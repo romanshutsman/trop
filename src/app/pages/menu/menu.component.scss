@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'BrownStd-Regular';
+    src: url('./../../../assets/fonts/BrownStd-Regular.otf');
+}
+
+@font-face {
+    font-family: 'BrownStd-Bold';
+    src: url('./../../../assets/fonts/BrownStd-Bold.otf')
+}
+
+$yellow : #ffcf00;
+$black : #171717;
+$blue : #0F7EDF;
+$white : #ffffff;
+
+$font-bold: 'BrownStd-Bold';
+$font-reg: 'BrownStd-Regular';
+@import './../../../styles';
+
+
+.container-fluid {
+    background-color: $yellow;
+    & > nav {
+        height: 55px;
+        max-width: 1440px;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: $font-reg;
+        & > a.navbar-brand {
+            font-size: 16px;
+            font-family: $font-bold;
+        }
+        & > div.collapse.navbar-collapse {
+            & > ul.navbar-nav.ml-auto {
+                & > li.nav-item {
+                    & > a.nav-link{
+                        color: $black;
+                        font-size: 14px;
+                    }
+                    & > a.nav-link.ingresar.btn{
+                        font-size: 9px;
+                        background-color: $blue;
+                        text-transform: uppercase;
+                        color: $white;
+                        border-radius: 8px;
+                        width: 84px;
+                        height: 26px;
+                        margin-left: 9px;
+                        padding-top: 6px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
