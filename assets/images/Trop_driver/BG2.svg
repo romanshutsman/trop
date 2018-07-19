@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="948px" viewBox="0 0 1440 948" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="DRIVER" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="main_driver" transform="translate(0.000000, -1356.000000)">
+            <g id="Group-3" transform="translate(-1.000000, 1350.000000)">
+                <polygon id="backgroundColor" fill="#EFEEF4" opacity="0.756584821" points="0 6 1450.30181 6 1441 260 0 624"></polygon>
+                <polygon id="backgroundColor" fill="#FFCF00" transform="translate(721.000000, 607.000000) rotate(-180.000000) translate(-721.000000, -607.000000) " points="1 260 1441 260 1441 595 1 954"></polygon>
+                <g id="Group-2" transform="translate(719.500000, 465.500000) rotate(-180.000000) translate(-719.500000, -465.500000) translate(4.000000, 0.000000)" opacity="0.31787817">
+                    <g id="Confetti" transform="translate(0.000000, 0.000000)">
+                        <ellipse id="Oval-4" stroke="#171717" fill="#FFCF00" cx="153.202878" cy="281" rx="16.376259" ry="17"></ellipse>
+                        <ellipse id="Oval-4" stroke="#393939" fill="#FFCF00" cx="470.131655" cy="438" rx="16.376259" ry="17"></ellipse>
+                        <ellipse id="Oval-4" stroke="#393939" fill="#FFCF00" transform="translate(232.675899, 137.500000) scale(-1, 1) translate(-232.675899, -137.500000) " cx="232.675899" cy="137.5" rx="6.26151079" ry="6.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#393939" fill="#FFCF00" transform="translate(297.217626, 530.500000) scale(-1, 1) translate(-297.217626, -530.500000) " cx="297.217626" cy="530.5" rx="6.26151079" ry="6.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#393939" fill="#FFCF00" transform="translate(589.100360, 133.500000) scale(-1, 1) translate(-589.100360, -133.500000) " cx="589.10036" cy="133.5" rx="6.26151079" ry="6.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#393939" fill="#FFCF00" transform="translate(795.730216, 190.000000) scale(-1, 1) translate(-795.730216, -190.000000) " cx="795.730216" cy="190" rx="8.66978417" ry="9"></ellipse>
+                        <ellipse id="Oval-4" stroke="#393939" fill="#FFCF00" transform="translate(719.628777, 397.000000) scale(-1, 1) translate(-719.628777, -397.000000) " cx="719.628777" cy="397" rx="8.66978417" ry="9"></ellipse>
+                        <ellipse id="Oval-4" stroke="#393939" fill="#FFCF00" transform="translate(1155.044604, 46.000000) scale(-1, 1) translate(-1155.044604, -46.000000) " cx="1155.0446" cy="46" rx="14.4496403" ry="15"></ellipse>
+                        <ellipse id="Oval-4" stroke="#393939" fill="#FFCF00" transform="translate(1169.012590, 304.500000) scale(-1, 1) translate(-1169.012590, -304.500000) " cx="1169.01259" cy="304.5" rx="6.26151079" ry="6.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#393939" fill="#FFCF00" transform="translate(1238.370863, 207.500000) scale(-1, 1) translate(-1238.370863, -207.500000) " cx="1238.37086" cy="207.5" rx="8.1881295" ry="8.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#393939" fill="#FFCF00" transform="translate(912.772302, 320.960156) scale(-1, 1) translate(-912.772302, -320.960156) " cx="912.772302" cy="320.960156" rx="8.1881295" ry="8.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" fill="#0F7EDF" transform="translate(1325.068705, 387.500000) scale(-1, 1) translate(-1325.068705, -387.500000) " cx="1325.06871" cy="387.5" rx="8.1881295" ry="8.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#393939" fill="#FFCF00" cx="733.596763" cy="44.5" rx="5.29820144" ry="5.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#393939" fill="#FFCF00" cx="1234.51763" cy="29.5" rx="5.29820144" ry="5.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#393939" fill="#FFCF00" cx="1119.88381" cy="116.5" rx="5.29820144" ry="5.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#393939" fill="#FFCF00" transform="translate(30.380935, 39.500000) scale(-1, 1) translate(-30.380935, -39.500000) " cx="30.3809353" cy="39.5" rx="8.1881295" ry="8.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#393939" transform="translate(335.750000, 37.500000) scale(-1, 1) translate(-335.750000, -37.500000) " cx="335.75" cy="37.5" rx="8.1881295" ry="8.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#171717" transform="translate(161.391007, 89.500000) scale(-1, 1) translate(-161.391007, -89.500000) " cx="161.391007" cy="89.5" rx="8.1881295" ry="8.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#171717" transform="translate(225.932734, 482.500000) scale(-1, 1) translate(-225.932734, -482.500000) " cx="225.932734" cy="482.5" rx="8.1881295" ry="8.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#393939" transform="translate(12.078058, 371.500000) scale(-1, 1) translate(-12.078058, -371.500000) " cx="12.0780576" cy="371.5" rx="8.1881295" ry="8.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#393939" cx="227.859353" cy="292.5" rx="11.0780576" ry="11.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#393939" cx="688.321223" cy="119.5" rx="11.0780576" ry="11.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#171717" cx="1327.47698" cy="218" rx="11.5597122" ry="12"></ellipse>
+                        <ellipse id="Oval-4" stroke="#171717" transform="translate(76.138129, 234.000000) scale(-1, 1) translate(-76.138129, -234.000000) " cx="76.1381295" cy="234" rx="6.74316547" ry="7"></ellipse>
+                        <ellipse id="Oval-4" stroke="#171717" transform="translate(432.562590, 250.000000) scale(-1, 1) translate(-432.562590, -250.000000) " cx="432.56259" cy="250" rx="6.74316547" ry="7"></ellipse>
+                        <ellipse id="Oval-4" stroke="#171717" transform="translate(742.266547, 289.500000) scale(-1, 1) translate(-742.266547, -289.500000) " cx="742.266547" cy="289.5" rx="8.1881295" ry="8.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#171717" transform="translate(152.239568, 474.000000) scale(-1, -1) translate(-152.239568, -474.000000) " cx="152.239568" cy="474" rx="12.5230216" ry="13"></ellipse>
+                        <rect id="Rectangle-8" stroke="#171717" x="63.1517986" y="96.5" width="12.4863309" height="13"></rect>
+                        <rect id="Rectangle-8" stroke="#171717" x="127.693525" y="489.5" width="12.4863309" height="13"></rect>
+                        <rect id="Rectangle-8" stroke="#171717" x="79.5280576" y="351.5" width="12.4863309" height="13"></rect>
+                        <rect id="Rectangle-8" stroke="#171717" x="680.633094" y="327.5" width="12.4863309" height="13"></rect>
+                        <rect id="Rectangle-8" stroke="#171717" x="1193.11367" y="135.5" width="12.4863309" height="13"></rect>
+                        <rect id="Rectangle-8" stroke="#171717" transform="translate(294.809353, 268.000000) rotate(46.000000) translate(-294.809353, -268.000000) " x="288.566187" y="261.5" width="12.4863309" height="13"></rect>
+                        <rect id="Rectangle-8" stroke="#171717" transform="translate(35.679137, 147.000000) rotate(46.000000) translate(-35.679137, -147.000000) " x="29.4359712" y="140.5" width="12.4863309" height="13"></rect>
+                        <rect id="Rectangle-8" stroke="#393939" transform="translate(392.103597, 163.000000) rotate(46.000000) translate(-392.103597, -163.000000) " x="385.860432" y="156.5" width="12.4863309" height="13"></rect>
+                        <rect id="Rectangle-8" stroke="#393939" transform="translate(264.946763, 427.000000) rotate(46.000000) translate(-264.946763, -427.000000) " x="258.703597" y="420.5" width="12.4863309" height="13"></rect>
+                        <rect id="Rectangle-8" stroke="#393939" transform="translate(795.730216, 34.000000) rotate(46.000000) translate(-795.730216, -34.000000) " x="789.48705" y="27.5" width="12.4863309" height="13"></rect>
+                        <rect id="Rectangle-8" stroke="#393939" transform="translate(1278.348201, 79.000000) rotate(46.000000) translate(-1278.348201, -79.000000) " x="1272.10504" y="72.5" width="12.4863309" height="13"></rect>
+                        <rect id="Rectangle-8" stroke="#393939" transform="translate(591.508633, 374.000000) rotate(46.000000) translate(-591.508633, -374.000000) " x="575.632374" y="357.5" width="31.752518" height="33"></rect>
+                        <rect id="Rectangle-8" stroke="#393939" transform="translate(856.719243, 417.311985) rotate(46.000000) translate(-856.719243, -417.311985) " x="849.512769" y="409.811985" width="14.4129496" height="15"></rect>
+                        <polygon id="Triangle" stroke="#171717" transform="translate(143.716754, 165.152567) rotate(31.000000) translate(-143.716754, -165.152567) " points="143.716754 152.652567 155.75812 177.652567 131.675387 177.652567"></polygon>
+                        <polygon id="Triangle" stroke="#171717" transform="translate(208.357228, 559.003975) rotate(31.000000) translate(-208.357228, -559.003975) " points="208.357228 546.503975 220.398595 571.503975 196.315861 571.503975"></polygon>
+                        <polygon id="Triangle" stroke="#393939" transform="translate(793.321942, 97.500000) rotate(-77.000000) translate(-793.321942, -97.500000) " points="793.321942 91 799.583453 104 787.060432 104"></polygon>
+                        <polygon id="Triangle" stroke="#393939" transform="translate(612.219784, 425.500000) rotate(-74.000000) translate(-612.219784, -425.500000) " points="612.219784 419 618.481295 432 605.958273 432"></polygon>
+                        <polygon id="Triangle" stroke="#393939" transform="translate(1060.678670, 249.500000) rotate(-74.000000) translate(-1060.678670, -249.500000) " points="1060.67867 243 1066.94018 256 1054.41716 256"></polygon>
+                        <polygon id="Triangle" stroke="#393939" transform="translate(1308.692446, 273.500000) rotate(-74.000000) translate(-1308.692446, -273.500000) " points="1308.69245 267 1314.95396 280 1302.43094 280"></polygon>
+                        <polygon id="Triangle" stroke="#393939" transform="translate(1198.875180, 395.500000) rotate(-74.000000) translate(-1198.875180, -395.500000) " points="1198.87518 389 1205.13669 402 1192.61367 402"></polygon>
+                        <polygon id="Triangle" stroke="#393939" transform="translate(19.302878, 437.000000) rotate(44.000000) translate(-19.302878, -437.000000) " points="19.3028777 432 24.1194245 442 14.4863309 442"></polygon>
+                        <polygon id="Triangle" stroke="#393939" transform="translate(199.441727, 362.000000) rotate(44.000000) translate(-199.441727, -362.000000) " points="199.441727 357 204.258273 367 194.62518 367"></polygon>
+                        <polygon id="Triangle" stroke="#393939" transform="translate(185.955396, 7.000000) rotate(44.000000) translate(-185.955396, -7.000000) " points="185.955396 2 190.771942 12 181.138849 12"></polygon>
+                        <path d="M193.240423,172 C186.457119,172 183.065468,174.465011 183.065468,179.395034 C183.065468,186.790068 195.588489,184.344438 195.588489,190.89842 C195.588489,197.471783 191.675045,200.484575 183.848156,199.936795" id="Line-2" stroke="#393939" stroke-linecap="square"></path>
+                        <path d="M257.782149,565 C250.998846,565 247.607194,567.465011 247.607194,572.395034 C247.607194,579.790068 260.130216,577.344438 260.130216,583.89842 C260.130216,590.471783 256.216772,593.484575 248.389883,592.936795" id="Line-2" stroke="#393939" stroke-linecap="square"></path>
+                        <path d="M327.140423,362 C320.357119,362 316.965468,364.465011 316.965468,369.395034 C316.965468,376.790068 329.488489,374.344438 329.488489,380.89842 C329.488489,387.471783 325.575045,390.484575 317.748156,389.936795" id="Line-2" stroke="#393939" stroke-linecap="square"></path>
+                        <path d="M1327.05553,29 C1320.27223,29 1316.88058,31.4650113 1316.88058,36.3950339 C1316.88058,43.7900677 1329.4036,41.3444378 1329.4036,47.8984199 C1329.4036,54.4717833 1325.49015,57.4845749 1317.66326,56.9367946" id="Line-2" stroke="#393939" stroke-linecap="square"></path>
+                    </g>
+                    <g id="Confetti" transform="translate(746.999315, 624.473832) rotate(177.000000) translate(-746.999315, -624.473832) translate(76.999315, 352.973832)">
+                        <ellipse id="Oval-4" stroke="#0F7EDF" cx="172.469065" cy="358" rx="16.376259" ry="17"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" cx="470.131655" cy="439" rx="16.376259" ry="17"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" transform="translate(232.675899, 138.500000) scale(-1, 1) translate(-232.675899, -138.500000) " cx="232.675899" cy="138.5" rx="6.26151079" ry="6.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" transform="translate(589.100360, 134.500000) scale(-1, 1) translate(-589.100360, -134.500000) " cx="589.10036" cy="134.5" rx="6.26151079" ry="6.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" transform="translate(795.730216, 191.000000) scale(-1, 1) translate(-795.730216, -191.000000) " cx="795.730216" cy="191" rx="8.66978417" ry="9"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" transform="translate(719.628777, 398.000000) scale(-1, 1) translate(-719.628777, -398.000000) " cx="719.628777" cy="398" rx="8.66978417" ry="9"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" fill="#0F7EDF" transform="translate(1155.044604, 47.000000) scale(-1, 1) translate(-1155.044604, -47.000000) " cx="1155.0446" cy="47" rx="14.4496403" ry="15"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" fill="#FFCF00" transform="translate(1285.459605, 291.807724) scale(-1, 1) translate(-1285.459605, -291.807724) " cx="1285.4596" cy="291.807724" rx="6.26151079" ry="6.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" fill="#0F7EDF" transform="translate(1238.370863, 208.500000) scale(-1, 1) translate(-1238.370863, -208.500000) " cx="1238.37086" cy="208.5" rx="8.1881295" ry="8.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" fill="#FFCF00" transform="translate(908.234888, 411.836814) scale(-1, 1) translate(-908.234888, -411.836814) " cx="908.234888" cy="411.836814" rx="8.1881295" ry="8.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" fill="#FFCF00" transform="translate(1325.068705, 388.500000) scale(-1, 1) translate(-1325.068705, -388.500000) " cx="1325.06871" cy="388.5" rx="8.1881295" ry="8.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" fill="#0F7EDF" cx="733.596763" cy="45.5" rx="5.29820144" ry="5.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" fill="#0F7EDF" cx="1234.51763" cy="30.5" rx="5.29820144" ry="5.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" fill="#0F7EDF" cx="1119.88381" cy="117.5" rx="5.29820144" ry="5.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" fill="#0F7EDF" transform="translate(30.380935, 40.500000) scale(-1, 1) translate(-30.380935, -40.500000) " cx="30.3809353" cy="40.5" rx="8.1881295" ry="8.5"></ellipse>
+                        <path d="M338.707436,20.041114 C344.027646,20.041114 348.340529,15.5639615 348.340529,10.041114 C348.340529,4.51826646 344.027646,0.0411139574 338.707436,0.0411139574 C333.387225,0.0411139574 329.074342,4.51826646 329.074342,10.041114 C329.074342,15.5639615 333.387225,20.041114 338.707436,20.041114 Z" id="Oval-4" stroke="#0F7EDF" fill="#0F7EDF" transform="translate(338.707436, 10.041114) scale(-1, 1) translate(-338.707436, -10.041114) "></path>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" fill="#0F7EDF" transform="translate(161.391007, 90.500000) scale(-1, 1) translate(-161.391007, -90.500000) " cx="161.391007" cy="90.5" rx="8.1881295" ry="8.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" fill="#0F7EDF" transform="translate(12.078058, 372.500000) scale(-1, 1) translate(-12.078058, -372.500000) " cx="12.0780576" cy="372.5" rx="8.1881295" ry="8.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" fill="#0F7EDF" cx="254.198242" cy="345.001555" rx="11.0780576" ry="11.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" fill="#0F7EDF" cx="688.321223" cy="120.5" rx="11.0780576" ry="11.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" cx="1327.47698" cy="219" rx="11.5597122" ry="12"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" transform="translate(74.211511, 233.000000) scale(-1, 1) translate(-74.211511, -233.000000) " cx="74.2115108" cy="233" rx="4.81654676" ry="5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" transform="translate(432.562590, 251.000000) scale(-1, 1) translate(-432.562590, -251.000000) " cx="432.56259" cy="251" rx="6.74316547" ry="7"></ellipse>
+                        <ellipse id="Oval-4" stroke="#0F7EDF" transform="translate(742.266547, 290.500000) scale(-1, 1) translate(-742.266547, -290.500000) " cx="742.266547" cy="290.5" rx="8.1881295" ry="8.5"></ellipse>
+                        <ellipse id="Oval-4" stroke="#FFCF00" transform="translate(124.303597, 529.000000) scale(-1, -1) translate(-124.303597, -529.000000) " cx="124.303597" cy="529" rx="12.5230216" ry="13"></ellipse>
+                        <rect id="Rectangle-8" stroke="#0F7EDF" x="63.1517986" y="97.5" width="8.63309353" height="9"></rect>
+                        <rect id="Rectangle-8" stroke="#0F7EDF" x="114.207194" y="411.5" width="8.63309353" height="9"></rect>
+                        <rect id="Rectangle-8" stroke="#0F7EDF" x="796.071794" y="334.780315" width="12.4863309" height="13"></rect>
+                        <rect id="Rectangle-8" stroke="#0F7EDF" x="1193.11367" y="136.5" width="12.4863309" height="13"></rect>
+                        <rect id="Rectangle-8" stroke="#FFCF00" transform="translate(294.809353, 269.000000) rotate(46.000000) translate(-294.809353, -269.000000) " x="288.566187" y="262.5" width="12.4863309" height="13"></rect>
+                        <rect id="Rectangle-8" stroke="#0F7EDF" transform="translate(35.726688, 145.172004) rotate(46.000000) translate(-35.726688, -145.172004) " x="31.4101416" y="140.672004" width="8.63309353" height="9"></rect>
+                        <rect id="Rectangle-8" stroke="#0F7EDF" transform="translate(394.624383, 114.068523) rotate(46.000000) translate(-394.624383, -114.068523) " x="388.381217" y="107.568523" width="12.4863309" height="13"></rect>
+                        <rect id="Rectangle-8" stroke="#FFCF00" transform="translate(275.739705, 488.000000) rotate(46.000000) translate(-275.739705, -488.000000) " x="269.49654" y="481.5" width="12.4863309" height="13"></rect>
+                        <rect id="Rectangle-8" stroke="#0F7EDF" transform="translate(795.730216, 35.000000) rotate(46.000000) translate(-795.730216, -35.000000) " x="789.48705" y="28.5" width="12.4863309" height="13"></rect>
+                        <rect id="Rectangle-8" stroke="#0F7EDF" transform="translate(1278.348201, 80.000000) rotate(46.000000) translate(-1278.348201, -80.000000) " x="1272.10504" y="73.5" width="12.4863309" height="13"></rect>
+                        <rect id="Rectangle-8" stroke="#0F7EDF" transform="translate(591.627512, 367.930009) rotate(46.000000) translate(-591.627512, -367.930009) " x="580.5678" y="356.430009" width="22.1194245" height="23"></rect>
+                        <rect id="Rectangle-8" stroke="#0F7EDF" transform="translate(997.543723, 52.824862) rotate(46.000000) translate(-997.543723, -52.824862) " x="990.337249" y="45.3248619" width="14.4129496" height="15"></rect>
+                        <polygon id="Triangle" stroke="#0F7EDF" transform="translate(106.132487, 238.291540) rotate(31.000000) translate(-106.132487, -238.291540) " points="106.132487 230.79154 113.357307 245.79154 98.9076672 245.79154"></polygon>
+                        <polygon id="Triangle" stroke="#0F7EDF" transform="translate(793.321942, 98.500000) rotate(-77.000000) translate(-793.321942, -98.500000) " points="793.321942 92 799.583453 105 787.060432 105"></polygon>
+                        <polygon id="Triangle" stroke="#FFCF00" transform="translate(612.219784, 426.500000) rotate(-74.000000) translate(-612.219784, -426.500000) " points="612.219784 420 618.481295 433 605.958273 433"></polygon>
+                        <polygon id="Triangle" stroke="#0F7EDF" transform="translate(1060.678670, 250.500000) rotate(-74.000000) translate(-1060.678670, -250.500000) " points="1060.67867 244 1066.94018 257 1054.41716 257"></polygon>
+                        <polygon id="Triangle" stroke="#FFCF00" transform="translate(1308.692446, 274.500000) rotate(-74.000000) translate(-1308.692446, -274.500000) " points="1308.69245 268 1314.95396 281 1302.43094 281"></polygon>
+                        <polygon id="Triangle" stroke="#FFCF00" transform="translate(1198.875180, 396.500000) rotate(-74.000000) translate(-1198.875180, -396.500000) " points="1198.87518 390 1205.13669 403 1192.61367 403"></polygon>
+                        <polygon id="Triangle" stroke="#0F7EDF" transform="translate(19.302878, 438.000000) rotate(44.000000) translate(-19.302878, -438.000000) " points="19.3028777 433 24.1194245 443 14.4863309 443"></polygon>
+                        <polygon id="Triangle" stroke="#0F7EDF" transform="translate(162.768548, 478.102013) rotate(44.000000) translate(-162.768548, -478.102013) " points="162.768548 473.102013 167.585095 483.102013 157.952002 483.102013"></polygon>
+                        <polygon id="Triangle" stroke="#0F7EDF" transform="translate(185.955396, 8.000000) rotate(44.000000) translate(-185.955396, -8.000000) " points="185.955396 3 190.771942 13 181.138849 13"></polygon>
+                        <path d="M844.368116,268.506222 C837.584812,268.506222 834.193161,270.971234 834.193161,275.901256 C834.193161,283.29629 846.716182,280.85066 846.716182,287.404642 C846.716182,293.978006 842.802738,296.990797 834.975849,296.443017" id="Line-2" stroke="#0F7EDF" stroke-linecap="square"></path>
+                        <path d="M327.140423,363 C320.357119,363 316.965468,365.465011 316.965468,370.395034 C316.965468,377.790068 329.488489,375.344438 329.488489,381.89842 C329.488489,388.471783 325.575045,391.484575 317.748156,390.936795" id="Line-2" stroke="#0F7EDF" stroke-linecap="square"></path>
+                        <path d="M1327.05553,30 C1320.27223,30 1316.88058,32.4650113 1316.88058,37.3950339 C1316.88058,44.7900677 1329.4036,42.3444378 1329.4036,48.8984199 C1329.4036,55.4717833 1325.49015,58.4845749 1317.66326,57.9367946" id="Line-2" stroke="#0F7EDF" stroke-linecap="square"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="222px" height="40px" viewBox="0 0 222 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>BTN/3</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="USER" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="main_black" transform="translate(-614.000000, -201.000000)">
+            <g id="BTN/3" transform="translate(614.000000, 201.000000)">
+                <g stroke-width="1" fill-rule="evenodd" fill="#0F7EDF" id="Rectangle-3">
+                    <rect x="0" y="0" width="222" height="40" rx="6"></rect>
+                </g>
+                <g id="BTN/Text/3" transform="translate(11.000000, 12.000000)" fill="#FFFFFF" font-family="BrownStd-Bold, BrownStd" font-size="12" font-weight="bold" letter-spacing="-0.08571429">
+                    <text id="CREATE-ACCOUNT">
+                        <tspan x="36.3214286" y="13">PUBLICA TU ANUNCIO</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
