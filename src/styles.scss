@@ -2,10 +2,10 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-p {
+p, ul {
     margin-bottom: 0px;
 }
-a {
+a, a[href^=tel], a[href^=mailto] {
     text-decoration: none;
     cursor: pointer;
-  }
+}
