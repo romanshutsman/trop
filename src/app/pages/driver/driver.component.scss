@@ -23,7 +23,7 @@ $font-reg: 'BrownStd-Regular';
     font-family: $font-reg;
     & > header {
         width: 100%;
-        height: 424px;
+        height: 574px;
         background-image: url('./../../../assets/images/city.svg');
         background-repeat: no-repeat;
         background-color: $yellow;
@@ -34,27 +34,37 @@ $font-reg: 'BrownStd-Regular';
             max-width: 1440px;
             margin-left: auto;
             margin-right: auto;
-            & > div {
-                &:first-child {
-                    padding-top: 32px;
+            & > .container {
+                & > .row {
+                    display: flex;
+                    flex-direction: column;
+                    & > div {
+                        &:first-child {
+                            padding-top: 61px;
+                            font-size: 36px;
+                        }
+                        color: $black;
+                        text-align: center;
+                    }
+                    & > div > p:first-child {
+                        font-family: $font-bold;
+                    }
+                    & > div > p:nth-child(2) {
+                        font-size: 22px;
+                        padding-top: 40px;
+                    }
+                    & > div > a {
+                        width: 222px;
+                        height: 40px;
+                        font-size: 12px;
+                        text-transform: uppercase;
+                        background-color: $blue;
+                        color: $white;
+                        border-radius: 8px;
+                        padding-top: 12px;
+                        margin-top: 40px;
+                    }
                 }
-                font-size: 36px;
-                color: $black;
-                text-align: center;
-            }
-            & > div > p:first-child {
-                font-family: $font-bold;
-            }
-            & > div > a {
-                width: 222px;
-                height: 40px;
-                font-size: 12px;
-                text-transform: uppercase;
-                background-color: $blue;
-                color: $white;
-                border-radius: 8px;
-                padding-top: 12px;
-                margin-top: 27px;
             }
         }
     }
@@ -106,18 +116,21 @@ $font-reg: 'BrownStd-Regular';
         }
     }
     & > section.devices {
-        height: 479px;
+        height: 948px;
+        width: 100%;
+        background-image: url('./../../../assets/images/Trop_driver/BG2.svg');
+        background-repeat: no-repeat;
+        background-size: 100%;
         @media only screen and (min-width: 540px) and (max-width: 575px) {
             height: 957px;
         }
         @media only screen and (min-width: 320px) and (max-width: 539px) {
             height: 1079px;
         }
-        width: 100%;
-        background-color: $yellow;
-        background-image: url('./../../../assets/images/Trop_user/BG_app.svg');
-        background-repeat: round;
         & > .container {
+            &:nth-child(2) {
+                margin-top: 8%;
+            }
             & > .row {
                 & > .col-sm.ios_android {
                     & > p {
@@ -126,12 +139,13 @@ $font-reg: 'BrownStd-Regular';
                     }
                     & > p:first-child {
                         font-family: $font-bold;
-                        font-size: 22px;
+                        font-size: 26px;
                         padding-top: 90px;
                         padding-bottom: 36px;
                     }
                     & > p:nth-child(2) {
                         padding-bottom: 53px;
+                        font-size: 14px;
                         @media only screen and (min-width: 576px) and (max-width: 991px) {
                             padding-bottom: 23px;
                         }
@@ -162,7 +176,7 @@ $font-reg: 'BrownStd-Regular';
                             width: 360px;
                             height: 489px;
                             position: absolute;
-                            top: -27px;
+                            top: -57px;
                             background-image: url('./../../../assets/images/Trop_user/iPhone.png');
                             background-repeat: no-repeat;
                             background-position: center;
@@ -188,6 +202,85 @@ $font-reg: 'BrownStd-Regular';
                     }
                 }
             }
+            & > .row.header {
+                & > .col {
+                    & > p {
+                        padding-top: 79px;
+                        padding-bottom: 72px;
+                        font-family: $font-bold;
+                        font-size: 26px;
+                        color: $black;
+                        text-align: center;
+                    }
+                }
+            }
+            & > .row {
+                & > form {
+                    & > .flex-grid {
+                        display: flex;
+                        & > .col-5-flex {
+                            display: flex;
+                            justify-content: center;
+                            display: inline-block;
+                            width: 100%;
+                            margin-left: 48px;
+                            & > input {
+                                background:  transparent;
+                                border:  none;
+                                border-bottom: 1px solid rgba(0,0,0,.42);
+                                border-radius: inherit;
+                                padding-left: 0;
+                                padding-right: 0;
+                                &:focus {
+                                    outline: none;
+                                    box-shadow: none;
+                                }
+                            }
+                            & > .mat-input-container.mat-form-field {
+                                position: relative;
+                                top: -9px; 
+                            }
+                        }
+                    }
+                    & > div.btn-block {
+                    padding-left: 47px;
+                    margin-top: 15px;
+                        & > .btn {
+                            font-size: 12px;
+                            background-color: $blue;
+                            text-transform: uppercase;
+                            color: $white;
+                            border-radius: 8px;
+                            width: 222px;
+                            height: 40px;
+                            padding-top: 12px;
+                        }
+                    }
+                    & > .text-block {
+                        & > p {
+                            font-size: 13px;
+                            color: $black;
+                            padding-left: 59px;
+                            padding-top: 16px;
+
+                        }
+                    }
+                }
+            }
+
         }
     }
 }
+
+
+//   ::ng-deep .mat-select-content{
+//     color: rebeccapurple;
+//     // font-size: 10px;   
+// }
+::ng-deep .mat-select-value-text {
+    color: #495057;
+  }
+
+  .err {
+      color: red;
+  }

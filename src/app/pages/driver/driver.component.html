@@ -1,0 +1,168 @@
+<div class="container-fluid">
+    <header>
+      <section class="main">
+        <div class="container">
+          <div class="row">
+            <div>
+              <p>¡Únete a Trop! ¡Es fácil y cómodo! Desde el móvil<br> recibo más portes y obtengo más ingresos.</p>
+              <p>¿Eres transportista autónomo? Trop consigue nuevos clientes para tí.<br> Apúntate ahora para aumentar tu volumen de trabajo y tus ingresos.</p>
+            </div>
+            <div>
+              <a class="btn register">Quiero trabajar con Trop</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </header>
+    <section class="benefits">
+      <div class="container">
+        <div class="row">
+          <div class="header">
+            <p>Sé tu propio jefe. Trop, un servicio a medida para ti.</p>
+          </div>
+        </div>
+        <div class="row first_section">
+          <div class="col-sm">
+            <div class="img">
+              <img src="./../../../assets/images/Trop_driver/Benefits/event.svg" alt="info">
+            </div>
+            <p>Pago semanal</p>
+            <p>Recibe tu dinero semanalmente. Te haremos<br> el ingreso en tu cuenta bancaria cada<br> semana de todos tu portes realizados.</p>
+          </div>
+          <div class="col-sm">
+            <div class="img">
+              <img src="./../../../assets/images/Trop_driver/Benefits/24-hours.svg" alt="info">
+            </div>
+            <p>Atención al transportista</p>
+            <p>Contacta con nuestro equipo de atención,<br> siempre disponible para resolver<br> cualquier duda.</p>
+          </div>
+          <div class="col-sm">
+            <div class="img">
+              <img src="./../../../assets/images/Trop_driver/Benefits/augmented-reality.svg" alt="info">
+            </div>
+            <p>Todo desde el móvil</p>
+            <p>Gestiona cómodamente desde el móvil todas<br> tus cargas. Gana tranquilidad y<br> calidad de vida.</p>
+          </div>
+        </div>
+        <div class="row second_section">
+          <div class="col-sm">
+            <div class="img">
+              <img src="./../../../assets/images/Trop_driver/Benefits/route.svg" alt="info">
+            </div>
+            <p>Trabajo Flexible</p>
+            <p>Tú eres tu propio jefe. Elige qué portes<br> quieres hacer según tu interés,<br> libremente y sin exclusividad.</p>
+          </div>
+          <div class="col-sm">
+            <div class="img">
+              <img src="./../../../assets/images/Trop_driver/Benefits/piggybank.svg" alt="info">
+            </div>
+            <p>Gratis</p>
+            <p>Sin costes fijos por uso. En Trop sólo<br> ganamos si tú haces más portes y<br> ganas más dinero.</p>
+          </div>
+          <div class="col-sm">
+            <div class="img">
+              <img src="./../../../assets/images/Trop_driver/Benefits/001-pin.svg" alt="info">
+            </div>
+            <p>Dentro de la ciudad</p>
+            <p>Sólo transportes en ciudad y su periferia.<br> Mayor disponibilidad y adaptado a tus<br> necesidades de transporte bajo demanda.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="devices">
+      <div class="container">
+        <div class="row header">
+            <div class="col">
+              <p>Date de alta en menos de un minuto y recibe más portes.</p>
+            </div>
+        </div>
+        <div class="row">
+          <form [formGroup]="registerDriver" (ngSubmit)="onSubmit()">
+            <div class="flex-grid">
+              <div class="col-5-flex">
+                  <p>Nombre y apellidos</p>
+                  <input 
+                  type="text" 
+                  class="form-control" 
+                  formControlName="name" 
+                  placeholder="Escribe tu nombre...."
+                  [class.err]="registerDriver.controls['email'].errors && registerDriver.controls['email'].touched">
+                  
+                </div>
+                <div class="col-5-flex">
+                    <p>Número de teléfono</p>
+                    <input type="number" class="form-control " formControlName="phone" placeholder="Escribe tu teléfono...">
+                </div>
+                <div class="col-5-flex">
+                  <p>Email</p>
+                  <input type="email" class="form-control " formControlName="email" placeholder="Escribe tu email...">
+                </div> 
+                <div class="col-5-flex">
+                  <p>Provincia</p>
+                  <mat-form-field style="color:green">
+                    <mat-select [(value)]="selected" formControlName="provincia" style="font-family: 'BrownStd-Regular';" >
+                      <mat-option style="font-family: 'BrownStd-Regular';color: #495057;" *ngFor="let i of provincia" value="{{i}}">{{i}}</mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="col-5-flex">
+                  <p>Contraseña</p>
+                  <input type="password" formControlName="password" class="form-control " placeholder="Confirmar constraseña">
+                </div>
+            </div>
+            <div class="btn-block">
+              <button [disabled]="!registerDriver.valid" class="btn">Quiero trabajar con Trop</button>
+            </div>
+            <div class="text-block">
+              <p>Rellenando este formulario consiento, comprendo y acepto las condiciones de transportista de Trop.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm ios_android">
+            <p>Descarga nuestras aplicaciones móviles</p>
+            <p>Si prefieres usar aplicaciones iOS o Android, descarga nuestras<br> aplicaciones. Más rápidas e integradas con las últimas tecnologías</p>
+            <div>
+              <a>
+                <img src="./../../../assets/images/Trop_user/BTN_AppStore.svg" alt="AppStore">
+              </a>
+            </div>
+            <div>
+              <a>
+                <img src="./../../../assets/images/Trop_user/BTN_GooglePlay.svg" alt="GooglePlay">
+              </a>
+            </div>
+          </div>
+          <div class="col-sm iphone">
+            <div class="wrap">
+                <div class="background">
+                  <div class="screen">
+                      <div id="controls" class="carousel slide" data-ride="carousel">
+                          <div class="carousel-inner">
+                            <div class="carousel-item">
+                              <img class="d-block w-100" src="./../../../assets/images/image.webp" alt="Second slide">
+                            </div>
+                            <div class="carousel-item active">
+                              <img class="d-block w-100" src="./../../../assets/images/phone.jpg" alt="First slide">
+                            </div>
+                          </div>
+                          <a class="carousel-control-prev" href="#controls" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                          </a>
+                          <a class="carousel-control-next" href="#controls" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                          </a>
+                        </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <app-footer></app-footer>
+  </div>
