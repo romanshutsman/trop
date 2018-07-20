@@ -86,20 +86,30 @@
                   class="form-control" 
                   formControlName="name" 
                   placeholder="Escribe tu nombre...."
-                  [class.err]="registerDriver.controls['email'].errors && registerDriver.controls['email'].touched">
+                  [class.err]="registerDriver.controls['name'].errors && registerDriver.controls['name'].touched">
                   
                 </div>
                 <div class="col-5-flex">
                     <p>Número de teléfono</p>
-                    <input type="number" class="form-control " formControlName="phone" placeholder="Escribe tu teléfono...">
+                    <input 
+                    type="number" 
+                    class="form-control " 
+                    formControlName="phone" 
+                    placeholder="Escribe tu teléfono..."
+                    [class.err]="registerDriver.controls['phone'].errors && registerDriver.controls['phone'].touched">
                 </div>
                 <div class="col-5-flex">
                   <p>Email</p>
-                  <input type="email" class="form-control " formControlName="email" placeholder="Escribe tu email...">
+                  <input 
+                  type="email" 
+                  class="form-control " 
+                  formControlName="email" 
+                  placeholder="Escribe tu email..."
+                  [class.err]="registerDriver.controls['email'].errors && registerDriver.controls['email'].touched">
                 </div> 
                 <div class="col-5-flex">
                   <p>Provincia</p>
-                  <mat-form-field style="color:green">
+                  <mat-form-field>
                     <mat-select [(value)]="selected" formControlName="provincia" style="font-family: 'BrownStd-Regular';" >
                       <mat-option style="font-family: 'BrownStd-Regular';color: #495057;" *ngFor="let i of provincia" value="{{i}}">{{i}}</mat-option>
                     </mat-select>
@@ -107,7 +117,13 @@
                 </div>
                 <div class="col-5-flex">
                   <p>Contraseña</p>
-                  <input type="password" formControlName="password" class="form-control " placeholder="Confirmar constraseña">
+                  <input 
+                  type="password" 
+                  formControlName="password" 
+                  class="form-control " 
+                  placeholder="Confirmar constraseña"
+                  [class.err]="registerDriver.controls['password'].errors && registerDriver.controls['password'].touched"
+                  >
                 </div>
             </div>
             <div class="btn-block">

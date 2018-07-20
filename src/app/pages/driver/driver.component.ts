@@ -43,7 +43,7 @@ export class DriverComponent implements OnInit {
   }
   validationForm() {
     const nameFormat = '[a-zA-Z ]*';
-    const phoneFormat = '[789][0-9]{9}';
+    const phoneFormat = '[0-9]';
     this.registerDriver = new FormGroup({
       'name': new FormControl(null, [
         Validators.required,
@@ -52,7 +52,7 @@ export class DriverComponent implements OnInit {
         Validators.pattern(nameFormat)
         ]),
       'email': new FormControl(null, [Validators.required, Validators.email]),
-      'phone': new FormControl(null, [Validators.required, Validators.pattern(phoneFormat)]),
+      'phone': new FormControl(null, [Validators.required, Validators.minLength(7), Validators.maxLength(11)]),
       'provincia': new FormControl(null, [Validators.required]),
       'password': new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(16)])
     });
