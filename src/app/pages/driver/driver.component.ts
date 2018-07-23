@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators  } from '@angular/forms';
+import { RouterModule, Routes, Router } from '@angular/router';
 
 @Component({
   selector: 'app-driver',
@@ -36,7 +37,7 @@ export class DriverComponent implements OnInit {
     'Tucumán'
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.validationForm();
@@ -56,7 +57,7 @@ export class DriverComponent implements OnInit {
       'provincia': new FormControl(null, [Validators.required ]),
       'password': new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(16)])
     });
-}
+  }
 validationNumber(event: any) {
   const pattern = /[0-9\+\ ]/;
 
@@ -69,5 +70,6 @@ validationNumber(event: any) {
     const data = this.registerDriver.value;
     console.log(data);
     this.registerDriver.reset();
+    this.router.navigateByUrl('/register-driver');
   }
 }

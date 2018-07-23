@@ -13,6 +13,7 @@ import { MenuComponent } from './pages/menu/menu.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { DriverComponent } from './pages/driver/driver.component';
+import { RegisterDriverComponent } from './pages/register-driver/register-driver.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { DriverComponent } from './pages/driver/driver.component';
     MenuComponent,
     HomeComponent,
     FooterComponent,
-    DriverComponent
+    DriverComponent,
+    RegisterDriverComponent
   ],
   imports: [
     BrowserModule,

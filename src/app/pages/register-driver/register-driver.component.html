@@ -1,0 +1,134 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="card">
+            <p class="input">Please, input fields</p>
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                <button class="nav-link " (click)="valueProgressBar(33)" href="#profile" role="tab" data-toggle="tab">Paso 1. Datos personales</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link active" (click)="valueProgressBar(66)" href="#buzz" role="tab" data-toggle="tab">Paso 2. Datos bancarios</button>
+              </li>
+              <li class="nav-item">
+                <button class="nav-link" (click)="valueProgressBar(100)" href="#references" role="tab" data-toggle="tab">Paso 3. Adjuntar documentación </button>
+              </li>
+            </ul>
+            <div class="progress">
+              <div class="progress-bar progress-bar-info" id="progress" role="progressbar" 
+              aria-valuemin="0" aria-valuemax="100" style="width:66%">
+              </div>
+            </div>
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane fade " id="profile">
+                  <form [formGroup]="registerDriver" (ngSubmit)="onSubmit()">
+                    <label for="name">Nombre y apellidos</label >
+                    <input
+                    id="name" 
+                    type="text" 
+                    class="form-control" 
+                    formControlName="name" 
+                    placeholder="Escribe tu nombre...."
+                    [class.err]="registerDriver.controls['name'].errors && registerDriver.controls['name'].touched">
+
+                    <label for="phone">Número de teléfono</label>
+                    <input 
+                    id="phone"
+                    type="text"
+                    (keypress)="validationNumber($event)" 
+                    class="form-control " 
+                    formControlName="phone" 
+                    placeholder="Escribe tu teléfono..."
+                    [class.err]="registerDriver.controls['phone'].errors && registerDriver.controls['phone'].touched">
+
+                    <label for="email">Email</label>
+                    <input 
+                    id="email"
+                    type="email" 
+                    class="form-control " 
+                    formControlName="email" 
+                    placeholder="Escribe tu email..."
+                    [class.err]="registerDriver.controls['email'].errors && registerDriver.controls['email'].touched">
+
+                    <label for="provincia">Provincia</label>
+                    <div class="select">
+                      <mat-form-field class="material-select">
+                        <mat-select [(value)]="selected" id="provincia" formControlName="provincia" style="font-family: 'BrownStd-Regular';" >
+                          <mat-option style="font-family: 'BrownStd-Regular';color: #495057;" *ngFor="let i of provincia" value="{{i}}">{{i}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                    </div>
+
+                      <label for="pswd">Contraseña</label>
+                      <input 
+                      id="pswd"
+                      type="password" 
+                      formControlName="password" 
+                      class="form-control " 
+                      placeholder="Confirmar constraseña"
+                      [class.err]="registerDriver.controls['password'].errors && registerDriver.controls['password'].touched"
+                      >
+                      <button class="btn driver" [disabled]="!registerDriver.valid" (click)="submit1()">Continuar</button>
+                    </form>
+                    <div class="skip center-block">
+                      <a class="btn" (click)="submit1()">Saltear</a>
+                    </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade show active" id="buzz">
+                <form [formGroup]="registerDetails" (ngSubmit)="onSubmit()">
+                  <label for="cbu">
+                    CBU del titular de la cuenta
+                  </label>
+                  <input 
+                  id="cbu" 
+                  class="form-control" 
+                  type="text" 
+                  (keypress)="validationCuilCbu($event)"
+                  formControlName="cbu"
+                  [class.err]="registerDetails.controls['cbu'].errors && registerDetails.controls['cbu'].touched"
+                  >
+  
+                  <label for="repeatCbu">
+                    Repeat CBU del titular de la cuenta
+                  </label>
+                  <input 
+                  id="repeatCbu" 
+                  class="form-control" 
+                  type="text" 
+                  (keypress)="validationCuilCbu($event)"
+                  formControlName="repeatCbu"
+                  [class.err]="registerDetails.errors || registerDetails.controls['repeatCbu'].touched && registerDetails.controls['repeatCbu'].errors">
+  
+                  <label for="cuil">
+                    CUIL /CUIT del titular de la cuenta
+                  </label>
+                  <input 
+                  id="cuil" 
+                  class="form-control" 
+                  type="text" formControlName="cuil" 
+                  (keypress)="validationCuilCbu($event)"
+                  [class.err]="registerDetails.controls['cuil'].errors && registerDetails.controls['cuil'].touched">
+  
+                  <label for="bank">
+                    Banco del titular de la cuenta
+                  </label>
+                  <input 
+                  id="bank" 
+                  class="form-control" 
+                  type="text" 
+                  formControlName="bank"
+                  [class.err]="registerDetails.controls['bank'].errors && registerDetails.controls['bank'].touched">
+                  <button class="btn" [disabled]="!registerDetails.valid" (click)="submit2()">Continuar</button>
+                </form>
+                <div class="skip center-block">
+                  <a class="btn" (click)="submit2()">Saltear</a>
+                </div>
+              </div>
+              <div role="tabpanel" class="tab-pane fade" id="references">ccc</div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
