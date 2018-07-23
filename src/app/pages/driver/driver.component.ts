@@ -52,12 +52,22 @@ export class DriverComponent implements OnInit {
         Validators.pattern(nameFormat)
         ]),
       'email': new FormControl(null, [Validators.required, Validators.email]),
-      'phone': new FormControl(null, [Validators.required, Validators.minLength(7), Validators.maxLength(11)]),
-      'provincia': new FormControl(null, [Validators.required]),
+      'phone': new FormControl(null, [Validators.required, Validators.minLength(10), Validators.maxLength(13)]),
+      'provincia': new FormControl(null, [Validators.required ]),
       'password': new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(16)])
     });
 }
+validationNumber(event: any) {
+  const pattern = /[0-9\+\ ]/;
+
+  let inputChar = String.fromCharCode(event.charCode);
+  if (event.keyCode != 8 && !pattern.test(inputChar)) {
+    event.preventDefault();
+  }
+}
   onSubmit() {
-    
+    const data = this.registerDriver.value;
+    console.log(data);
+    this.registerDriver.reset();
   }
 }

@@ -92,7 +92,8 @@
                 <div class="col-5-flex">
                     <p>Número de teléfono</p>
                     <input 
-                    type="number" 
+                    type="text"
+                    (keypress)="validationNumber($event)" 
                     class="form-control " 
                     formControlName="phone" 
                     placeholder="Escribe tu teléfono..."

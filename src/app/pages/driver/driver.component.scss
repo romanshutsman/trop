@@ -42,6 +42,9 @@ $font-reg: 'BrownStd-Regular';
                         &:first-child {
                             padding-top: 61px;
                             font-size: 36px;
+                            @media only screen and (min-width: 320px) and (max-width: 425px) {
+                                font-size: 27px;
+                            }
                         }
                         color: $black;
                         text-align: center;
@@ -121,11 +124,23 @@ $font-reg: 'BrownStd-Regular';
         background-image: url('./../../../assets/images/Trop_driver/BG2.svg');
         background-repeat: no-repeat;
         background-size: 100%;
-        @media only screen and (min-width: 540px) and (max-width: 575px) {
-            height: 957px;
+        @media only screen and (min-width: 768px) and (max-width: 1439px) {
+            height: 1010px;
         }
-        @media only screen and (min-width: 320px) and (max-width: 539px) {
-            height: 1079px;
+        @media only screen and (min-width: 320px) and (max-width: 1439px) {
+            background-size: cover;
+        }
+        @media only screen and (min-width: 576px) and (max-width: 767px) {
+            height: 1140px;
+        }
+        @media only screen and (min-width: 456px) and (max-width: 575px) {
+            height: 1600px;
+        }
+        @media only screen and (min-width: 380px) and (max-width: 455px) {
+            height: 1750px;
+        }
+        @media only screen and (min-width: 320px) and (max-width: 379px) {
+            height: 1850px;
         }
         & > .container {
             &:nth-child(2) {
@@ -152,6 +167,7 @@ $font-reg: 'BrownStd-Regular';
                         @media only screen and (min-width: 540px) and (max-width: 575px) {
                             padding-bottom: 53px;
                         }
+
                     }
                     & > div {
                         display: flex;
@@ -162,7 +178,8 @@ $font-reg: 'BrownStd-Regular';
                             margin-bottom: 23px ;
                         }
                         @media only screen and (min-width: 320px) and (max-width: 575px) {
-                            margin-bottom: 53px;
+                            margin-bottom: 70px;
+                            // height: 1600px;
                         }
                     }
                 }
@@ -218,12 +235,23 @@ $font-reg: 'BrownStd-Regular';
                 & > form {
                     & > .flex-grid {
                         display: flex;
+                        flex-wrap: wrap;
+                        @media only screen and (min-width: 320px) and (max-width: 455px) {
+                            justify-content: center;
+                        }
                         & > .col-5-flex {
+                            @media only screen and (min-width: 320px) and (max-width: 455px) {
+                                margin-left: 10px;
+                            }
                             display: flex;
                             justify-content: center;
                             display: inline-block;
                             width: 100%;
                             margin-left: 48px;
+                            width: 180px;
+                            @media only screen and (min-width: 456px) and (max-width: 575px) {
+                                margin-left: 38px;
+                            }
                             & > input {
                                 background:  transparent;
                                 border:  none;
@@ -245,6 +273,9 @@ $font-reg: 'BrownStd-Regular';
                     & > div.btn-block {
                     padding-left: 47px;
                     margin-top: 15px;
+                    @media only screen and (min-width: 320px) and (max-width: 575px) {
+                        display: flex;
+                    }
                         & > .btn {
                             font-size: 12px;
                             background-color: $blue;
@@ -254,6 +285,10 @@ $font-reg: 'BrownStd-Regular';
                             width: 222px;
                             height: 40px;
                             padding-top: 12px;
+                            @media only screen and (min-width: 320px) and (max-width: 575px) {
+                                margin-left: auto;
+                                margin-right: auto;
+                            }
                         }
                     }
                     & > .text-block {
