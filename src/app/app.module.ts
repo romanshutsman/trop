@@ -4,6 +4,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
+import { SharedService } from './services/shared.service';
+
 import {MatButtonModule} from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
 import {MatSelectModule} from '@angular/material/select';
@@ -40,7 +42,7 @@ import { RegisterDriverComponent } from './pages/register-driver/register-driver
     MatInputModule,
     MatSelectModule
   ],
-  providers: [],
+  providers: [ SharedService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
