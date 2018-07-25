@@ -155,8 +155,9 @@ export class RegisterDriverComponent implements OnInit {
     dataDriver['phone'] = data.phone;
     dataDriver['provincia'] = data.provincia;
     const user = firebase.auth().currentUser;
-    const uid = user.uid;
-    if (uid) {
+    if (user) {
+      const uid = user.uid;
+      console.log(uid);
       firebase.database().ref('users/' + uid).update(dataDriver);
     }
   }
