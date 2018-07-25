@@ -18,23 +18,23 @@
               </li>
               <li class="nav-item ">
                 <button 
-                class="nav-link " 
+                class="nav-link active" 
                 (click)="valueProgressBar(66)" 
                 href="#buzz" 
                 role="tab" 
                 data-toggle="tab"
                 id="btn2"
-                [disabled]="registerDriver.valid">Paso 2. Datos bancarios</button>
+                [disabled]="!registerDriver.valid">Paso 2. Datos bancarios</button>
               </li>
               <li class="nav-item">
                 <button 
-                class="nav-link active" 
+                class="nav-link " 
                 (click)="valueProgressBar(100)" 
                 href="#references" 
                 role="tab" 
                 data-toggle="tab"
                 id="btn3"
-                [disabled]="registerDriver.valid">Paso 3. Adjuntar documentación </button>
+                [disabled]="!registerDriver.valid">Paso 3. Adjuntar documentación </button>
               </li>
             </ul>
             <div class="progress">
@@ -44,7 +44,7 @@
             </div>
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane fade " id="profile">
-                  <form [formGroup]="registerDriver"  (ngSubmit)="onSubmit()">
+                  <form [formGroup]="registerDriver"  (ngSubmit)="onSubmitDriver()">
                     <label for="name">Nombre y apellidos</label >
                     <input
                     id="name" 
@@ -94,8 +94,8 @@
                       <button class="btn driver" [disabled]="!registerDriver.valid" (click)="submit1()">Continuar</button>
                     </form>
               </div>
-              <div role="tabpanel" class="tab-pane fade " id="buzz">
-                <form [formGroup]="registerDetails"  (ngSubmit)="onSubmit()">
+              <div role="tabpanel" class="tab-pane fade show active" id="buzz">
+                <form [formGroup]="registerDetails"  (ngSubmit)="onSubmitDetails()">
                   <label for="cbu">
                     CBU del titular de la cuenta
                   </label>
@@ -144,8 +144,8 @@
                   <a class="btn" (click)="submit2()">Saltear</a>
                 </div>
               </div>
-              <div role="tabpanel" class="tab-pane fade show active" id="references">
-                <form [formGroup]="uploadImages" class="uploadImages" (ngSubmit)="onSubmit()">
+              <div role="tabpanel" class="tab-pane fade " id="references">
+                <form [formGroup]="uploadImages" class="uploadImages" (ngSubmit)="onSubmitImage()">
                   <div class="firstBlock">
                     <div class="personal">
                         <p>

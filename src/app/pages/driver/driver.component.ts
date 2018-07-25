@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators  } from '@angular/forms';
 import { RouterModule, Routes, Router } from '@angular/router';
 import { SharedService } from './../../services/shared.service';
-
+import { AuthService } from './../../services/auth/auth.service';
+import * as firebase from 'firebase';
 @Component({
   selector: 'app-driver',
   templateUrl: './driver.component.html',
@@ -40,7 +41,8 @@ export class DriverComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private service:   SharedService
+    private service:   SharedService,
+    private auth:   AuthService,
   ) { }
 
   ngOnInit() {
@@ -79,7 +81,7 @@ validationNumber(event: any) {
       clearInterval(refreshIntervalId);
     }, 5000);
 
-
+    this.auth.signUp(data.email, data.password);
     this.registerDriver.reset();
     this.router.navigateByUrl('/register-driver');
   }

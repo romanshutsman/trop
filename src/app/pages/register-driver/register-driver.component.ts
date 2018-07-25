@@ -3,6 +3,7 @@ import { FormArray, FormControl, FormGroup, Validators, FormBuilder  } from '@an
 import { RouterModule, Routes, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { SharedService } from './../../services/shared.service';
+import * as firebase from 'firebase';
 declare var $: any;
 
 @Component({
@@ -126,10 +127,41 @@ export class RegisterDriverComponent implements OnInit {
     const progress = document.getElementById('progress');
     progress.setAttribute('style', width);
   }
-  onSubmit() {
+  onSubmitDriver() {
     const data = this.registerDriver.value;
+    this.updateDriverProfile(data);
+    this.valueProgressBar(66);
+  }
+  onSubmitDetails() {
+    this.valueProgressBar(100);
+    const data = this.registerDetails.value;
+    const dataDetails = {};
+    dataDetails['bank'] = data.bank;
+    dataDetails['cbu'] = data.cbu;
+    dataDetails['cuil'] = data.cuil;
+    const user = firebase.auth().currentUser;
+    const uid = user.uid;
+    if (uid) {
+      firebase.database().ref('users/' + uid).update(dataDetails);
+    }
+  }
+  onSubmitImage() {
+
+  }
+  updateDriverProfile(data) {
+    const dataDriver = {};
+    dataDriver['email'] = data.email;
+    dataDriver['name'] = data.name;
+    dataDriver['phone'] = data.phone;
+    dataDriver['provincia'] = data.provincia;
+    const user = firebase.auth().currentUser;
+    const uid = user.uid;
+    if (uid) {
+      firebase.database().ref('users/' + uid).update(dataDriver);
+    }
   }
   fillform(data) {
+    this.updateDriverProfile(data);
     this.registerDriver.patchValue(data);
   }
   onAddPersonal(event) {

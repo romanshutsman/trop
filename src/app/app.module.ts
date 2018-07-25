@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
 import { SharedService } from './services/shared.service';
+import { AuthService } from './services/auth/auth.service';
 
 import {MatButtonModule} from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
@@ -44,7 +45,7 @@ import { OrdersForDriversComponent } from './pages/orders-for-drivers/orders-for
     MatInputModule,
     MatSelectModule
   ],
-  providers: [ SharedService ],
+  providers: [ SharedService, AuthService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
