@@ -16,6 +16,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './pages/footer/footer.component';
 import { DriverComponent } from './pages/driver/driver.component';
 import { RegisterDriverComponent } from './pages/register-driver/register-driver.component';
+import { OrdersForDriversComponent } from './pages/orders-for-drivers/orders-for-drivers.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { RegisterDriverComponent } from './pages/register-driver/register-driver
     HomeComponent,
     FooterComponent,
     DriverComponent,
-    RegisterDriverComponent
+    RegisterDriverComponent,
+    OrdersForDriversComponent
   ],
   imports: [
     BrowserModule,

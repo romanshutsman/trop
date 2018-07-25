@@ -12,9 +12,9 @@ declare var $: any;
 })
 export class RegisterDriverComponent implements OnInit {
   selected = '';
-  dataForm;
   registerDriver: FormGroup;
   registerDetails: FormGroup;
+  uploadImages: FormGroup;
   subscDriver: Subscription;
   provincia = [
     'Ciudad Autónoma de Buenos Aires',
@@ -42,29 +42,21 @@ export class RegisterDriverComponent implements OnInit {
     'Terra do Fogo',
     'Tucumán'
   ];
-name = '';
-phone = '';
-email = '';
-password = '';
   validCbu = false;
+  showHeader = true;
+  personal = [];
+  vehicle = [];
+  license = [];
+
   constructor(private service:   SharedService, private fb: FormBuilder) {
     this.validationFormDriver();
+    this.validationDetails();
+    this.validationImage();
   }
   
   ngOnInit() {
-    this.subscDriver = this.service.fillDriverForm.subscribe((data) => 
-    {
-      this.name = data['name'];
-      this.phone = data['phone'];
-      this.email = data['email'];
-      this.selected = data['provincia'];
-      this.password = data['password'];
-      console.log(data);
-      this.dataForm = data;
-      this.fillform(data);
-    }
-  );
-    this.validationDetails();
+    this.subscDriver = this.service.fillDriverForm.subscribe((data) => this.fillform(data));
+
   }
   validationFormDriver() {
     const nameFormat = '[a-zA-Z ]*';
@@ -90,13 +82,22 @@ password = '';
       'bank': new FormControl(null, [Validators.required, Validators.minLength(5), Validators.maxLength(50)])
     }, this.cbuRepeat);
   }
+  validationImage() {
+    this.personal = [];
+    this.vehicle = [];
+    this.license = [];
+    this.uploadImages = new FormGroup({
+      'personal': new FormControl(null),
+      'vehicle': new FormControl(null),
+      'license': new FormControl(null)
+    });
+  }
   cbuRepeat(g: FormGroup) {
     return g.get('cbu').value === g.get('repeatCbu').value
     ? null : {'mismatch': true};
 }
   validationNumber(event: any) {
     const pattern = /[0-9\+\ ]/;
-  
     let inputChar = String.fromCharCode(event.charCode);
     if (event.keyCode != 8 && !pattern.test(inputChar)) {
       event.preventDefault();
@@ -104,77 +105,82 @@ password = '';
   }
   validationCuilCbu(event: any) {
     const pattern = /[0-9\ ]/;
-  
     let inputChar = String.fromCharCode(event.charCode);
     if (event.keyCode != 8 && !pattern.test(inputChar)) {
       event.preventDefault();
     }
   }
-  submit1(){
+  submit1() {
     $('[href="#buzz"]').tab('show');
   }
-  submit2(){
+  submit2() {
     $('[href="#references"]').tab('show');
   }
   valueProgressBar(percent) {
+    if (percent == 100) {
+      this.showHeader = false;
+    } else {
+      this.showHeader = true;
+    }
     const width = 'width:' + percent + '%';
     const progress = document.getElementById('progress');
     progress.setAttribute('style', width);
-    console.log(this.registerDriver);
   }
   onSubmit() {
     const data = this.registerDriver.value;
-    console.log(data);
   }
   fillform(data) {
-    this.dataForm = data;
-    console.log(this.dataForm);
-    console.log(data);
-
-    const name = data['name'];
-    const phone = data['phone'];
-    const email = data['email'];
-    const provincias = data['provincia'];
-    const password = data['password'];
-    console.log(name);
-    console.log(phone);
-    console.log(email);
-    console.log(provincias);
-    console.log(password);
-
-    const nameFormat = '[a-zA-Z ]*';
-    const phoneFormat = '[0-9]';
-    // this.registerDriver = this.fb.group({
-    //   'name': new FormControl(name, [
-    //     Validators.required,
-    //     Validators.maxLength(50),
-    //     Validators.minLength(5),
-    //     Validators.pattern(nameFormat)
-    //     ]),
-    //   'email': new FormControl(email, [Validators.required, Validators.email]),
-    //   'phone': new FormControl(phone, [Validators.required, Validators.minLength(10), Validators.maxLength(13)]),
-    //   'provincia': new FormControl(provincias, [Validators.required ]),
-    //   'password': new FormControl(password, [Validators.required, Validators.minLength(8), Validators.maxLength(16)])
-    // });
-    // data = this.dataForm;
-    // console.log(data);
-
-
-    // this.registerDriver.controls['name'].setValue(data['name']);
-    // this.registerDriver.controls['phone'].setValue(data['phone']);
-    // this.registerDriver.controls['email'].setValue(data['email']);
-    // this.registerDriver.controls['provincia'].setValue(data['provincia']);
-    // this.registerDriver.controls['password'].setValue(data['password']);
     this.registerDriver.patchValue(data);
-    // console.log('hello');
-    console.log(this.registerDriver);
-    
   }
-  setValue() {
-    console.log(this.registerDriver);
-    console.log(this.dataForm);
-    console.log(this.name);
-    console.log(this.email);
-
+  onAddPersonal(event) {
+    const file = event.srcElement.files;
+    if (file[0]) {
+      if (file[0].size <= 2228571) {
+        if (event.target.files && event.target.files[0]) {
+          const reader = new FileReader();
+          reader.onload = (e: any) => {
+            const url = e.target.result;
+            this.personal.push({url: url});
+          };
+          reader.readAsDataURL(event.target.files[0]);
+        }
+      } else {
+        alert('File size must be less than 2MB.');
+      }
+    }
+  }
+  onAddVehicle(event) {
+    const file = event.srcElement.files;
+    if (file[0]) {
+      if (file[0].size <= 2228571) {
+        if (event.target.files && event.target.files[0]) {
+          const reader = new FileReader();
+          reader.onload = (e: any) => {
+            const url = e.target.result;
+            this.vehicle.push({url: url});
+          };
+          reader.readAsDataURL(event.target.files[0]);
+        }
+      } else {
+        alert('File size must be less than 2MB.');
+      }
+    }
+  }
+  onAddLicense(event) {
+    const file = event.srcElement.files;
+    if (file[0]) {
+      if (file[0].size <= 2228571) {
+        if (event.target.files && event.target.files[0]) {
+          const reader = new FileReader();
+          reader.onload = (e: any) => {
+            const url = e.target.result;
+            this.license.push({url: url});
+          };
+          reader.readAsDataURL(event.target.files[0]);
+        }
+      } else {
+        alert('File size must be less than 2MB.');
+      }
+    }
   }
 }

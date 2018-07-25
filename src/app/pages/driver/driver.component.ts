@@ -72,16 +72,19 @@ validationNumber(event: any) {
 }
   onSubmit() {
     const data = this.registerDriver.value;
-    // this.service.transferDataDriverForm(data);
     const refreshIntervalId = setInterval(() => {
       this.service.fillDriverForm.next(data);
     }, 1000);
     setTimeout(() => {
       clearInterval(refreshIntervalId);
     }, 5000);
-    console.log(data);
+
 
     this.registerDriver.reset();
     this.router.navigateByUrl('/register-driver');
+  }
+  goToRegister() {
+    const elem = document.getElementById('anchor');
+    elem.scrollIntoView({ behavior: 'smooth' });
   }
 }

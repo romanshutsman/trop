@@ -17,11 +17,16 @@ $bg: #efeef4;
 
 $font-bold: 'BrownStd-Bold';
 $font-reg: 'BrownStd-Regular';
-
+input[type="file"] {
+    display: none;
+}
 .container-fluid {
     background-color: $bg;
     width: 100%;
     min-height: calc(100vh - 55px);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: 100%;
     & > .container {
         & > .row {
             & > .col-12 {
@@ -29,11 +34,12 @@ $font-reg: 'BrownStd-Regular';
                 justify-content: center;
                 & > .card {
                     width: 800px;
-                    height: 710px;
+                    min-height: 710px;
+                    // height: 100%;
                     border-radius: 4px;
                     background-color: $white;
                     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
-                    margin-top: 52px;
+                    // margin-top: 52px;
                     .input {
                         font-family: $font-reg;
                         font-size: 24px;
@@ -41,6 +47,12 @@ $font-reg: 'BrownStd-Regular';
                         color: $black;
                         margin-top: 36px;
                         margin-bottom: 42px;
+                        @media only screen and (min-width: 320px) and (max-width: 576px) {
+                            margin-bottom: 15px;
+                        }
+                        @media only screen and (min-width: 320px) and (max-width: 432px) {
+                            font-size: 17px;
+                        }
                     }
                     & > ul {
                         display: flex;
@@ -124,6 +136,9 @@ $font-reg: 'BrownStd-Regular';
                                 & > .btn.driver {
                                     margin-top: 18px;
                                 }
+                                & > .btn.subir {
+                                    margin-top: 0px;
+                                }
                             }
                             & > .skip {
                                 display: flex;
@@ -137,6 +152,92 @@ $font-reg: 'BrownStd-Regular';
                                     margin-right: auto;
                                     margin-top: 28px;
                                 }
+                                & > .btn.img {
+                                    margin-top: 11px;
+                                }
+                            }
+                            & > .uploadImages {
+                                & > .firstBlock:first-child {
+                                    margin-top: 20px;
+                                }
+                                & > .firstBlock {
+                                    display: flex;
+                                    flex-direction: column;
+                                    margin-left: 71px;
+                                    margin-bottom: 35px;
+                                    @media only screen and (min-width: 320px) and (max-width: 576px) {
+                                        margin-left: 35px;
+                                        margin-right: 35px;
+                                    }
+                                    & > .personal {
+                                        display: flex;
+                                        margin-bottom: 10px;
+                                        & > p {
+                                            font-size: 12px;
+                                            color: $black;
+                                            font-family: $font-bold;
+                                            height: 100%;
+                                            width: 230px;
+                                            padding-top: 5px;
+                                        }
+                                        & > .custom-file-upload {
+                                            width: 84px;
+                                            height: 26px;
+                                            border-radius: 6px;
+                                            background-color: #0f7edf;
+                                            text-transform: uppercase;
+                                            color: $white;
+                                            font-size: 9px;
+                                            text-align: center;
+                                            padding-top: 7px;
+                                            cursor: pointer;
+                                            font-family: $font-reg;
+                                            @media only screen and (min-width: 320px) and (max-width: 372px) {
+                                                width: 97px;
+                                                height: 36px;
+                                            }
+                                            @media only screen and (min-width: 373px) and (max-width: 576px) {
+                                                width: 100px;
+                                            }
+                                        }
+                                    }
+                                    & > .personal_img {
+                                        @media only screen and (min-width: 320px) and (max-width: 576px) {
+                                            display:  flex;
+                                            justify-content:  center;
+                                            flex-direction:  column;
+                                            margin-left:  auto;
+                                            margin-right:  auto;
+                                        }
+                                        & > label {
+                                            @media only screen and (min-width: 320px) and (max-width: 576px) {
+                                                margin-bottom: 10px;
+                                            }
+                                            & > .img {
+                                                display: flex;
+                                                // flex-direction: row;
+                                                @media only screen and (min-width: 320px) and (max-width: 576px) {
+                                                    flex-direction: column;
+                                                    margin-bottom: 12px;
+                                                }
+                                                & > div {
+                                                    margin-right: 12px;
+                                                    width: 153px;
+                                                    height: 115px;
+                                                    & > img {
+                                                        width: 100%;
+                                                        max-width: 153px;
+                                                        max-height: 115px;
+                                                    }
+                                                }
+                                            }
+                                            & > img {
+                                                border-radius: 4px;
+                                                margin-right: 12px;
+                                            }
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -147,4 +248,14 @@ $font-reg: 'BrownStd-Regular';
 }
 .err {
     color: red;
+}
+
+.longCard {
+    min-height: 865px;
+    height: 100%;
+}
+label.custom-file-upload.disabled{
+    background-color: #69a2d4 !important;
+    color: #dad5d5 !important;
+    cursor:not-allowed !important;
 }

@@ -1,8 +1,16 @@
 <div class="container-fluid">
   <nav class="navbar navbar-expand-lg navbar-light ">
-    <a class="navbar-brand" href="#">
-      <img src="./../../../assets/images/LOGO_truck.svg" alt="">
+    <a 
+    class="navbar-brand" 
+    routerLink="/" 
+    *ngIf="router.url === '/' 
+    || this.router.url === '/driver'
+    || this.router.url === '/orders-for-drivers'">
+      <img src="./../../../assets/images/LOGO_truck.svg" alt="logo">
       <span>Trop</span>
+    </a>
+    <a class="navbar-brand" routerLink="/driver" *ngIf="router.url === '/register-driver'">
+      <img src="./../../../assets/images/Trop_user/Logo/Full+arrow.png" alt="logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -10,15 +18,15 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/driver" >Soy transportista</a>
+          <a class="nav-link" routerLink="/driver" *ngIf="router.url === '/'">Soy transportista</a>
         </li>
         <li class="nav-item">
-          <a class="btn nav-link ingresar" >Ingresar</a>
+          <a class="btn nav-link ingresar" *ngIf="router.url === '/'">Ingresar</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="router.url === '/driver'">
           <a class="nav-link" routerLink="/" >Home</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="this.router.url === '/driver'">
           <a class="btn nav-link ingresar" >Iniciar sesión</a>
         </li>
       </ul>

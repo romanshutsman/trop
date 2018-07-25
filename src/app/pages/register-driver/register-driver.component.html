@@ -2,17 +2,39 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="card">
-            <p class="input">Please, input fields</p>
+        <div class="card" [class.longCard]="!showHeader">
+            <p class="input" *ngIf="showHeader">Please, input fields</p>
+            <p class="input" *ngIf="!showHeader">Please, attach your documents</p>
             <ul class="nav nav-tabs" role="tablist">
               <li class="nav-item">
-                <button class="nav-link active" (click)="valueProgressBar(33); setValue()" href="#profile" role="tab" data-toggle="tab">Paso 1. Datos personales</button>
+                <button 
+                class="nav-link " 
+                (click)="valueProgressBar(33)" 
+                href="#profile" 
+                role="tab" 
+                data-toggle="tab"
+                id="btn1"
+                >Paso 1. Datos personales</button>
+              </li>
+              <li class="nav-item ">
+                <button 
+                class="nav-link " 
+                (click)="valueProgressBar(66)" 
+                href="#buzz" 
+                role="tab" 
+                data-toggle="tab"
+                id="btn2"
+                [disabled]="registerDriver.valid">Paso 2. Datos bancarios</button>
               </li>
               <li class="nav-item">
-                <button class="nav-link " (click)="valueProgressBar(66)" href="#buzz" role="tab" data-toggle="tab">Paso 2. Datos bancarios</button>
-              </li>
-              <li class="nav-item">
-                <button class="nav-link" (click)="valueProgressBar(100)" href="#references" role="tab" data-toggle="tab">Paso 3. Adjuntar documentación </button>
+                <button 
+                class="nav-link active" 
+                (click)="valueProgressBar(100)" 
+                href="#references" 
+                role="tab" 
+                data-toggle="tab"
+                id="btn3"
+                [disabled]="registerDriver.valid">Paso 3. Adjuntar documentación </button>
               </li>
             </ul>
             <div class="progress">
@@ -21,12 +43,11 @@
               </div>
             </div>
             <div class="tab-content">
-              <div role="tabpanel" class="tab-pane fade show active" id="profile">
-                  <form [formGroup]="registerDriver" (ngSubmit)="onSubmit()">
+              <div role="tabpanel" class="tab-pane fade " id="profile">
+                  <form [formGroup]="registerDriver"  (ngSubmit)="onSubmit()">
                     <label for="name">Nombre y apellidos</label >
                     <input
                     id="name" 
-                    [ngModel]="name"
                     type="text" 
                     class="form-control" 
                     formControlName="name" 
@@ -37,7 +58,6 @@
                     <input 
                     id="phone"
                     type="text"
-                    [ngModel]="phone"
                     (keypress)="validationNumber($event)" 
                     class="form-control " 
                     formControlName="phone" 
@@ -48,7 +68,6 @@
                     <input 
                     id="email"
                     type="email" 
-                    [ngModel]="email"
                     class="form-control " 
                     formControlName="email" 
                     placeholder="Escribe tu email..."
@@ -66,7 +85,6 @@
                       <label for="pswd">Contraseña</label>
                       <input 
                       id="pswd"
-                      [ngModel]="password"
                       type="password" 
                       formControlName="password" 
                       class="form-control " 
@@ -75,12 +93,9 @@
                       >
                       <button class="btn driver" [disabled]="!registerDriver.valid" (click)="submit1()">Continuar</button>
                     </form>
-                    <div class="skip center-block">
-                      <a class="btn" (click)="submit1()">Saltear</a>
-                    </div>
               </div>
               <div role="tabpanel" class="tab-pane fade " id="buzz">
-                <form [formGroup]="registerDetails" (ngSubmit)="onSubmit()">
+                <form [formGroup]="registerDetails"  (ngSubmit)="onSubmit()">
                   <label for="cbu">
                     CBU del titular de la cuenta
                   </label>
@@ -129,7 +144,116 @@
                   <a class="btn" (click)="submit2()">Saltear</a>
                 </div>
               </div>
-              <div role="tabpanel" class="tab-pane fade" id="references">ccc</div>
+              <div role="tabpanel" class="tab-pane fade show active" id="references">
+                <form [formGroup]="uploadImages" class="uploadImages" (ngSubmit)="onSubmit()">
+                  <div class="firstBlock">
+                    <div class="personal">
+                        <p>
+                          Imagen para tu perfil personal
+                        </p>
+                        <label for="personal" *ngIf="personal.length === 0" class="custom-file-upload" >
+                          Elegir archivo
+                        </label>
+                        <label *ngIf="personal.length === 1"  class="custom-file-upload disabled" >
+                          Elegir archivo
+                        </label>
+                        <input 
+                        class="form-control" 
+                        formControlName="personal" 
+                        type="file" 
+                        accept="image/*"
+                        (change)="onAddPersonal($event)" 
+                        id="personal" >
+                    </div>
+                    <div class="personal_img">
+                      <label for="personal">
+                        <img src="./../../../assets/images/Block.svg" alt="add photo" *ngIf="personal.length === 0">
+                      </label>
+                      <label >
+                        <div class="img"  *ngIf="personal.length === 1 ">
+                          <div *ngFor="let img of personal">
+                            <img [src]="img.url" alt="image">
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="firstBlock vehicle">
+                    <div class="personal">
+                        <p>
+                          Comprobante de Seguro del vehículo
+                        </p>
+                        <label for="vehicle" *ngIf="vehicle.length === 0 ||  vehicle.length === 1" class="custom-file-upload" >
+                          Elegir archivo
+                        </label>
+                        <label *ngIf="vehicle.length === 2"  class="custom-file-upload disabled" >
+                          Elegir archivo
+                        </label>
+                        <input 
+                        class="form-control" 
+                        formControlName="vehicle" 
+                        type="file" 
+                        accept="image/*"
+                        (change)="onAddVehicle($event)" 
+                        id="vehicle" >
+                    </div>
+                    <div class="personal_img">
+                      <label >
+                        <div class="img"  *ngIf="vehicle.length === 1  || vehicle.length === 2">
+                          <div *ngFor="let img of vehicle">
+                            <img [src]="img.url" alt="image">
+                          </div>
+                        </div>
+                      </label>
+                      <label for="vehicle">
+                        <img src="./../../../assets/images/Block.svg" alt="add photo" *ngIf="vehicle.length === 0">
+                      </label>
+                      <label for="vehicle">
+                        <img src="./../../../assets/images/Block.svg" alt="add photo" *ngIf="vehicle.length === 1 || vehicle.length === 0">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="firstBlock license">
+                    <div class="personal">
+                        <p>
+                          Licencia de conducir
+                        </p>
+                        <label for="license" *ngIf="license.length === 0 ||  license.length === 1" class="custom-file-upload" >
+                          Elegir archivo
+                        </label>
+                        <label *ngIf="license.length === 2"  class="custom-file-upload disabled" >
+                          Elegir archivo
+                        </label>
+                        <input 
+                        class="form-control" 
+                        formControlName="license" 
+                        type="file" 
+                        accept="image/*"
+                        (change)="onAddLicense($event)" 
+                        id="license" >
+                    </div>
+                    <div class="personal_img">
+                      <label >
+                        <div class="img"  *ngIf="license.length === 1  || license.length === 2">
+                          <div *ngFor="let img of license">
+                            <img [src]="img.url" alt="image">
+                          </div>
+                        </div>
+                      </label>
+                      <label for="license">
+                        <img src="./../../../assets/images/Block.svg" alt="add photo" *ngIf="license.length === 0">
+                      </label>
+                      <label for="license">
+                        <img src="./../../../assets/images/Block.svg" alt="add photo" *ngIf="license.length === 1 || license.length === 0">
+                      </label>
+                    </div>
+                  </div>
+                  <button class="btn subir" [disabled]="!uploadImages.valid" routerLink="/orders-for-drivers">Subir</button>
+                </form>
+                <div class="skip center-block">
+                  <a class="btn img" routerLink="/orders-for-drivers">Saltear</a>
+                </div>
+              </div>
             </div>
         </div>
       </div>

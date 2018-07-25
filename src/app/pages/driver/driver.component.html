@@ -8,7 +8,7 @@
               <p>¿Eres transportista autónomo? Trop consigue nuevos clientes para tí.<br> Apúntate ahora para aumentar tu volumen de trabajo y tus ingresos.</p>
             </div>
             <div>
-              <a class="btn register">Quiero trabajar con Trop</a>
+              <a class="btn register " (click)="goToRegister()">Quiero trabajar con Trop</a>
             </div>
           </div>
         </div>
@@ -77,7 +77,7 @@
             </div>
         </div>
         <div class="row">
-          <form [formGroup]="registerDriver" (ngSubmit)="onSubmit()">
+          <form [formGroup]="registerDriver" (ngSubmit)="onSubmit()" id="anchor">
             <div class="flex-grid">
               <div class="col-5-flex">
                   <p>Nombre y apellidos</p>
