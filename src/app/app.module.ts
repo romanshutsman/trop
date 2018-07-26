@@ -6,6 +6,7 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 
 import { SharedService } from './services/shared.service';
 import { AuthService } from './services/auth/auth.service';
+import { AuthGuardService } from './services/auth/auth-guard.service';
 
 import {MatButtonModule} from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
@@ -45,7 +46,7 @@ import { OrdersForDriversComponent } from './pages/orders-for-drivers/orders-for
     MatInputModule,
     MatSelectModule
   ],
-  providers: [ SharedService, AuthService ],
+  providers: [ SharedService, AuthService, AuthGuardService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

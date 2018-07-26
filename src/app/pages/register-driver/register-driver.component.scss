@@ -17,7 +17,7 @@ $bg: #efeef4;
 
 $font-bold: 'BrownStd-Bold';
 $font-reg: 'BrownStd-Regular';
-input[type="file"] {
+input[type="file"], input[type="checkbox"] {
     display: none;
 }
 .container-fluid {
@@ -108,6 +108,7 @@ input[type="file"] {
                                     margin-bottom: 20px;
                                     &:focus {
                                         box-shadow: unset;
+                                        outline: none;
                                     }
                                 }
                                 & > .select {
@@ -116,6 +117,58 @@ input[type="file"] {
                                     & > .material-select {
                                         max-width: 300px;
                                         width: 100%;
+                                    }
+                                }
+                                & > .checkboxes {
+                                    width: 300px;
+                                    margin-left: auto;
+                                    margin-right: auto;
+                                    & > p {
+                                        text-align: center;
+                                        color: #393939;
+                                        font-size: 12px;
+                                        font-family: "BrownStd-Regular";
+                                        margin-bottom: 3px;
+                                    }
+                                    & > label{
+                                        height: 33px;
+                                        border-radius: 2px;
+                                        border: solid 1px #979797;
+                                        padding: 7px 12px 7px;
+                                        font-size: 14px;
+                                        color: rgba(82, 82, 82, 0.65);
+                                        font-family: $font-reg;
+                                        margin-right: 7px;
+                                        margin-bottom: 10px;
+                                        &::first-letter {
+                                            text-transform: capitalize;
+                                        }
+                                    }
+                                    & > #automotores:checked + label,
+                                    #mudanza:checked + label,
+                                    #maquinaria:checked + label,
+                                    #objetos:checked + label,
+                                    #mascotas:checked + label,
+                                    #motocicleta:checked + label,
+                                    #muebles:checked + label,
+                                    #otros:checked + label {
+                                        border: solid 1px #0f7edf;
+                                        color: $black;
+                                        color: rgba(23, 23, 23, 1);
+                                    }
+                                    input {
+                                        max-width: 300px;
+                                        width: 100%;
+                                        margin-left: auto;
+                                        margin-right: auto;
+                                        border: unset;  
+                                        border-radius: unset;
+                                        border-bottom: 1px $black solid;
+                                        margin-bottom: 20px;
+                                        &:focus {
+                                            box-shadow: unset;
+                                            outline: none;
+                                        }
                                     }
                                 }
                                 & > .btn {
@@ -247,12 +300,13 @@ input[type="file"] {
     }
 }
 .err {
-    color: red;
+    color: red !important;
 }
 
 .longCard {
     min-height: 865px;
     height: 100%;
+    padding-bottom: 30px;
 }
 label.custom-file-upload.disabled{
     background-color: #69a2d4 !important;

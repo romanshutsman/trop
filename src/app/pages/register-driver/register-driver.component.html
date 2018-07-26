@@ -8,7 +8,7 @@
             <ul class="nav nav-tabs" role="tablist">
               <li class="nav-item">
                 <button 
-                class="nav-link " 
+                class="nav-link active" 
                 (click)="valueProgressBar(33)" 
                 href="#profile" 
                 role="tab" 
@@ -18,7 +18,7 @@
               </li>
               <li class="nav-item ">
                 <button 
-                class="nav-link active" 
+                class="nav-link " 
                 (click)="valueProgressBar(66)" 
                 href="#buzz" 
                 role="tab" 
@@ -43,7 +43,7 @@
               </div>
             </div>
             <div class="tab-content">
-              <div role="tabpanel" class="tab-pane fade " id="profile">
+              <div role="tabpanel" class="tab-pane fade   show active" id="profile">
                   <form [formGroup]="registerDriver"  (ngSubmit)="onSubmitDriver()">
                     <label for="name">Nombre y apellidos</label >
                     <input
@@ -63,6 +63,16 @@
                     formControlName="phone" 
                     placeholder="Escribe tu teléfono..."
                     [class.err]="registerDriver.controls['phone'].errors && registerDriver.controls['phone'].touched">
+
+                    <label for="alternateNumber">Número alternativo</label>
+                    <input 
+                    id="alternateNumber"
+                    type="text"
+                    (keypress)="validationNumber($event)" 
+                    class="form-control " 
+                    formControlName="alternateNumber" 
+                    placeholder="Escribe tu teléfono..."
+                    [class.err]="registerDriver.controls['alternateNumber'].errors && registerDriver.controls['alternateNumber'].touched">
 
                     <label for="email">Email</label>
                     <input 
@@ -91,7 +101,7 @@
                       placeholder="Confirmar constraseña"
                       [class.err]="registerDriver.controls['password'].errors && registerDriver.controls['password'].touched"
                       >
-                      <!-- <label for="description">
+                      <label for="description">
                         Escriba su mensaje aquí
                       </label>
                       <input 
@@ -99,21 +109,29 @@
                       class="form-control" 
                       type="text" 
                       formControlName="description"
-                      [class.err]="registerDriver.controls['description'].errors && registerDriver.controls['description'].touched"> -->
-                      <!-- <div formControlName="services"> 
-                        <div *ngFor="let service of services" >
-                          <label for="{{service}}" class="{{service}}">{{service}}</label>
+                      [class.err]="registerDriver.controls['description'].errors && registerDriver.controls['description'].touched">
+                      <div class="checkboxes">
+                        <p class="services" [class.err]="registerDriver.errors">Extra services</p>
+                        <ng-container *ngFor="let service of services" >
                           <input 
-                          type="radio" 
+                          type="checkbox" 
                           class="form-control"
                           id="{{service}}"
                           formControlName="{{service}}">
-                        </div>
-                      </div> -->
+                          <label for="{{service}}" class="{{service}}" >{{service}}</label>
+                        </ng-container>
+                        <input
+                        *ngIf="registerDriver.controls['otros'].value"
+                        type="text" 
+                        class="form-control"
+                        placeholder="Input what are you mean"
+                        formControlName="otrosText"
+                        [class.err]="registerDriver.controls['otrosText'].errors && registerDriver.controls['otrosText'].touched">
+                      </div>
                       <button class="btn driver" [disabled]="!registerDriver.valid" (click)="submit1()">Continuar</button>
                     </form>
               </div>
-              <div role="tabpanel" class="tab-pane fade show active" id="buzz">
+              <div role="tabpanel" class="tab-pane fade" id="buzz">
                 <form [formGroup]="registerDetails"  (ngSubmit)="onSubmitDetails()">
                   <label for="cbu">
                     CBU del titular de la cuenta

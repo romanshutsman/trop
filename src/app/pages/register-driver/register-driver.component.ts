@@ -48,19 +48,15 @@ export class RegisterDriverComponent implements OnInit {
   personal = [];
   vehicle = [];
   license = [];
-  services = [];
+  services = ['automotores', 'mudanza', 'maquinaria', 'objetos', 'mascotas', 'motocicleta', 'muebles', 'otros'];
   constructor(private service:   SharedService, private fb: FormBuilder) {
     this.validationFormDriver();
     this.validationDetails();
     this.validationImage();
-    // this.services = Object.keys(this.registerDriver.controls['services']['controls']);
   }
   
   ngOnInit() {
     this.subscDriver = this.service.fillDriverForm.subscribe((data) => this.fillform(data));
-    console.log(this.registerDriver.controls['services']);
-    
-    // console.log(this.services);
   }
   validationFormDriver() {
     const nameFormat = '[a-zA-Z ]*';
@@ -74,20 +70,31 @@ export class RegisterDriverComponent implements OnInit {
         ]),
       'email': new FormControl(null, [Validators.required, Validators.email]),
       'phone': new FormControl(null, [Validators.required, Validators.minLength(10), Validators.maxLength(13)]),
+      'alternateNumber': new FormControl(null, [Validators.required, Validators.minLength(10), Validators.maxLength(13)]),
       'provincia': new FormControl(null, [Validators.required ]),
-      'password': new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(16)])
-      // 'description': new FormControl(null, [Validators.required, Validators.minLength(5), Validators.maxLength(1000)])
-      // 'services': this.fb.group({
-      //   'automotores': new FormControl(null),
-      //   'mudanza': new FormControl(null),
-      //   'maquinaria': new FormControl(null),
-      //   'objetos': new FormControl(null),
-      //   'mascotas': new FormControl(null),
-      //   'motocicleta': new FormControl(null),
-      //   'muebles': new FormControl(null),
-      //   'otros': new FormControl(null)
-      // }, Validators.required)
-    });
+      'password': new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(16)]),
+      'description': new FormControl(null, [Validators.required, Validators.minLength(5), Validators.maxLength(1000)]),
+      'automotores': new FormControl(false),
+      'mudanza': new FormControl(false),
+      'maquinaria': new FormControl(false),
+      'objetos': new FormControl(false),
+      'mascotas': new FormControl(false),
+      'motocicleta': new FormControl(false),
+      'muebles': new FormControl(false),
+      'otros': new FormControl(false),
+      'otrosText': new FormControl(null, [Validators.minLength(2), Validators.maxLength(100)])
+    }, this.validationCheckbox);
+  }
+  validationCheckbox(g: FormGroup) {
+    return g.get('automotores').value
+    || g.get('mudanza').value
+    || g.get('maquinaria').value
+    || g.get('objetos').value
+    || g.get('mascotas').value
+    || g.get('motocicleta').value
+    || g.get('muebles').value
+    || (g.get('otros').value && g.get('otrosText').value)
+    ? null : {'mismatch': true};
   }
   validationDetails() {
     this.registerDetails = new FormGroup({
@@ -110,7 +117,7 @@ export class RegisterDriverComponent implements OnInit {
   cbuRepeat(g: FormGroup) {
     return g.get('cbu').value === g.get('repeatCbu').value
     ? null : {'mismatch': true};
-}
+  }
   validationNumber(event: any) {
     const pattern = /[0-9\+\ ]/;
     let inputChar = String.fromCharCode(event.charCode);
@@ -143,6 +150,7 @@ export class RegisterDriverComponent implements OnInit {
   }
   onSubmitDriver() {
     const data = this.registerDriver.value;
+    console.log(data);
     this.updateDriverProfile(data);
     this.valueProgressBar(66);
   }
@@ -175,7 +183,7 @@ export class RegisterDriverComponent implements OnInit {
     let photoURL = [];
     this.personal.forEach((img, i) => {
       const namePhoto = this.getnameOfImages();
-      const ref = firebase.storage().ref().child('personal/' + namePhoto).put(img.file);
+      const ref = firebase.storage().ref().child(uid + '/personal/' + namePhoto).put(img.file);
       ref.on('state_changed', () => {
       }, (error) => {
       }, () => {
@@ -194,7 +202,7 @@ export class RegisterDriverComponent implements OnInit {
     let photoURL = [];
     this.vehicle.forEach((img, i) => {
       const namePhoto = this.getnameOfImages();
-      const ref = firebase.storage().ref().child('vehicle/' + namePhoto).put(img.file);
+      const ref = firebase.storage().ref().child(uid +  '/vehicle/' + namePhoto).put(img.file);
       ref.on('state_changed', () => {
       }, (error) => {
       }, () => {
@@ -216,7 +224,7 @@ export class RegisterDriverComponent implements OnInit {
     let photoURL = [];
     this.license.forEach((img, i) => {
       const namePhoto = this.getnameOfImages();
-      const ref = firebase.storage().ref().child('license/' + namePhoto).put(img.file);
+      const ref = firebase.storage().ref().child(uid +  '/license/' + namePhoto).put(img.file);
       ref.on('state_changed', () => {
       }, (error) => {
       }, () => {
@@ -251,6 +259,33 @@ export class RegisterDriverComponent implements OnInit {
     dataDriver['name'] = data.name;
     dataDriver['phone'] = data.phone;
     dataDriver['provincia'] = data.provincia;
+    if (data.alternateNumber) {
+      dataDriver['alternateNumber'] = data.alternateNumber;
+    }
+    if (data.description) {
+      dataDriver['description'] = data.description;
+    }
+    if (data.automotores
+    || data.mudanza
+    || data.maquinaria
+    || data.objetos
+    || data.mascotas
+    || data.motocicleta
+    || data.muebles
+    || data.otros) {
+      dataDriver['services'] = {};
+      dataDriver['services']['automotores'] = data.automotores;
+      dataDriver['services']['mudanza'] = data.mudanza;
+      dataDriver['services']['maquinaria'] = data.maquinaria;
+      dataDriver['services']['objetos'] = data.objetos;
+      dataDriver['services']['mascotas'] = data.mascotas;
+      dataDriver['services']['motocicleta'] = data.motocicleta;
+      dataDriver['services']['muebles'] = data.muebles;
+      dataDriver['services']['otros'] = data.otros;
+    }
+    if (data.otrosText) {
+      dataDriver['otrosText'] = data.otrosText;
+    }
     const user = firebase.auth().currentUser;
     if (user) {
       const uid = user.uid;
@@ -275,7 +310,7 @@ export class RegisterDriverComponent implements OnInit {
           reader.readAsDataURL(event.target.files[0]);
         }
       } else {
-        alert('File size must be less than 2MB.');
+        alert('File size must be less than 10MB.');
       }
     }
   }
@@ -292,7 +327,7 @@ export class RegisterDriverComponent implements OnInit {
           reader.readAsDataURL(event.target.files[0]);
         }
       } else {
-        alert('File size must be less than 2MB.');
+        alert('File size must be less than 10MB.');
       }
     }
   }
@@ -309,7 +344,7 @@ export class RegisterDriverComponent implements OnInit {
           reader.readAsDataURL(event.target.files[0]);
         }
       } else {
-        alert('File size must be less than 2MB.');
+        alert('File size must be less than 10MB.');
       }
     }
   }

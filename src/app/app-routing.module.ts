@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, CanActivate  } from '@angular/router';
+
+import { AuthGuardService as AuthGuard } from './services/auth/auth-guard.service';
 
 import { MenuComponent } from './pages/menu/menu.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -11,8 +13,8 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
   {path: 'driver', component: DriverComponent},
-  {path: 'register-driver', component: RegisterDriverComponent},
-  {path: 'orders-for-drivers', component: OrdersForDriversComponent},
+  {path: 'register-driver', component: RegisterDriverComponent, canActivate: [AuthGuard]},
+  {path: 'orders-for-drivers', component: OrdersForDriversComponent, canActivate: [AuthGuard]},
   {path: '**', component: HomeComponent}
   ];
 

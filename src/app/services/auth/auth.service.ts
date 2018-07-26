@@ -10,7 +10,19 @@ export class AuthService {
   signUp(email, password) {
     firebase.auth().createUserWithEmailAndPassword(email, password).then((data) => {
       console.log(data);
-      console.log(data.uid);
+      firebase.auth().currentUser.getToken()
+      .then((token) => {
+        localStorage.setItem('token', token);
+      });
     });
+  }
+  isAuthenticated() {
+    const token = localStorage.getItem('token');
+    console.log(token);
+    if (token) {
+      return true;
+    } else {
+      return false;
+    }
   }
 }
