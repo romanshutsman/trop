@@ -73,6 +73,7 @@ validationNumber(event: any) {
   }
 }
   onSubmit() {
+    this.auth.isAuthenticated();
     const data = this.registerDriver.value;
     const refreshIntervalId = setInterval(() => {
       this.service.fillDriverForm.next(data);
