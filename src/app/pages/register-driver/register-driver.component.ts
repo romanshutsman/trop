@@ -283,7 +283,7 @@ export class RegisterDriverComponent implements OnInit {
       dataDriver['services']['muebles'] = data.muebles;
       dataDriver['services']['otros'] = data.otros;
     }
-    if (data.otrosText) {
+    if (data.otros && data.otrosText) {
       dataDriver['otrosText'] = data.otrosText;
     }
     const user = firebase.auth().currentUser;
