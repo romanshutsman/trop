@@ -16,7 +16,7 @@ export class AppComponent implements OnInit {
       authDomain: "trop-staging1.firebaseapp.com",
       databaseURL: "https://trop-staging1.firebaseio.com",
       projectId: "trop-staging1",
-      storageBucket: "",
+      storageBucket: "trop-staging1.appspot.com",
       messagingSenderId: "159737933531"
     };
 

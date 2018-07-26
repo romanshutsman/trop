@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12">
-        <div class="card" [class.longCard]="!showHeader">
+        <div class="card" [class.longCard]="true">
             <p class="input" *ngIf="showHeader">Please, input fields</p>
             <p class="input" *ngIf="!showHeader">Please, attach your documents</p>
             <ul class="nav nav-tabs" role="tablist">
@@ -91,6 +91,25 @@
                       placeholder="Confirmar constraseña"
                       [class.err]="registerDriver.controls['password'].errors && registerDriver.controls['password'].touched"
                       >
+                      <label for="description">
+                        Escriba su mensaje aquí
+                      </label>
+                      <input 
+                      id="description" 
+                      class="form-control" 
+                      type="text" 
+                      formControlName="description"
+                      [class.err]="registerDriver.controls['description'].errors && registerDriver.controls['description'].touched">
+                      <!-- <div formControlName="services"> 
+                        <div *ngFor="let service of services" >
+                          <label for="{{service}}" class="{{service}}">{{service}}</label>
+                          <input 
+                          type="radio" 
+                          class="form-control"
+                          id="{{service}}"
+                          formControlName="{{service}}">
+                        </div>
+                      </div> -->
                       <button class="btn driver" [disabled]="!registerDriver.valid" (click)="submit1()">Continuar</button>
                     </form>
               </div>
@@ -145,7 +164,7 @@
                 </div>
               </div>
               <div role="tabpanel" class="tab-pane fade " id="references">
-                <form [formGroup]="uploadImages" class="uploadImages" (ngSubmit)="onSubmitImage()">
+                <form [formGroup]="uploadImages" class="uploadImages">
                   <div class="firstBlock">
                     <div class="personal">
                         <p>
@@ -248,7 +267,8 @@
                       </label>
                     </div>
                   </div>
-                  <button class="btn subir" [disabled]="!uploadImages.valid" routerLink="/orders-for-drivers">Subir</button>
+                  <button type="button" class="btn subir" [disabled]="!uploadImages.valid" (click)="onSubmitImage()" routerLink="/orders-for-drivers">Subir</button>
+                  <!-- <button type="button" class="btn subir" [disabled]="!uploadImages.valid" (click)="onSubmitImage()" >Subir</button> -->
                 </form>
                 <div class="skip center-block">
                   <a class="btn img" routerLink="/orders-for-drivers">Saltear</a>
