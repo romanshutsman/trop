@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
   {path: 'driver', component: DriverComponent},
-  {path: 'register-driver', component: RegisterDriverComponent, canActivate: [AuthGuard]},
+  {path: 'register-driver', component: RegisterDriverComponent},
   {path: 'orders-for-drivers', component: OrdersForDriversComponent, canActivate: [AuthGuard]},
   {path: '**', component: HomeComponent}
   ];
