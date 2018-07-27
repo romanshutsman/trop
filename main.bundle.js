@@ -131,6 +131,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 
+	
+	
+	
+	
 
 
 
@@ -243,7 +247,7 @@ var HomeComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/pages/menu/menu.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"container-fluid\">\n  <nav class=\"navbar navbar-expand-lg navbar-light \">\n    <a class=\"navbar-brand\" href=\"#\">\n      <img src=\"./../../../assets/images/LOGO_truck.svg\" alt=\"\">\n      <span>Trop</span>\n    </a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n      <ul class=\"navbar-nav ml-auto\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" >Soy transportista</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"btn nav-link ingresar\" >Ingresar</a>\n        </li>\n      </ul>\n    </div>\n  </nav>\n</div>"
+module.exports = "<div class=\"container-fluid\">\n  <nav class=\"navbar navbar-expand-lg navbar-light \">\n    <a class=\"navbar-brand\" href=\"#\">\n      <img src=\"./assets/images/LOGO_truck.svg\" alt=\"\">\n      <span>Trop</span>\n    </a>\n    <button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">\n      <ul class=\"navbar-nav ml-auto\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" >Soy transportista</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"btn nav-link ingresar\" >Ingresar</a>\n        </li>\n      </ul>\n    </div>\n  </nav>\n</div>"
 
 /***/ }),
 
