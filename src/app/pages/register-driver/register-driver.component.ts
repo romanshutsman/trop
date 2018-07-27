@@ -164,7 +164,7 @@ export class RegisterDriverComponent implements OnInit {
     const user = firebase.auth().currentUser;
     const uid = user.uid;
     if (uid) {
-      firebase.database().ref('users/' + uid).update(dataDetails);
+      firebase.database().ref('drivers/' + uid).update(dataDetails);
     }
   }
   onSubmitImage() {
@@ -183,7 +183,7 @@ export class RegisterDriverComponent implements OnInit {
     let photoURL = [];
     this.personal.forEach((img, i) => {
       const namePhoto = this.getnameOfImages();
-      const ref = firebase.storage().ref().child(uid + '/personal/' + namePhoto).put(img.file);
+      const ref = firebase.storage().ref().child('drivers/' + uid + '/personal/' + namePhoto).put(img.file);
       ref.on('state_changed', () => {
       }, (error) => {
       }, () => {
@@ -192,7 +192,7 @@ export class RegisterDriverComponent implements OnInit {
         photoURL.push(downloadURL);
         const photo = {};
         photo[0] = photoURL[0];
-        firebase.database().ref('/users/' + uid + '/personal/').set(photo);
+        firebase.database().ref('/drivers/' + uid + '/personal/').set(photo);
       });
     });
     this.personal = [];
@@ -202,7 +202,7 @@ export class RegisterDriverComponent implements OnInit {
     let photoURL = [];
     this.vehicle.forEach((img, i) => {
       const namePhoto = this.getnameOfImages();
-      const ref = firebase.storage().ref().child(uid +  '/vehicle/' + namePhoto).put(img.file);
+      const ref = firebase.storage().ref().child('drivers/' + uid +  '/vehicle/' + namePhoto).put(img.file);
       ref.on('state_changed', () => {
       }, (error) => {
       }, () => {
@@ -214,7 +214,7 @@ export class RegisterDriverComponent implements OnInit {
         if (photoURL.length == 2) {
           photo[1] = photoURL[1];
         }
-        firebase.database().ref('/users/' + uid + '/vehicle/').set(photo);
+        firebase.database().ref('/drivers/' + uid + '/vehicle/').set(photo);
       });
     });
     this.vehicle = [];
@@ -224,7 +224,7 @@ export class RegisterDriverComponent implements OnInit {
     let photoURL = [];
     this.license.forEach((img, i) => {
       const namePhoto = this.getnameOfImages();
-      const ref = firebase.storage().ref().child(uid +  '/license/' + namePhoto).put(img.file);
+      const ref = firebase.storage().ref().child('drivers/' + uid +  '/license/' + namePhoto).put(img.file);
       ref.on('state_changed', () => {
       }, (error) => {
       }, () => {
@@ -236,7 +236,7 @@ export class RegisterDriverComponent implements OnInit {
         if (photoURL.length == 2) {
           photo[1] = photoURL[1];
         }
-        firebase.database().ref('/users/' + uid + '/license/').set(photo);
+        firebase.database().ref('/drivers/' + uid + '/license/').set(photo);
       });
     });
     this.license = [];
@@ -290,7 +290,7 @@ export class RegisterDriverComponent implements OnInit {
     if (user) {
       const uid = user.uid;
       console.log(uid);
-      firebase.database().ref('users/' + uid).update(dataDriver);
+      firebase.database().ref('drivers/' + uid).update(dataDriver);
     }
   }
   fillform(data) {
