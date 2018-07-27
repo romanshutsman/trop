@@ -1,0 +1,125 @@
+<div class="container-fluid">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="card" [class.longCard]="true">
+            <ul class="nav nav-tabs" role="tablist">
+              <li class="nav-item">
+                <button 
+                class="nav-link " 
+                href="#login" 
+                role="tab" 
+                data-toggle="tab"
+                id="btn1"
+                (click)="showLine(1)"
+                >Iniciar sesión</button>
+                <p *ngIf="!displayLine"></p>
+              </li>
+              <li class="nav-item ">
+                <button 
+                class="nav-link active " 
+                href="#register" 
+                role="tab" 
+                (click)="showLine(2)"
+                data-toggle="tab"
+                id="btn2">Registrate</button>
+                <p *ngIf="displayLine"></p>
+              </li>
+            </ul>
+            <div class="tab-content">
+              <div role="tabpanel" class="tab-pane fade " id="login">
+                  <div class="social ">
+                    <button class="btn facebook login"  >Continuar con FACEBOOK</button>
+                    <button class="btn gmail login"  >Continuar con GOOGLE</button>
+                  </div>
+                  <p class="orUse">o usa:</p>
+                  <form [formGroup]="loginUser"  (ngSubmit)="onSubmitLoginUser()">
+
+                    <label for="email1">Email</label>
+                    <input 
+                    id="email1"
+                    type="email" 
+                    class="form-control " 
+                    formControlName="email" 
+                    placeholder="Escribe tu email..."
+                    [class.err]="loginUser.controls['email'].errors && loginUser.controls['email'].touched">
+
+
+                    <label for="password2">Contraseña</label>
+                    <input 
+                    id="password2"
+                    type="password" 
+                    formControlName="password" 
+                    class="form-control " 
+                    placeholder="Confirmar constraseña"
+                    [class.err]="loginUser.controls['password'].errors && loginUser.controls['password'].touched"
+                    >
+
+
+                      <button class="btn login" [disabled]="!loginUser.valid" >Continuar con EMAIL</button>
+                  </form>
+                  <p><a class="forgot">Olvide contraseña</a></p>
+              </div>
+              <div role="tabpanel" class="tab-pane fade show active" id="register">
+                <form [formGroup]="registerUser"  (ngSubmit)="onSubmitReigsterUser()">
+                  <label for="name">Nombre</label >
+                  <input
+                  id="name" 
+                  type="text" 
+                  class="form-control" 
+                  formControlName="name" 
+                  [class.err]="registerUser.controls['name'].errors && registerUser.controls['name'].touched">
+
+                  <!-- <label for="phone">Número de teléfono</label>
+                  <input 
+                  id="phone"
+                  type="text"
+                  (keypress)="validationNumber($event)" 
+                  class="form-control " 
+                  formControlName="phone" 
+                  [class.err]="registerUser.controls['phone'].errors && registerUser.controls['phone'].touched"> -->
+
+
+                  <label for="email2">Email</label>
+                  <input 
+                  id="email2"
+                  type="email" 
+                  class="form-control " 
+                  formControlName="email" 
+                  [class.err]="registerUser.controls['email'].errors && registerUser.controls['email'].touched">
+
+
+                  <label for="password1">Contraseña</label>
+                  <input 
+                  id="password1"
+                  type="password" 
+                  formControlName="password" 
+                  class="form-control " 
+                  [class.err]="registerUser.controls['password'].errors && registerUser.controls['password'].touched"
+                  >
+
+                  <label for="repeatPassword">Confirmar constraseña</label>
+                  <input 
+                  id="repeatPassword"
+                  type="password" 
+                  formControlName="repeatPassword" 
+                  class="form-control " 
+                  [class.err]="registerUser.controls['repeatPassword'].errors && registerUser.controls['repeatPassword'].touched || registerUser.errors"
+                  >
+
+                  <button class="btn driver" [disabled]="!registerUser.valid" >Crear cuenta</button>
+                </form>
+                <div class="social">
+                  <button class="btn facebook"  >Registrate con FACEBOOK</button>
+                  <button class="btn gmail"  >Registrate con  GMAIL</button>
+                </div>
+                <p>
+                    Al registrarte o iniciar sesión, aceptas nuestros Términos y<br>Condiciones y la Política de Privacidad.
+                </p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

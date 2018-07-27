@@ -19,6 +19,8 @@ import { FooterComponent } from './pages/footer/footer.component';
 import { DriverComponent } from './pages/driver/driver.component';
 import { RegisterDriverComponent } from './pages/register-driver/register-driver.component';
 import { OrdersForDriversComponent } from './pages/orders-for-drivers/orders-for-drivers.component';
+import { RegisterUserComponent } from './pages/register-user/register-user.component';
+import { LoginDriverComponent } from './pages/login-driver/login-driver.component';
 
 
 @NgModule({
@@ -29,7 +31,9 @@ import { OrdersForDriversComponent } from './pages/orders-for-drivers/orders-for
     FooterComponent,
     DriverComponent,
     RegisterDriverComponent,
-    OrdersForDriversComponent
+    OrdersForDriversComponent,
+    RegisterUserComponent,
+    LoginDriverComponent
   ],
   imports: [
     BrowserModule,

@@ -8,12 +8,16 @@ import { HomeComponent } from './pages/home/home.component';
 import { DriverComponent } from './pages/driver/driver.component';
 import { RegisterDriverComponent } from './pages/register-driver/register-driver.component';
 import { OrdersForDriversComponent } from './pages/orders-for-drivers/orders-for-drivers.component';
+import { RegisterUserComponent } from './pages/register-user/register-user.component';
+import { LoginDriverComponent } from './pages/login-driver/login-driver.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
   {path: 'driver', component: DriverComponent},
   {path: 'register-driver', component: RegisterDriverComponent},
+  {path: 'login-driver', component: LoginDriverComponent},
+  {path: 'register-user', component: RegisterUserComponent},
   {path: 'orders-for-drivers', component: OrdersForDriversComponent, canActivate: [AuthGuard]},
   {path: '**', component: HomeComponent}
   ];

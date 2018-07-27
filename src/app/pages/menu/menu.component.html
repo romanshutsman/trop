@@ -9,7 +9,7 @@
       <img src="./../../../assets/images/LOGO_truck.svg" alt="logo">
       <span>Trop</span>
     </a>
-    <a class="navbar-brand" routerLink="/driver" *ngIf="router.url === '/register-driver'">
+    <a class="navbar-brand" (click)="backClicked()" *ngIf="router.url === '/register-driver' || router.url === '/register-user'">
       <img src="./../../../assets/images/Trop_user/Logo/Full+arrow.png" alt="logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -21,13 +21,13 @@
           <a class="nav-link" routerLink="/driver" *ngIf="router.url === '/'">Soy transportista</a>
         </li>
         <li class="nav-item">
-          <a class="btn nav-link ingresar" *ngIf="router.url === '/'">Ingresar</a>
+          <a class="btn nav-link ingresar" *ngIf="router.url === '/'" routerLink="/register-user">Ingresar</a>
         </li>
         <li class="nav-item" *ngIf="router.url === '/driver'">
           <a class="nav-link" routerLink="/" >Home</a>
         </li>
         <li class="nav-item" *ngIf="this.router.url === '/driver'">
-          <a class="btn nav-link ingresar" >Iniciar sesión</a>
+          <a class="btn nav-link ingresar"  routerLink="/login-driver" >Iniciar sesión</a>
         </li>
       </ul>
     </div>

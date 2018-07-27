@@ -16,6 +16,12 @@ export class AuthService {
       });
     });
   }
+ signIn(email, password) {
+    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+    });
+  }
   isAuthenticated() {
     const token = localStorage.getItem('token');
     console.log(token);
