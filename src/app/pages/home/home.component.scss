@@ -42,7 +42,7 @@ $font-reg: 'BrownStd-Regular';
                 color: $black;
                 text-align: center;
             }
-            & > div > p:first-child {
+            & > div > p:first-child > span {
                 font-family: $font-bold;
             }
             & > div > a {
@@ -125,10 +125,12 @@ $font-reg: 'BrownStd-Regular';
                         color: $black;
                     }
                     & > p:first-child {
-                        font-family: $font-bold;
                         font-size: 22px;
                         padding-top: 90px;
                         padding-bottom: 36px;
+                        & > span {
+                            font-family: $font-bold;
+                        }
                     }
                     & > p:nth-child(2) {
                         padding-bottom: 53px;
