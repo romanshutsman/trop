@@ -22,7 +22,7 @@
                       <button class="btn gmail login"  >Continuar con GOOGLE</button>
                     </div>
                     <p class="orUse">o usa:</p>
-                    <form [formGroup]="loginUser"  (ngSubmit)="onSubmitLoginUser()">
+                    <form [formGroup]="loginDriver"  (ngSubmit)="onSubmitLoginDriver()">
   
                       <label for="email1">Email</label>
                       <input 
@@ -31,7 +31,7 @@
                       class="form-control " 
                       formControlName="email" 
                       placeholder="Escribe tu email..."
-                      [class.err]="loginUser.controls['email'].errors && loginUser.controls['email'].touched">
+                      [class.err]="loginDriver.controls['email'].errors && loginDriver.controls['email'].touched">
   
   
                       <label for="password2">Contraseña</label>
@@ -41,11 +41,11 @@
                       formControlName="password" 
                       class="form-control " 
                       placeholder="Confirmar constraseña"
-                      [class.err]="loginUser.controls['password'].errors && loginUser.controls['password'].touched"
+                      [class.err]="loginDriver.controls['password'].errors && loginDriver.controls['password'].touched"
                       >
   
   
-                        <button class="btn login" [disabled]="!loginUser.valid" >Continuar con EMAIL</button>
+                        <button class="btn login" [disabled]="!loginDriver.valid" >Continuar con EMAIL</button>
                     </form>
                     <p><a class="forgot">Olvide contraseña</a></p>
                 </div>
