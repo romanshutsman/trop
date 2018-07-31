@@ -41,7 +41,7 @@ $font-reg: 'BrownStd-Regular';
                         display: flex;
                         justify-content: space-around;
                         border: unset;
-                        width: 300px;
+                        max-width: 300px;
                         margin-left: auto;
                         margin-right: auto;
                         margin-top: 42px;
@@ -120,7 +120,8 @@ $font-reg: 'BrownStd-Regular';
                             }
                             & > .social {
                                 display: flex;
-                                width: 277px;
+                                max-width: 277px;
+                                width: 100%;
                                 margin-left: auto;
                                 margin-right: auto;
                                 flex-direction: column;
@@ -162,6 +163,10 @@ $font-reg: 'BrownStd-Regular';
                                 color: #393939;
                                 font-family: $font-reg;
                                 margin-top: 20px;
+                                & > .forgot {
+                                    text-decoration: none;
+                                    color: #393939;
+                                }
                             }
                             & > p.orUse {
                                 margin-bottom: 22px;

@@ -10,6 +10,7 @@ import { RegisterDriverComponent } from './pages/register-driver/register-driver
 import { OrdersForDriversComponent } from './pages/orders-for-drivers/orders-for-drivers.component';
 import { RegisterUserComponent } from './pages/register-user/register-user.component';
 import { LoginDriverComponent } from './pages/login-driver/login-driver.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -18,6 +19,7 @@ const routes: Routes = [
   {path: 'register-driver', component: RegisterDriverComponent},
   {path: 'login-driver', component: LoginDriverComponent},
   {path: 'register-user', component: RegisterUserComponent},
+  {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'orders-for-drivers', component: OrdersForDriversComponent, canActivate: [AuthGuard]},
   {path: '**', component: HomeComponent}
   ];

@@ -9,7 +9,10 @@
       <img src="./../../../assets/images/LOGO_truck.svg" alt="logo">
       <span>Trop</span>
     </a>
-    <a class="navbar-brand" (click)="backClicked()" *ngIf="router.url === '/register-driver' || router.url === '/register-user'">
+    <a class="navbar-brand" (click)="backClicked()" *ngIf="router.url === '/register-driver' 
+    || router.url === '/forgot-password'
+    || router.url === '/login-driver'
+    || router.url === '/register-user'">
       <img src="./../../../assets/images/Trop_user/Logo/Full+arrow.png" alt="logo">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

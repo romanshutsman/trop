@@ -21,6 +21,7 @@ import { RegisterDriverComponent } from './pages/register-driver/register-driver
 import { OrdersForDriversComponent } from './pages/orders-for-drivers/orders-for-drivers.component';
 import { RegisterUserComponent } from './pages/register-user/register-user.component';
 import { LoginDriverComponent } from './pages/login-driver/login-driver.component';
+import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { LoginDriverComponent } from './pages/login-driver/login-driver.componen
     RegisterDriverComponent,
     OrdersForDriversComponent,
     RegisterUserComponent,
-    LoginDriverComponent
+    LoginDriverComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,

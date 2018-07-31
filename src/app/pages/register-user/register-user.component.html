@@ -58,7 +58,7 @@
 
                       <button class="btn login" [disabled]="!loginUser.valid" >Continuar con EMAIL</button>
                   </form>
-                  <p><a class="forgot">Olvide contraseña</a></p>
+                  <p><a class="forgot" routerLink='/forgot-password'>Olvide contraseña</a></p>
               </div>
               <div role="tabpanel" class="tab-pane fade show active" id="register">
                 <form [formGroup]="registerUser"  (ngSubmit)="onSubmitReigsterUser()">
