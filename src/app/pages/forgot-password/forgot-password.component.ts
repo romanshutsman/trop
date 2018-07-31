@@ -33,6 +33,7 @@ export class ForgotPasswordComponent implements OnInit {
     .then((success) => {
       console.log(success);
       alert('Please check your email!');
+      this.router.navigateByUrl('/');
     })
     .catch((error) => {
       console.log(error);
