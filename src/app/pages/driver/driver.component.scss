@@ -308,6 +308,12 @@ $font-reg: 'BrownStd-Regular';
 }
 
 
+app-menu {
+    position: absolute !important;
+    width: 100% !important;
+    background: transparent !important;
+}
+
 //   ::ng-deep .mat-select-content{
 //     color: rebeccapurple;
 //     // font-size: 10px;   

@@ -7,6 +7,7 @@ import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
 import { SharedService } from './services/shared.service';
 import { AuthService } from './services/auth/auth.service';
 import { AuthGuardService } from './services/auth/auth-guard.service';
+import { GoogleplaceDirective } from './directives/google-place.directive';
 
 import {MatButtonModule} from '@angular/material';
 import {MatInputModule} from '@angular/material/input';
@@ -24,6 +25,7 @@ import { LoginDriverComponent } from './pages/login-driver/login-driver.componen
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +37,8 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
     OrdersForDriversComponent,
     RegisterUserComponent,
     LoginDriverComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    GoogleplaceDirective
   ],
   imports: [
     BrowserModule,

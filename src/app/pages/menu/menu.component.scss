@@ -7,28 +7,40 @@
     font-family: 'BrownStd-Bold';
     src: url('./../../../assets/fonts/BrownStd-Bold.otf')
 }
+@font-face {
+    font-family: 'Quicksand-Regular';
+    src: url('./../../../assets/fonts/Quicksand-Regular.otf');
+}
+@font-face {
+    font-family: 'Quicksand_Bold';
+    src: url('./../../../assets/fonts/Quicksand_Bold.otf');
+}
 
 $yellow : #ffcf00;
 $black : #171717;
 $blue : #0F7EDF;
 $white : #ffffff;
+$lightwhite : #f9f9f9;
 
 $font-bold: 'BrownStd-Bold';
 $font-reg: 'BrownStd-Regular';
+$font-quick: 'Quicksand-Regular';
+$font-quick-bold: 'Quicksand_Bold';
 @import './../../../styles';
 
 
 .container-fluid {
-    background-color: $yellow;
+    // background-color: $yellow;
     & > nav {
         height: 55px;
         max-width: 1440px;
         margin-left: auto;
         margin-right: auto;
-        font-family: $font-reg;
+        font-family: $font-quick-bold;
         & > a.navbar-brand {
+            margin-right: auto;
+            font-family: $font-quick-bold;
             font-size: 16px;
-            font-family: $font-bold;
         }
         & > div.collapse.navbar-collapse {
             & > ul.navbar-nav.ml-auto {

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="20px" viewBox="0 0 22 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>002-linkedin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="USER" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="main_blackU222" transform="translate(-504.000000, -4831.000000)" fill="#FFFFFF">
+            <rect x="0" y="0" width="1440" height="4911"></rect>
+            <g id="002-linkedin" transform="translate(504.000000, 4831.000000)" fill-rule="nonzero">
+                <rect id="Rectangle-path" x="0" y="6" width="5" height="14"></rect>
+                <path d="M18.3509091,6.16418182 C18.2990909,6.14890909 18.25,6.13236364 18.1954545,6.11836364 C18.13,6.10436364 18.0645455,6.09290909 17.9977273,6.08272727 C17.7386364,6.03436364 17.455,6 17.1222727,6 C14.2777273,6 12.4736364,7.93072727 11.8790909,8.67654545 L11.8790909,6 L7,6 L7,20 L11.8790909,20 L11.8790909,12.3636364 C11.8790909,12.3636364 15.5663636,7.57054545 17.1222727,11.0909091 C17.1222727,14.2332727 17.1222727,20 17.1222727,20 L22,20 L22,10.5525455 C22,8.43727273 20.4468182,6.67454545 18.3509091,6.16418182 Z" id="Shape"></path>
+                <circle id="Oval" cx="2.5" cy="2.5" r="2.5"></circle>
+            </g>
+        </g>
+    </g>
+</svg>

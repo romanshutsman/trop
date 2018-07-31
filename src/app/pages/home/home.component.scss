@@ -7,6 +7,14 @@
     font-family: 'BrownStd-Bold';
     src: url('./../../../assets/fonts/BrownStd-Bold.otf')
 }
+@font-face {
+    font-family: 'Quicksand-Regular';
+    src: url('./../../../assets/fonts/Quicksand-Regular.otf');
+}
+@font-face {
+    font-family: 'Quicksand_Bold';
+    src: url('./../../../assets/fonts/Quicksand_Bold.otf');
+}
 
 $yellow : #ffcf00;
 $black : #171717;
@@ -16,15 +24,17 @@ $lightwhite : #f9f9f9;
 
 $font-bold: 'BrownStd-Bold';
 $font-reg: 'BrownStd-Regular';
+$font-quick: 'Quicksand-Regular';
+$font-quick-bold: 'Quicksand_Bold';
 
 .container-fluid {
     padding-right: 0px;
     padding-left: 0px;
-    font-family: $font-reg;
+    font-family: $font-quick;
     & > header {
         width: 100%;
-        height: 424px;
-        background-image: url('./../../../assets/images/city.svg');
+        height: 479px;
+        background-image: url('./../../../assets/images/user_icon_landing/city.png');
         background-repeat: no-repeat;
         background-color: $yellow;
         background-position: 0% 100%;
@@ -36,25 +46,80 @@ $font-reg: 'BrownStd-Regular';
             margin-right: auto;
             & > div {
                 &:first-child {
-                    padding-top: 32px;
+                    padding-top: 92px;
                 }
                 font-size: 36px;
                 color: $black;
                 text-align: center;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
             }
             & > div > p:first-child > span {
-                font-family: $font-bold;
+                font-family: $font-quick-bold;
+            }
+            & > div > form {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                margin-top: 36px;
+                & > label {
+                    position: relative;
+                    font-size: 10px;
+                    color: rgba(23, 23, 23, 0.72);
+                    & > span {
+                        font-family: $font-quick-bold;
+                        position: absolute;
+                        left: 8px;
+                        top: 3px;
+                    }
+                    & > input {
+                        width: 222px;
+                        height: 40px;
+                        font-size: 12px;
+                        padding-top: 15px;
+                        border: solid 1px #525252;
+                        border-radius: 6px;
+                        &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                            color: rgba(23, 23, 23, 0.23);
+                            font-family: $font-quick-bold;
+                            text-align: center;
+                          }
+                        &::-moz-placeholder { /* Firefox 19+ */
+                            color: rgba(23, 23, 23, 0.23);
+                            font-family: $font-quick-bold;
+                            text-align: center;
+                          }
+                        &:-ms-input-placeholder { /* IE 10+ */
+                            color: rgba(23, 23, 23, 0.23);
+                            font-family: $font-quick-bold;
+                            text-align: center;
+                          }
+                        &:-moz-placeholder { /* Firefox 18- */
+                            color: rgba(23, 23, 23, 0.23);
+                            font-family: $font-quick-bold;
+                            text-align: center;
+                          }
+                    }
+                }
+                & > button {
+                    width: 222px;
+                    height: 40px;
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    background-color: $blue;
+                    color: $white;
+                    border-radius: 8px;
+                    padding-top: 12px;
+                    margin-top: 15px;
+                }
             }
             & > div > a {
-                width: 222px;
-                height: 40px;
                 font-size: 12px;
-                text-transform: uppercase;
-                background-color: $blue;
-                color: $white;
-                border-radius: 8px;
-                padding-top: 12px;
-                margin-top: 27px;
+                font-family: $font-quick-bold;
+                margin-top: 5px;
             }
         }
     }
@@ -190,4 +255,9 @@ $font-reg: 'BrownStd-Regular';
             }
         }
     }
+}
+app-menu {
+    position: absolute !important;
+    width: 100% !important;
+    background: $yellow ;
 }

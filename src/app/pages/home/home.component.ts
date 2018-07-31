@@ -1,4 +1,9 @@
 import { Component, OnInit } from '@angular/core';
+import { FormArray, FormControl, FormGroup, Validators  } from '@angular/forms';
+import { RouterModule, Routes, Router } from '@angular/router';
+import { SharedService } from './../../services/shared.service';
+import { AuthService } from './../../services/auth/auth.service';
+import * as firebase from 'firebase';
 declare var $: any;
 
 @Component({
@@ -7,7 +12,16 @@ declare var $: any;
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  constructor() { }
+  location: string;
+  locationForm: FormGroup;
+  constructor(
+    private router: Router,
+    private service:   SharedService,
+    private auth:   AuthService,
+  ) { 
+    this.validationForm();
+    this.location = '';
+  }
 
   ngOnInit() {
     this.typeWrite();
@@ -70,5 +84,22 @@ export class HomeComponent implements OnInit {
         css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #000}";
         document.body.appendChild(css);
     };
+  }
+  getAddressOnChange(event) {
+    this.location = '';
+    // console.log(event.formatted_address);
+    this.location = event.formatted_address;
+    console.log(this.location);
+    return event.formatted_address;
+  }
+  validationForm() {
+    this.locationForm = new FormGroup({
+      'address': new FormControl(null)
+    });
+  }
+  onSubmitLocation() {
+    const data = this.locationForm.value;
+    console.log(this.location);
+    console.log(data);
   }
 }
