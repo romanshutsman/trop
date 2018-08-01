@@ -190,6 +190,114 @@ $font-quick-bold: 'Quicksand_Bold';
             }
         }
     }
+    & > section.road {
+        min-height: 2458px;
+        width: 100%;
+        background-color: $white;
+        & > .wrap {
+            margin-right: auto;
+            margin-left: auto;
+            max-width: 1440px;
+            min-height: 2458px;
+            height: 100%;
+            background-image: url('./../../../assets/images/driver/Group8a.svg');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            & > .container {
+                & > .row.header {
+                    flex-direction: column;
+                    & > p {
+                        font-family: $font-quick;
+                        font-weight: bold;
+                        font-style: normal;
+                        font-stretch: normal;
+                        letter-spacing: normal;
+                        text-align: center;
+                        color: $yellow;
+                    }
+                    & > p:first-child {
+                        line-height: 1.31;
+                        font-size: 16px;
+                        margin-top: 89px;
+                        margin-bottom: 15px;
+                    }
+                    & > p:nth-child(2) {
+                        font-family: $font-quick-bold;
+                        font-size: 32px;
+                        line-height: 1.34;
+                        color: #3b3d44;
+                        margin-bottom: 164px;
+                    }
+                }
+                & > .row.road_trop {
+                    & > .col {
+                        & > p:first-child {
+                            font-size: 24px;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 1.33;
+                            letter-spacing: normal;
+                            color: #3b3d44;
+                            font-family: $font-quick-bold;
+                            margin-top: 129px;
+                            margin-bottom: 31px;
+                            padding-left: 64px;
+                        }
+                        & > p:nth-child(2) {
+                            font-size: 18px;
+                            font-weight: 500;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 1.67;
+                            letter-spacing: normal;
+                            color: #424242;
+                            font-family: $font-quick;
+                            max-width: 496px;
+                            margin-left: 64px;
+                        }
+                        & > img {
+                            width: 380px;
+                            height: 380px;
+                        }
+                    }
+                    & > .col.img {
+                        display: flex;
+                        justify-content: center;
+                    }
+                }
+                & > .row.road_trop.second_block {
+                    & > .col.img {
+                        margin-top: 155px;
+                    }
+                    & > .col {
+                        & > p:first-child {
+                            margin-top: 330px;
+                        }
+                    }
+                }
+                & > .row.road_trop.third_block {
+                    & > .col.img {
+                        margin-top: 180px;
+                    }
+                    & > .col {
+                        & > p:first-child {
+                            margin-top: 358px;
+                        }
+                    }
+                }
+                & > .row.road_trop.fourth_block {
+                    & > .col.img {
+                        margin-top: 130px;
+                    }
+                    & > .col {
+                        & > p:first-child {
+                            margin-top: 283px;
+                        }
+                    }
+                }
+            }
+        }
+    }
     & > section.devices {
         height: 948px;
         width: 100%;
