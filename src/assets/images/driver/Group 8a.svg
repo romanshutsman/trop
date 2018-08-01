@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1440px" height="2461px" viewBox="0 0 1440 2461" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51 (57462) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 8</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="DRIVER" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="main_driver" transform="translate(0.000000, -990.000000)">
+            <rect fill="#FFFFFF" x="0" y="0" width="1440" height="4831"></rect>
+            <g id="Group-8" transform="translate(-6.000000, 990.000000)">
+                <rect id="Rectangle-3" fill="#FFFFFF" fill-rule="nonzero" x="0" y="0" width="1451" height="2461"></rect>
+                <g id="Group-7" transform="translate(112.000000, 296.000000)">
+                    <circle id="Oval-5" stroke="#FFCF00" stroke-width="3" cx="94.5" cy="66.5" r="23.5"></circle>
+                    <circle id="Oval-5" stroke="#FFCF00" stroke-width="3" cx="1142.5" cy="346.5" r="23.5"></circle>
+                    <circle id="Oval-5" stroke="#FFCF00" stroke-width="3" cx="30.5" cy="890.5" r="23.5"></circle>
+                    <circle id="Oval-5" stroke="#FFCF00" stroke-width="3" cx="647.5" cy="1170.5" r="23.5"></circle>
+                    <circle id="Oval-5" stroke="#FFCF00" stroke-width="3" cx="1159.5" cy="1476.5" r="23.5"></circle>
+                    <circle id="Oval-5" stroke="#FFCF00" stroke-width="3" cx="116.5" cy="1678.5" r="23.5"></circle>
+                    <circle id="Oval-5" stroke="#FFCF00" stroke-width="3" cx="630.5" cy="1809.5" r="23.5"></circle>
+                    <path d="M125,49.8184031 C239.000511,19.2106409 320.000512,2.86610461 368.000004,0.784794278 C548.018184,-7.0209922 568,43.8142837 652.000009,134.876694 C695.766332,182.322739 749.132705,274.828496 841.000006,325.007002 C883.949355,348.466217 909.738414,226.297458 958.000012,226.939803 C1004.63604,227.560506 1115,305.909562 1115,315.000149" id="Line-3" stroke="#FFDE97" stroke-width="9" stroke-dasharray="50,22,1,5"></path>
+                    <path d="M1160.56458,381 C1179.81181,415.000002 1179.81181,451.333335 1160.56458,490 C1119.99052,571.511367 881.66454,582.35421 641.258267,562.999999 C418.925395,545.100815 308.365583,464.689884 159.414959,511.000004 C47.9140196,545.666667 3.77823116,660.333333 27.0075939,855" id="Line-4" stroke="#FFDE97" stroke-width="9" stroke-dasharray="50,22,1,5"></path>
+                    <path d="M41,942 C105.003756,1065.59656 178.003753,1144.41821 259.999992,1178.46494 C341.996248,1212.51169 461.662917,1212.51169 619,1178.46494" id="Line-5" stroke="#FFDE97" stroke-width="9" stroke-dasharray="50,22,1,5"></path>
+                    <path d="M714,1147.72764 C905.080848,1064.36062 1040.76027,1053.36953 1121.03827,1114.75437 C1201.31629,1176.1392 1218.7914,1281.45682 1173.46362,1430.70722" id="Line-6" stroke="#FFDE97" stroke-width="9" stroke-dasharray="50,22,1,5"></path>
+                    <path d="M1130.23758,1534.88703 C1068.94811,1580.93107 989.005316,1603.95309 890.409209,1603.95309 C742.515117,1603.95309 279.846262,1564.30343 231.880584,1554.29386 C124.417772,1531.8683 17.6971495,1506.14371 3.04437967,1554.29386 C-10.2794172,1598.07689 11.371753,1630.97894 67.9978904,1653" id="Line-7" stroke="#FFDE97" stroke-width="9" stroke-dasharray="50,22,1,5"></path>
+                    <path d="M149,1697 C219.07368,1739.0711 281.646102,1763.69421 336.717265,1770.86935 C391.788423,1778.04448 473.216002,1786.7547 581,1797" id="Line-8" stroke="#FFDE97" stroke-width="9" stroke-dasharray="50,22,1,5"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

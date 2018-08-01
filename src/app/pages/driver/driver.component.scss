@@ -7,6 +7,14 @@
     font-family: 'BrownStd-Bold';
     src: url('./../../../assets/fonts/BrownStd-Bold.otf')
 }
+@font-face {
+    font-family: 'Quicksand-Regular';
+    src: url('./../../../assets/fonts/Quicksand-Regular.otf');
+}
+@font-face {
+    font-family: 'Quicksand_Bold';
+    src: url('./../../../assets/fonts/Quicksand_Bold.otf');
+}
 
 $yellow : #ffcf00;
 $black : #171717;
@@ -16,19 +24,24 @@ $lightwhite : #f9f9f9;
 
 $font-bold: 'BrownStd-Bold';
 $font-reg: 'BrownStd-Regular';
+$font-quick: 'Quicksand-Regular';
+$font-quick-bold: 'Quicksand_Bold';
 
 .container-fluid {
     padding-right: 0px;
     padding-left: 0px;
-    font-family: $font-reg;
+    font-family: $font-quick;
     & > header {
         width: 100%;
-        height: 574px;
-        background-image: url('./../../../assets/images/city.svg');
+        height: 476px;
+        background-image: url('./../../../assets/images/driver/Slider_5.png');
         background-repeat: no-repeat;
-        background-color: $yellow;
         background-position: 0% 100%;
-        background-size: 100%;
+        background-size: 100% 100%;
+        @media only screen and (min-width: 320px) and (max-width: 992px) {
+            background-size: cover;
+            // font-size: 27px;
+        }
         & > section.main {
             height: 100%;
             max-width: 1440px;
@@ -40,21 +53,34 @@ $font-reg: 'BrownStd-Regular';
                     flex-direction: column;
                     & > div {
                         &:first-child {
-                            padding-top: 61px;
+                            padding-top: 106px;
                             font-size: 36px;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 1.11;
+                            letter-spacing: -0.1px;
                             @media only screen and (min-width: 320px) and (max-width: 425px) {
                                 font-size: 27px;
                             }
+                            @media only screen and (min-width: 320px) and (max-width: 568px) {
+                                font-size: 27px;
+                                padding-top: 60px;
+                            }
                         }
-                        color: $black;
+                        color: $white;
                         text-align: center;
                     }
                     & > div > p:first-child {
-                        font-family: $font-bold;
+                        font-family: $font-quick-bold;
                     }
                     & > div > p:nth-child(2) {
-                        font-size: 22px;
-                        padding-top: 40px;
+                        font-size: 20px;
+                        padding-top: 25px;
+                        padding-bottom: 25px;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1.35;
+                        letter-spacing: normal;
                     }
                     & > div > a {
                         width: 222px;
@@ -65,7 +91,6 @@ $font-reg: 'BrownStd-Regular';
                         color: $white;
                         border-radius: 8px;
                         padding-top: 12px;
-                        margin-top: 40px;
                     }
                 }
             }
@@ -73,19 +98,25 @@ $font-reg: 'BrownStd-Regular';
     }
     & > section.benefits {
         background-color: $lightwhite;
+        border: solid 1px #e5e5e5;
+        min-height: 512px;
         & > .container {
             & > .row {
                 & > div.header {
                     display: flex;
                     justify-content: center;
                     width: 100%;
-                    padding-top: 71px;
-                    padding-bottom: 30px;
+                    padding-top: 67px;
+                    padding-bottom: 55px;                
                     & > p {
                         text-align: center;
-                        font-size: 22px;
                         color: $black;
-                        font-family: $font-bold;
+                        font-family: $font-quick-bold;
+                        font-size: 35px;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
                     }
                 }
                 & > .col-sm {
@@ -94,20 +125,61 @@ $font-reg: 'BrownStd-Regular';
                     justify-content: center;
                     align-items: center;
                     text-align: center;
+                    & > p:first-child {
+
+                    }
                     & > div.img {
-                        height: 100px;
+                        height: 106px;
                         display: flex;
                         align-items: center;
                     }
-                    & :nth-child(2) {
-                        font-family: $font-bold;
-                        font-size: 16px;
-                        padding-top: 15px;
-                        padding-bottom: 15px;
+                    & > div:nth-child(2) {
+                        min-height: 180px;
+                        & > p:first-child {
+
+                            font-family: $font-quick-bold;
+                            font-size: 16px;
+                            padding-top: 15px;
+                            padding-bottom: 15px;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 1.33;
+                            letter-spacing: normal;
+                            text-align: center;
+                            font-size: 18px;
+                            margin-bottom: 10px;
+                        }
+                        & > p:nth-child(2) {
+                            font-size: 16px;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 1.69;
+                            letter-spacing: -0.6px;
+                            text-align: center;
+                            color: #424242;
+                        }
                     }
-                    & :nth-child(3) {
-                        font-size: 13px;
-                    }
+                    // & :nth-child(2) {
+                    //     font-family: $font-quick-bold;
+                    //     font-size: 16px;
+                    //     padding-top: 15px;
+                    //     padding-bottom: 15px;
+                    //     font-style: normal;
+                    //     font-stretch: normal;
+                    //     line-height: 1.33;
+                    //     letter-spacing: normal;
+                    //     text-align: center;
+                    //     font-size: 18px;
+                    // }
+                    // & :nth-child(3) {
+                    //     font-size: 16px;
+                    //     font-style: normal;
+                    //     font-stretch: normal;
+                    //     line-height: 1.69;
+                    //     letter-spacing: -0.6px;
+                    //     text-align: center;
+                    //     color: #424242;
+                    // }
                 }
             }
             & > .row.first_section {
@@ -153,7 +225,7 @@ $font-reg: 'BrownStd-Regular';
                         color: $black;
                     }
                     & > p:first-child {
-                        font-family: $font-bold;
+                        font-family: $font-quick-bold;
                         font-size: 26px;
                         padding-top: 90px;
                         padding-bottom: 36px;
@@ -224,7 +296,7 @@ $font-reg: 'BrownStd-Regular';
                     & > p {
                         padding-top: 79px;
                         padding-bottom: 72px;
-                        font-family: $font-bold;
+                        font-family: $font-quick-bold;
                         font-size: 26px;
                         color: $black;
                         text-align: center;
