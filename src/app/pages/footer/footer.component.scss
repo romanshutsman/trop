@@ -7,6 +7,14 @@
     font-family: 'BrownStd-Bold';
     src: url('./../../../assets/fonts/BrownStd-Bold.otf')
 }
+@font-face {
+    font-family: 'Quicksand-Regular';
+    src: url('./../../../assets/fonts/Quicksand-Regular.otf');
+}
+@font-face {
+    font-family: 'Quicksand_Bold';
+    src: url('./../../../assets/fonts/Quicksand_Bold.otf');
+}
 
 $yellow : #ffcf00;
 $black : #171717;
@@ -16,26 +24,49 @@ $lightwhite : #f9f9f9;
 
 $font-bold: 'BrownStd-Bold';
 $font-reg: 'BrownStd-Regular';
+$font-quick: 'Quicksand-Regular';
+$font-quick-bold: 'Quicksand_Bold';
 
 
 footer {
     width: 100%;
-    height: 219px;
-    background: $black;
+    height: 430px;
+    background: #242424;
     @media only screen and (min-width: 768px) and (max-width: 991px) {
-        height: 310px;
+        height: 410px;
     }
     @media only screen and (min-width: 320px) and (max-width: 539px) {
-        height: 440px;
+        height: 540px;
     }
     @media only screen and (min-width: 540px) and (max-width: 767px) {
-        height: 320px;
+        height: 420px;
     }
     & > .container {
         & > .row {
+            &:first-child {
+                padding-top: 75px;
+                @media only screen and (min-width: 576px) and (max-width: 767px) {
+                    padding-top: 50px;
+                }
+            }
+            &:last-child{
+                padding-top: 80px;
+                @media only screen and (min-width: 992px) and (max-width: 1199px) {
+                    padding-top: 60px;
+                }
+                @media only screen and (min-width: 768px) and (max-width: 991px) {
+                    padding-top: 20px;
+                }
+                @media only screen and (min-width: 576px) and (max-width: 767px) {
+                    padding-top: 30px;
+                }
+                @media only screen and (min-width: 320px) and (max-width: 575px) {
+                    padding-top: 0;
+                }
+            }
             & > div {
                 display: flex;
-                padding-top: 24px;
+                padding-top: 25px;
                 & > a {
                     margin-right: 79px;
                     @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -64,7 +95,10 @@ footer {
                             padding-bottom: 6px;
                             & > a {
                                 color: $white;
-                                font-size: 11px;
+                                font-size: 14px;
+                                @media only screen and (min-width: 320px) and (max-width: 575px) {
+                                    font-size: 12px;
+                                }
                                 & > img:nth-child(1) {
                                     padding-right: 9px;
                                 }
@@ -90,10 +124,13 @@ footer {
                     }
                     margin-left: 87px;
                     height: 80px;
+                    & > ul + p {
+                        margin-top: 29px;
+                    }
                     & > form {
                         & > div {
                             & > div {
-                                font-size: 12px;
+                                font-size: 14px;
                                 color: #b93a3a;
                                 padding-top: 5px;
                             }
@@ -104,14 +141,17 @@ footer {
                             border-bottom: 2px solid #fff;
                             width: 166px;
                             color: $white;
-                            font-size: 12px;
+                            font-size: 14px;
                             &:focus {
                                 outline: none;
                             }
                             @media only screen and (min-width: 992px) and (max-width: 1200px) {
                                 width: 149px;
                             }
-                            @media only screen and (min-width: 320px) and (max-width: 539px) {
+                            @media only screen and (min-width: 768px) and (max-width: 991px) {
+                                width: 130px;
+                            }
+                            @media only screen and (min-width: 320px) and (max-width: 767px) {
                                 width: 120px;
                             }
                         }
@@ -124,20 +164,15 @@ footer {
                             text-transform: uppercase;
                             color: $black;
                             border-radius: 8px;
-                            font-size: 9px;
+                            font-size: 10px;
                             width: 84px;
                             height: 26px;
-                            font-family: $font-bold;
+                            font-family: $font-quick-bold;
                             margin-left: 15px;
-                            @media only screen and (min-width: 320px) and (max-width: 991px) {
+                            @media only screen and (min-width: 320px) and (max-width: 1199px) {
                                 margin-top: 10px;
                             }
                         }
-                    }
-                    & > p.author {
-                        font-size: 10px;
-                        color: #363636;
-                        margin-top: 15px;
                     }
                 }
             }
@@ -149,8 +184,13 @@ footer {
                 }
             }
             & > .col-12 {
+                display:  flex;
+                justify-content: center;
                 @media only screen and (min-width: 320px) and (max-width: 539px) {
                     margin-top: 130px;
+                }
+                @media only screen and (min-width: 320px) and (max-width: 575px) {
+                    flex-direction: column;
                 }
                 padding-top: 5px;
                 display:  flex;
@@ -158,6 +198,9 @@ footer {
                 & > .wrap {
                     display:  flex;
                     align-items: center;
+                    @media only screen and (min-width: 320px) and (max-width: 575px) {
+                        justify-content: center;
+                    }
                     & > div {
                         margin-right: 35px;
                     }
@@ -165,4 +208,18 @@ footer {
             }
         }
     }
+}
+p.author {
+    position: relative;
+    right:  -100px;
+    @media only screen and (min-width: 320px) and (max-width: 767px) {
+        right: 0px;
+    }
+    @media only screen and (min-width: 320px) and (max-width: 575px) {
+        text-align: center;
+        padding-top: 10px;
+    }
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.33);
+
 }

@@ -159,27 +159,6 @@ $font-quick-bold: 'Quicksand_Bold';
                             color: #424242;
                         }
                     }
-                    // & :nth-child(2) {
-                    //     font-family: $font-quick-bold;
-                    //     font-size: 16px;
-                    //     padding-top: 15px;
-                    //     padding-bottom: 15px;
-                    //     font-style: normal;
-                    //     font-stretch: normal;
-                    //     line-height: 1.33;
-                    //     letter-spacing: normal;
-                    //     text-align: center;
-                    //     font-size: 18px;
-                    // }
-                    // & :nth-child(3) {
-                    //     font-size: 16px;
-                    //     font-style: normal;
-                    //     font-stretch: normal;
-                    //     line-height: 1.69;
-                    //     letter-spacing: -0.6px;
-                    //     text-align: center;
-                    //     color: #424242;
-                    // }
                 }
             }
             & > .row.first_section {
@@ -191,7 +170,6 @@ $font-quick-bold: 'Quicksand_Bold';
         }
     }
     & > section.road {
-        min-height: 2458px;
         width: 100%;
         background-color: $white;
         & > .wrap {
@@ -199,10 +177,16 @@ $font-quick-bold: 'Quicksand_Bold';
             margin-left: auto;
             max-width: 1440px;
             min-height: 2458px;
+            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+                min-height: 2100px;
+            }
             height: 100%;
             background-image: url('./../../../assets/images/driver/Group8a.svg');
             background-repeat: no-repeat;
             background-size: 100%;
+            @media only screen and (min-width: 320px) and (max-width: 991px) {
+                background-size: cover;
+            }
             & > .container {
                 & > .row.header {
                     flex-direction: column;
@@ -227,6 +211,12 @@ $font-quick-bold: 'Quicksand_Bold';
                         line-height: 1.34;
                         color: #3b3d44;
                         margin-bottom: 164px;
+                        @media only screen and (min-width: 992px) and (max-width: 1099px) {
+                            margin-bottom: 20px;
+                        }
+                        @media only screen and (min-width: 320px) and (max-width: 767px) {
+                            margin-bottom: 0px;
+                        }
                     }
                 }
                 & > .row.road_trop {
@@ -258,6 +248,10 @@ $font-quick-bold: 'Quicksand_Bold';
                         & > img {
                             width: 380px;
                             height: 380px;
+                            @media only screen and (min-width: 320px) and (max-width: 399px) {
+                                width: 300px;
+                                height: 300px;
+                            }
                         }
                     }
                     & > .col.img {
@@ -265,33 +259,139 @@ $font-quick-bold: 'Quicksand_Bold';
                         justify-content: center;
                     }
                 }
+                & > .row.road_trop.first_block {
+                    & > .col.img {
+                        @media only screen and (min-width: 768px) and (max-width: 991px) {
+                            margin-top: 0px;
+                        }
+                    }
+                    & > .col {
+                        & > p:first-child {
+                            @media only screen and (min-width: 1100px) and (max-width: 1199px) {
+                                margin-top: 50px;
+                            }
+                            @media only screen and (min-width: 768px) and (max-width: 991px) {
+                                margin-top: 0px;
+                            }
+                            @media only screen and (min-width: 320px) and (max-width: 767px) {
+                                margin-top: 50px;
+                            }
+                        }
+                    }
+                }
                 & > .row.road_trop.second_block {
+                    @media only screen and (min-width: 1055px) and (max-width: 1099px) {
+                        margin-top: 50px;
+                    }
                     & > .col.img {
                         margin-top: 155px;
+                        @media only screen and (min-width: 1200px) and (max-width: 1299px) {
+                            margin-top: 50px;
+                        }
+                        @media only screen and (min-width: 1100px) and (max-width: 1199px) {
+                            margin-top: 30px;
+                        }
+                        @media only screen and (min-width: 992px) and (max-width: 1099px) {
+                            margin-top: 0px;
+                        }
+                        @media only screen and (min-width: 768px) and (max-width: 991px) {
+                            margin-top: 50px;
+                        }
+                        @media only screen and (min-width: 320px) and (max-width: 767px) {
+                            margin-top: 30px;
+                            order: 10;
+                        }
                     }
                     & > .col {
                         & > p:first-child {
                             margin-top: 330px;
+                            @media only screen and (min-width: 1200px) and (max-width: 1299px) {
+                                margin-top: 150px;
+                            }
+                            @media only screen and (min-width: 1100px) and (max-width: 1199px) {
+                                margin-top: 120px;
+                            }
+                            @media only screen and (min-width: 992px) and (max-width: 1099px) {
+                                margin-top: 128px;
+                            }
+                            @media only screen and (min-width: 768px) and (max-width: 991px) {
+                                margin-top: 90px;
+                            }
+                            @media only screen and (min-width: 320px) and (max-width: 767px) {
+                                margin-top: 30px;
+                            }
                         }
                     }
                 }
                 & > .row.road_trop.third_block {
                     & > .col.img {
                         margin-top: 180px;
+                        @media only screen and (min-width: 1300px) and (max-width: 1380px) {
+                            margin-top: 80px;
+                        }
+                        @media only screen and (min-width: 1200px) and (max-width: 1299px) {
+                            margin-top: 100px;
+                        }
+                        @media only screen and (min-width: 1150px) and (max-width: 1199px) {
+                            margin-top: 30px;
+                        }
+                        @media only screen and (min-width: 992px) and (max-width: 1149px) {
+                            margin-top: 0px;
+                        }
+                        @media only screen and (min-width: 768px) and (max-width: 991px) {
+                            margin-top: 120px;
+                        }
+                        @media only screen and (min-width: 320px) and (max-width: 767px) {
+                            margin-top: 30px;
+                        }
                     }
                     & > .col {
                         & > p:first-child {
                             margin-top: 358px;
+                            @media only screen and (min-width: 1300px) and (max-width: 1380px) {
+                                margin-top: 230px;
+                            }
+                            @media only screen and (min-width: 1200px) and (max-width: 1299px)  {
+                                margin-top: 220px;
+                            }
+                            @media only screen and (min-width: 1150px) and (max-width: 1199px) {
+                                margin-top: 120px;
+                            }
+                            @media only screen and (min-width: 1100px) and (max-width: 1149px) {
+                                margin-top: 80px;
+                            }
+                            @media only screen and (min-width: 992px) and (max-width: 1099px) {
+                                margin-top: 100px;
+                            }
+                            @media only screen and (min-width: 768px) and (max-width: 991px) {
+                                margin-top: 150px;
+                            }
+                            @media only screen and (min-width: 320px) and (max-width: 767px) {
+                                margin-top: 30px;
+                            }
                         }
                     }
                 }
                 & > .row.road_trop.fourth_block {
                     & > .col.img {
                         margin-top: 130px;
+                        @media only screen and (min-width: 768px) and (max-width: 991px) {
+                            margin-top: 100px;
+                        }
+                        @media only screen and (min-width: 320px) and (max-width: 767px) {
+                            margin-top: 30px;
+                            order: 10;
+                        }
                     }
                     & > .col {
                         & > p:first-child {
                             margin-top: 283px;
+                            @media only screen and (min-width: 768px) and (max-width: 991px) {
+                                margin-top: 50px;
+                            }
+                            @media only screen and (min-width: 320px) and (max-width: 767px) {
+                                margin-top: 30px;
+                            }
                         }
                     }
                 }
@@ -320,27 +420,43 @@ $font-quick-bold: 'Quicksand_Bold';
             height: 1750px;
         }
         @media only screen and (min-width: 320px) and (max-width: 379px) {
-            height: 1850px;
+            height: 1895px;
         }
         & > .container {
             &:nth-child(2) {
-                margin-top: 8%;
+                margin-top: 5%;
             }
             & > .row {
                 & > .col-sm.ios_android {
+                    padding-left: 0px;
+                    padding-right: 0px;
                     & > p {
                         text-align: center;
                         color: $black;
                     }
                     & > p:first-child {
                         font-family: $font-quick-bold;
-                        font-size: 26px;
+                        font-size: 32px;
                         padding-top: 90px;
-                        padding-bottom: 36px;
+                        @media only screen and (min-width: 576px) and (max-width: 991px) {
+                            padding-top: 60px;
+                        }
+                        padding-bottom: 25px;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 0.75;
+                        letter-spacing: normal;
+                        text-align: center;
                     }
                     & > p:nth-child(2) {
-                        padding-bottom: 53px;
-                        font-size: 14px;
+                        font-weight: 900;
+                        padding-bottom: 19px;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1.69;
+                        letter-spacing: normal;
+                        text-align: center;
                         @media only screen and (min-width: 576px) and (max-width: 991px) {
                             padding-bottom: 23px;
                         }
@@ -369,45 +485,89 @@ $font-quick-bold: 'Quicksand_Bold';
                         justify-content: center;
                         height: 100%;
                         width: 100%;
-                        & > .background { 
+                        & > .frame {
+                            display: flex;
+                            justify-content: center;
+                            & > img {
+                                z-index: 10;
+                                position: absolute;
+                                top: -56px;
+                            }
                             width: 360px;
+                            @media only screen and (min-width: 320px) and (max-width: 368px) {
+                                width: 300px;
+                            }
                             height: 489px;
                             position: absolute;
-                            top: -57px;
-                            background-image: url('./../../../assets/images/Trop_user/iPhone.png');
-                            background-repeat: no-repeat;
-                            background-position: center;
+                            top: -8px;
+                            @media only screen and (min-width: 576px) and (max-width: 767px) {
+                                top: 30px;
+                            }
                             @media only screen and (min-width: 576px) and (max-width: 632px) {
                                 width: 300px;
                             }
                             @media only screen and (min-width: 320px) and (max-width: 368px) {
                                 width: 300px;
                             }
-                            & > .screen {
-                                width: 210px;
-                                height: 372px;
-                                margin: 48px auto 0px auto;
-                                & > .carousel.slide {
+                            & > .background { 
+                                width: 360px;
+                                height: 489px;
+                                position: absolute;
+                                top: -57px;
+                                background-image: url('./../../../assets/images/driver/iPhone_white.png');
+                                background-repeat: no-repeat;
+                                background-position: center;
+                                @media only screen and (min-width: 576px) and (max-width: 632px) {
+                                    width: 300px;
+                                }
+                                @media only screen and (min-width: 320px) and (max-width: 368px) {
+                                    width: 300px;
+                                }
+                                & > .screen {
                                     width: 210px;
-                                    & > .carousel-inner {
+                                    height: 372px;
+                                    margin: 48px auto 0px auto;
+                                    & > .carousel.slide {
                                         width: 210px;
-                                        height: 372px;  
+                                        & > .carousel-inner {
+                                            width: 210px;
+                                            height: 421px;  
+                                            margin-top: -6px;
+                                            margin-left: -1px;
+                                        }
+                                        & > a {
+                                            z-index: 1000 !important;
+                                            cursor: pointer;
+                                        }
+                                        & > a.carousel-control-prev {
+                                            & > span:first-child {
+                                                background-image: url('./../../../assets/images/driver/left-arrow.svg')
+                                            }
+                                        }
+                                        & > a.carousel-control-next {
+                                            & > span:first-child {
+                                                background-image: url('./../../../assets/images/driver/right-arrow.svg')
+                                            }
+                                        }
                                     }
                                 }
-                            }
-                        } 
+                            } 
+                        }
                     }
                 }
             }
             & > .row.header {
                 & > .col {
                     & > p {
-                        padding-top: 79px;
-                        padding-bottom: 72px;
+                        padding-top: 95px;
+                        padding-bottom: 42px;
                         font-family: $font-quick-bold;
-                        font-size: 26px;
+                        font-size: 35px;
                         color: $black;
-                        text-align: center;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: 1.29;
+                        letter-spacing: -0.4px;
                     }
                 }
             }
@@ -428,6 +588,40 @@ $font-quick-bold: 'Quicksand_Bold';
                             display: inline-block;
                             width: 100%;
                             margin-left: 48px;
+                            &:first-child {
+                                margin-left: 17px;
+                            }
+                            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+                                &:last-child {
+                                    margin-left: 17px;
+                                }
+                            }
+                            @media only screen and (min-width: 768px) and (max-width: 991px) {
+                                &:nth-child(4) {
+                                    margin-left: 17px;
+                                }
+                            }
+                            @media only screen and (min-width: 576px) and (max-width: 767px) {
+                                &:nth-child(3) {
+                                    margin-left: 17px;
+                                }
+                                &:last-child {
+                                    margin-left: 17px;
+                                }
+                                &:first-child {
+                                    margin-left: 17px;
+                                }
+                            }
+                            @media only screen and (min-width: 456px) and (max-width: 575px) {
+                                &:first-child {
+                                    margin-left: 37px;
+                                }
+                            }
+                            @media only screen and (min-width: 992px) and (max-width: 1199px) {
+                                &:last-child {
+                                    margin-left: 17px;
+                                }
+                            }
                             width: 180px;
                             @media only screen and (min-width: 456px) and (max-width: 575px) {
                                 margin-left: 38px;
@@ -451,7 +645,7 @@ $font-quick-bold: 'Quicksand_Bold';
                         }
                     }
                     & > div.btn-block {
-                    padding-left: 47px;
+                    padding-left: 17px;
                     margin-top: 15px;
                     @media only screen and (min-width: 320px) and (max-width: 575px) {
                         display: flex;
@@ -464,7 +658,7 @@ $font-quick-bold: 'Quicksand_Bold';
                             border-radius: 8px;
                             width: 222px;
                             height: 40px;
-                            padding-top: 12px;
+                            padding-top: 10px;
                             @media only screen and (min-width: 320px) and (max-width: 575px) {
                                 margin-left: auto;
                                 margin-right: auto;
@@ -473,11 +667,15 @@ $font-quick-bold: 'Quicksand_Bold';
                     }
                     & > .text-block {
                         & > p {
-                            font-size: 13px;
                             color: $black;
-                            padding-left: 59px;
+                            padding-left: 18px;
                             padding-top: 16px;
-
+                            font-size: 14px;
+                            font-weight: normal;
+                            font-style: normal;
+                            font-stretch: normal;
+                            line-height: 1.71;
+                            letter-spacing: normal;
                         }
                     }
                 }

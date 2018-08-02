@@ -70,7 +70,7 @@ export class RegisterDriverComponent implements OnInit {
         ]),
       'email': new FormControl(null, [Validators.required, Validators.email]),
       'phone': new FormControl(null, [Validators.required, Validators.minLength(10), Validators.maxLength(13)]),
-      'alternateNumber': new FormControl(null, [Validators.required, Validators.minLength(10), Validators.maxLength(13)]),
+      'alternateNumber': new FormControl(null, [ Validators.minLength(10), Validators.maxLength(13)]),
       'provincia': new FormControl(null, [Validators.required ]),
       'password': new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(16)]),
       'description': new FormControl(null, [Validators.required, Validators.minLength(5), Validators.maxLength(1000)]),

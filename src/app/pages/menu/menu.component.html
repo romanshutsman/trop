@@ -23,15 +23,15 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/driver" *ngIf="router.url === '/'">Transportista</a>
         </li>
-        <li class="nav-item">
-          <a class="btn nav-link ingresar" *ngIf="router.url === '/'" routerLink="/register-user">Ingresar</a>
-        </li>
+        <!-- <li class="nav-item" *ngIf="router.url === '/'">
+          <a class="btn nav-link ingresar"  routerLink="/register-user">Ingresar</a>
+        </li> -->
         <li class="nav-item" *ngIf="router.url === '/driver'">
-          <a class="nav-link" routerLink="/" >Home</a>
+          <a class="nav-link" routerLink="/" style="color: white" >Home</a>
         </li>
-        <li class="nav-item" *ngIf="this.router.url === '/driver'">
+        <!-- <li class="nav-item" *ngIf="this.router.url === '/driver'">
           <a class="btn nav-link ingresar"  routerLink="/login-driver" >Iniciar sesión</a>
-        </li>
+        </li> -->
       </ul>
     </div>
   </nav>
