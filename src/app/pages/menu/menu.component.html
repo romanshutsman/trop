@@ -4,6 +4,7 @@
     class="navbar-brand" 
     routerLink="/" 
     *ngIf="router.url === '/' 
+    || router.url === '/home'
     || this.router.url === '/driver'
     || this.router.url === '/orders-for-drivers'">
       <img src="./../../../assets/images/LOGO_truck.svg" alt="logo">
@@ -21,7 +22,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" routerLink="/driver" *ngIf="router.url === '/'">Transportista</a>
+          <a class="nav-link" routerLink="/driver" *ngIf="router.url === '/' || router.url === '/home'">Transportista</a>
         </li>
         <!-- <li class="nav-item" *ngIf="router.url === '/'">
           <a class="btn nav-link ingresar"  routerLink="/register-user">Ingresar</a>

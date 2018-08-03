@@ -22,7 +22,7 @@ $font-reg: 'BrownStd-Regular';
 .container-fluid {
     background-color: $bg;
     width: 100%;
-    min-height: calc(100vh - 55px);
+    min-height: 100vh;
     height: 100%;
     & > .main-container {
         max-width: 1246px;
@@ -30,7 +30,7 @@ $font-reg: 'BrownStd-Regular';
         margin-left: auto;
         margin-right: auto;
         // height: 1024px;
-        height: calc(100vh - 55px);
+        height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -44,4 +44,9 @@ $font-reg: 'BrownStd-Regular';
         & > .row {
         }
     }
+}
+app-menu {
+    position: absolute !important;
+    width: 100% !important;
+    background: $yellow ;
 }

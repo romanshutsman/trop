@@ -23,10 +23,12 @@ input[type="file"], input[type="checkbox"] {
 .container-fluid {
     background-color: $bg;
     width: 100%;
-    min-height: calc(100vh - 55px);
-    padding-top: 50px;
+    min-height: 100vh;
+    padding-top: 105px;
     padding-bottom: 50px;
     height: 100%;
+    padding-left: 0px;
+    padding-right: 0px;
     & > .container {
         & > .row {
             & > .col-12 {
@@ -312,4 +314,9 @@ label.custom-file-upload.disabled{
     background-color: #69a2d4 !important;
     color: #dad5d5 !important;
     cursor:not-allowed !important;
+}
+app-menu {
+    position: absolute !important;
+    width: 100% !important;
+    background: $yellow ;
 }

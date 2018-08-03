@@ -21,8 +21,8 @@ $font-reg: 'BrownStd-Regular';
 .container-fluid {
     background-color: $bg;
     width: 100%;
-    min-height: calc(100vh - 55px);
-    padding-top: 50px;
+    min-height: 100vh;
+    padding-top: 105px;
     padding-bottom: 50px;
     height: 100%;
     & > .container {
@@ -185,4 +185,9 @@ $font-reg: 'BrownStd-Regular';
     100% {
         width: 80px;
     }
+}
+app-menu {
+    position: absolute !important;
+    width: 100% !important;
+    background: $yellow ;
 }

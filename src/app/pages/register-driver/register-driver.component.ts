@@ -49,7 +49,7 @@ export class RegisterDriverComponent implements OnInit {
   vehicle = [];
   license = [];
   services = ['automotores', 'mudanza', 'maquinaria', 'objetos', 'mascotas', 'motocicleta', 'muebles', 'otros'];
-  constructor(private service:   SharedService, private fb: FormBuilder) {
+  constructor(private service:   SharedService, private fb: FormBuilder, private router: Router) {
     this.validationFormDriver();
     this.validationDetails();
     this.validationImage();
@@ -178,6 +178,7 @@ export class RegisterDriverComponent implements OnInit {
     if (this.license.length != 0) {
       this.putImgLicense(uid);
     }
+    this.router.navigateByUrl('/driver');
   }
   putImgPersonal(uid) {
     let photoURL = [];
