@@ -178,7 +178,7 @@ export class RegisterDriverComponent implements OnInit {
     if (this.license.length != 0) {
       this.putImgLicense(uid);
     }
-    this.router.navigateByUrl('/driver');
+    this.router.navigateByUrl('/orders-for-drivers');
   }
   putImgPersonal(uid) {
     let photoURL = [];

@@ -16,14 +16,16 @@
       </div>
       <div>
         <form [formGroup]="locationForm" (ngSubmit)="onSubmitLocation()">
-        <label for="address">
-          <span>RECOGER EN:</span>
-          <input type="text" id="address" class="form-control" formControlName="address" (setAddress)="getAddressOnChange($event)"
-                appGoogleplace placeholder="Ingresar dirección">
-        </label>
+          <label for="address">
+            <span>RECOGER EN:</span>
+            <input type="text" id="address" class="form-control" formControlName="address" (setAddress)="getAddressOnChange($event)"
+                  appGoogleplace placeholder="Ingresar dirección">
+          </label>
           <button class="btn register" >empezar</button>
         </form>
-        <a routerLink="/driver"> <span>¿</span>Eres un transportista?</a>
+        <p>
+          <a routerLink="/driver"> <span>¿</span>Eres un transportista?</a>
+        </p>
       </div>
     </section>
   </header>

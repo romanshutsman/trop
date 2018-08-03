@@ -69,14 +69,14 @@ export class RegisterUserComponent implements OnInit {
         console.log(uid);
         firebase.database().ref('users/' + uid).update(dataUser);
         this.registerUser.reset();
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl('/dashboard-user');
       }
     }, 100);
   }
   onSubmitLoginUser() {
     const data = this.loginUser.value;
     this.auth.signIn(data.email, data.password);
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/dashboard-user');
   }
   showLine(e) {
     if (e == 2) {

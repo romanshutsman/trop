@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'BrownStd-Regular';
+    src: url('./../../../assets/fonts/BrownStd-Regular.otf');
+}
+
+@font-face {
+    font-family: 'BrownStd-Bold';
+    src: url('./../../../assets/fonts/BrownStd-Bold.otf')
+}
+
+$yellow : #ffcf00;
+$black : #171717;
+$blue : #0F7EDF;
+$white : #ffffff;
+$lightwhite : #f9f9f9;
+$bg: #efeef4;
+
+$font-bold: 'BrownStd-Bold';
+$font-reg: 'BrownStd-Regular';
+
+
+.container-fluid {
+    background-color: $bg;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    padding-top: 105px;
+    padding-bottom: 50px;
+    color: $black;
+    font-family: $font-reg;
+    & > .container {
+        & > .row {
+            & > p {
+                text-align: justify;
+            }
+        }
+    }
+}
+app-menu {
+    position: absolute !important;
+    width: 100% !important;
+    background: $yellow ;
+}

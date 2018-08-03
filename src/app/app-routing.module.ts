@@ -11,6 +11,9 @@ import { OrdersForDriversComponent } from './pages/orders-for-drivers/orders-for
 import { RegisterUserComponent } from './pages/register-user/register-user.component';
 import { LoginDriverComponent } from './pages/login-driver/login-driver.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { DashboardUserComponent } from './pages/dashboard-user/dashboard-user.component';
+import { PrivacyComponent } from './pages/privacy/privacy.component';
+import { TermsComponent } from './pages/terms/terms.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -20,7 +23,10 @@ const routes: Routes = [
   {path: 'login-driver', component: LoginDriverComponent},
   {path: 'register-user', component: RegisterUserComponent},
   {path: 'forgot-password', component: ForgotPasswordComponent},
+  {path: 'privacy', component: PrivacyComponent},
+  {path: 'terms', component: TermsComponent},
   {path: 'orders-for-drivers', component: OrdersForDriversComponent, canActivate: [AuthGuard]},
+  {path: 'dashboard-user', component: DashboardUserComponent, canActivate: [AuthGuard]},
   {path: '**', component: HomeComponent}
   ];
 

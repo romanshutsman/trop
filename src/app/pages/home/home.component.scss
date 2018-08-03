@@ -112,22 +112,25 @@ $font-quick-med: 'Quicksand-Medium';
                 & > button {
                     width: 222px;
                     height: 40px;
-                    font-size: 12px;
+                    font-size: 13px;
                     text-transform: uppercase;
                     background-color: $blue;
                     color: $white;
                     border-radius: 8px;
-                    padding-top: 12px;
+                    padding-top: 9px;
                     margin-top: 15px;
                 }
             }
-            & > div > a {
-                font-size: 12px;
-                font-family: $font-quick-bold;
-                margin-top: 5px;
-                color: $black;
-                & > span {
-                    font-family: $font-bold;
+            & > div > p {
+                & > a {
+                    font-size: 12px;
+                    font-family: $font-quick-bold;
+                    margin-top: 5px;
+                    color: $black;
+                    text-decoration: none;
+                    & > span {
+                        font-family: $font-bold;
+                    }
                 }
             }
         }

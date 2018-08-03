@@ -33,7 +33,7 @@ export class LoginDriverComponent implements OnInit {
   onSubmitLoginDriver() {
     const data = this.loginDriver.value;
     this.auth.signIn(data.email, data.password);
-    this.router.navigateByUrl('/');
+    this.router.navigateByUrl('/orders-for-drivers');
   }
 }
 

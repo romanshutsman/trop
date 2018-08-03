@@ -23,6 +23,9 @@ import { OrdersForDriversComponent } from './pages/orders-for-drivers/orders-for
 import { RegisterUserComponent } from './pages/register-user/register-user.component';
 import { LoginDriverComponent } from './pages/login-driver/login-driver.component';
 import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
+import { DashboardUserComponent } from './pages/dashboard-user/dashboard-user.component';
+import { PrivacyComponent } from './pages/privacy/privacy.component';
+import { TermsComponent } from './pages/terms/terms.component';
 
 
 
@@ -38,7 +41,10 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
     RegisterUserComponent,
     LoginDriverComponent,
     ForgotPasswordComponent,
-    GoogleplaceDirective
+    GoogleplaceDirective,
+    DashboardUserComponent,
+    PrivacyComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,

@@ -6,12 +6,15 @@
     *ngIf="router.url === '/' 
     || router.url === '/home'
     || this.router.url === '/driver'
+    || this.router.url === '/dashboard-user'
     || this.router.url === '/orders-for-drivers'">
       <img src="./../../../assets/images/LOGO_truck.svg" alt="logo">
       <span>Trop</span>
     </a>
     <a class="navbar-brand" (click)="backClicked()" *ngIf="router.url === '/register-driver' 
     || router.url === '/forgot-password'
+    || router.url === '/privacy'
+    || router.url === '/terms'
     || router.url === '/login-driver'
     || router.url === '/register-user'">
       <img src="./../../../assets/images/Trop_user/Logo/Full+arrow.png" alt="logo">
@@ -24,15 +27,73 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/driver" *ngIf="router.url === '/' || router.url === '/home'">Transportista</a>
         </li>
-        <!-- <li class="nav-item" *ngIf="router.url === '/'">
+        <li class="nav-item" *ngIf="router.url === '/'">
           <a class="btn nav-link ingresar"  routerLink="/register-user">Ingresar</a>
-        </li> -->
+        </li>
         <li class="nav-item" *ngIf="router.url === '/driver'">
           <a class="nav-link" routerLink="/" style="color: white" >Home</a>
         </li>
-        <!-- <li class="nav-item" *ngIf="this.router.url === '/driver'">
+        <li class="nav-item" *ngIf="this.router.url === '/driver'">
           <a class="btn nav-link ingresar"  routerLink="/login-driver" >Iniciar sesión</a>
-        </li> -->
+        </li>
+
+
+
+        <li class="nav-item  menu">
+          <a class="nav-link" 
+          [routerLinkActive]="" [ngClass]="rla.isActive?'active':''"  #rla="routerLinkActive"
+          *ngIf="router.url === '/dashboard-user' 
+          || router.url === '/orders-for-drivers'
+          || router.url === '/chat'
+          || router.url === '/my-jobs'
+          || router.url === '/transfers'
+          || router.url === '/profile'"
+          >Anuncios</a>
+        </li>
+        <li class="nav-item menu">
+          <a class="nav-link" 
+          routerLinkActive="active-link"
+          *ngIf="router.url === '/dashboard-user' 
+          || router.url === '/orders-for-drivers'
+          || router.url === '/chat'
+          || router.url === '/my-jobs'
+          || router.url === '/transfers'
+          || router.url === '/profile'"
+          >Chat</a>
+        </li>
+        <li class="nav-item menu">
+          <a class="nav-link"  
+          routerLinkActive="active-link"
+          *ngIf="router.url === '/dashboard-user' 
+          || router.url === '/orders-for-drivers'
+          || router.url === '/chat'
+          || router.url === '/my-jobs'
+          || router.url === '/transfers'
+          || router.url === '/profile'"
+          >Mis trabajos</a>
+        </li>
+        <li class="nav-item menu">
+          <a class="nav-link" 
+          routerLinkActive="active-link"
+          *ngIf="router.url === '/dashboard-user' 
+          || router.url === '/orders-for-drivers'
+          || router.url === '/chat'
+          || router.url === '/my-jobs'
+          || router.url === '/transfers'
+          || router.url === '/profile'"
+          >Transferencias</a>
+        </li>
+        <li class="nav-item menu">
+          <a class="nav-link"  
+          routerLinkActive="active-link"
+          *ngIf="router.url === '/dashboard-user' 
+          || router.url === '/orders-for-drivers'
+          || router.url === '/chat'
+          || router.url === '/my-jobs'
+          || router.url === '/transfers'
+          || router.url === '/profile'"
+          >Perfil</a>
+        </li>
       </ul>
     </div>
   </nav>

@@ -55,14 +55,31 @@ $font-quick-bold: 'Quicksand_Bold';
                         text-transform: uppercase;
                         color: $white;
                         border-radius: 8px;
-                        width: 84px;
+                        width: 94px;
                         height: 26px;
                         margin-left: 9px;
                         padding-top: 6px;
                         margin-top: 5px;
                     }
                 }
+                & > li.nav-item.menu {
+                    margin-left: 11px;
+                    & > a.nav-link {
+                        font-family: $font-reg;
+                        font-size: 16px;
+                        font-weight: normal;
+                        font-style: normal;
+                        font-stretch: normal;
+                        line-height: normal;
+                        letter-spacing: normal;
+                        color: rgba($color: #171717, $alpha: 0.5) ;
+                    }
+                }
             }
         }
     }
+}
+
+.active {
+    color: #171717 !important;
 }
