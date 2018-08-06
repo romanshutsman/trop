@@ -21,7 +21,7 @@
             <input type="text" id="address" class="form-control" formControlName="address" (setAddress)="getAddressOnChange($event)"
                   appGoogleplace placeholder="Ingresar dirección">
           </label>
-          <button class="btn register" >empezar</button>
+          <button class="btn register" (click)="goToCreate();">empezar</button>
         </form>
         <a routerLink="/driver"> <span>¿</span>Eres un transportista?</a>
       </div>

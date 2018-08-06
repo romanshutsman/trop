@@ -87,9 +87,10 @@ export class HomeComponent implements OnInit {
   }
   getAddressOnChange(event) {
     this.location = '';
-    // console.log(event.formatted_address);
+
     this.location = event.formatted_address;
     console.log(this.location);
+    localStorage.setItem('address', this.location);
     return event.formatted_address;
   }
   validationForm() {
@@ -100,6 +101,10 @@ export class HomeComponent implements OnInit {
   onSubmitLocation() {
     const data = this.locationForm.value;
     console.log(this.location);
-    console.log(data);
+    console.log(data.address);
+
+    this.router.navigateByUrl('/create-order');
+  }
+  goToCreate() {
   }
 }

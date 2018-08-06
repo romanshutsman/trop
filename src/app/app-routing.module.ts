@@ -14,6 +14,7 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { DashboardUserComponent } from './pages/dashboard-user/dashboard-user.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { TermsComponent } from './pages/terms/terms.component';
+import { CreateOrderComponent } from './pages/create-order/create-order.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'privacy', component: PrivacyComponent},
   {path: 'terms', component: TermsComponent},
+  {path: 'create-order', component: CreateOrderComponent},
   {path: 'orders-for-drivers', component: OrdersForDriversComponent, canActivate: [AuthGuard]},
   {path: 'dashboard-user', component: DashboardUserComponent, canActivate: [AuthGuard]},
   {path: '**', component: HomeComponent}

@@ -26,6 +26,7 @@ import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password
 import { DashboardUserComponent } from './pages/dashboard-user/dashboard-user.component';
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { TermsComponent } from './pages/terms/terms.component';
+import { CreateOrderComponent } from './pages/create-order/create-order.component';
 
 
 
@@ -44,7 +45,8 @@ import { TermsComponent } from './pages/terms/terms.component';
     GoogleplaceDirective,
     DashboardUserComponent,
     PrivacyComponent,
-    TermsComponent
+    TermsComponent,
+    CreateOrderComponent
   ],
   imports: [
     BrowserModule,
