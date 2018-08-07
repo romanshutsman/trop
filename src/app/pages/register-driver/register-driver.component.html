@@ -46,7 +46,17 @@
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane fade   show active" id="profile">
                   <form [formGroup]="registerDriver"  (ngSubmit)="onSubmitDriver()">
-                    <label for="name">Nombre y apellidos</label >
+                    
+                    <label for="alternateNumber">Número alternativo</label>
+                    <input 
+                    id="alternateNumber"
+                    type="text"
+                    (keypress)="validationNumber($event)" 
+                    class="form-control " 
+                    formControlName="alternateNumber" 
+                    placeholder="Escribe tu teléfono..."
+                    [class.err]="registerDriver.controls['alternateNumber'].errors && registerDriver.controls['alternateNumber'].touched">
+                    <!-- <label for="name">Nombre y apellidos</label >
                     <input
                     id="name" 
                     type="text" 
@@ -101,9 +111,9 @@
                       class="form-control " 
                       placeholder="Confirmar constraseña"
                       [class.err]="registerDriver.controls['password'].errors && registerDriver.controls['password'].touched"
-                      >
+                      > -->
                       <label class="description1" for="description1">
-                          Descripción *
+                          Descripción de su servicio
                       </label>
                       <div class="desc">
                           <textarea 
@@ -184,15 +194,15 @@
                   </label>
                   <input 
                   id="bank" 
-                  class="form-control" 
+                  class="form-control"   
                   type="text" 
                   formControlName="bank"
                   [class.err]="registerDetails.controls['bank'].errors && registerDetails.controls['bank'].touched">
                   <button class="btn" [disabled]="!registerDetails.valid" (click)="submit2()">Continuar</button>
                 </form>
-                <div class="skip center-block">
+                <!-- <div class="skip center-block">
                   <a class="btn" (click)="submit2()">Saltear</a>
-                </div>
+                </div> -->
               </div>
               <div role="tabpanel" class="tab-pane fade " id="references">
                 <form [formGroup]="uploadImages" class="uploadImages">

@@ -43,6 +43,7 @@ export class RegisterDriverComponent implements OnInit {
     'Terra do Fogo',
     'Tucumán'
   ];
+  userInfo;
   validCbu = false;
   showHeader = true;
   personal = [];
@@ -62,17 +63,17 @@ export class RegisterDriverComponent implements OnInit {
     const nameFormat = '[a-zA-Z ]*';
     const phoneFormat = '[0-9]';
     this.registerDriver = new FormGroup({
-      'name': new FormControl(null, [
-        Validators.required,
-        Validators.maxLength(50),
-        Validators.minLength(5),
-        Validators.pattern(nameFormat)
-        ]),
-      'email': new FormControl(null, [Validators.required, Validators.email]),
-      'phone': new FormControl(null, [Validators.required, Validators.minLength(10), Validators.maxLength(13)]),
+      // 'name': new FormControl(null, [
+      //   Validators.required,
+      //   Validators.maxLength(50),
+      //   Validators.minLength(5),
+      //   Validators.pattern(nameFormat)
+      //   ]),
+      // 'email': new FormControl(null, [Validators.required, Validators.email]),
+      // 'phone': new FormControl(null, [Validators.required, Validators.minLength(10), Validators.maxLength(13)]),
+      // 'provincia': new FormControl(null, [Validators.required ]),
+      // 'password': new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(16)]),
       'alternateNumber': new FormControl(null, [ Validators.minLength(10), Validators.maxLength(13)]),
-      'provincia': new FormControl(null, [Validators.required ]),
-      'password': new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(16)]),
       'description': new FormControl(null, [Validators.required, Validators.minLength(5), Validators.maxLength(1200)]),
       'automotores': new FormControl(false),
       'mudanza': new FormControl(false),
@@ -255,14 +256,12 @@ export class RegisterDriverComponent implements OnInit {
     return namePhoto13;
   }
   updateDriverProfile(data) {
+    console.log(this.userInfo);
     const dataDriver = {};
-    dataDriver['email'] = data.email;
-    dataDriver['name'] = data.name;
-    dataDriver['phone'] = data.phone;
-    dataDriver['provincia'] = data.provincia;
-    if (data.alternateNumber) {
-      dataDriver['alternateNumber'] = data.alternateNumber;
-    }
+    dataDriver['email'] = this.userInfo.email;
+    dataDriver['name'] = this.userInfo.name;
+    dataDriver['phone'] = this.userInfo.phone;
+    dataDriver['provincia'] = this.userInfo.provincia;
     if (data.description) {
       dataDriver['description'] = data.description;
     }
@@ -291,12 +290,15 @@ export class RegisterDriverComponent implements OnInit {
     if (user) {
       const uid = user.uid;
       console.log(uid);
+      console.log(dataDriver);
       firebase.database().ref('drivers/' + uid).update(dataDriver);
     }
   }
   fillform(data) {
+    console.log(data);
+    this.userInfo = data;
     this.updateDriverProfile(data);
-    this.registerDriver.patchValue(data);
+    // this.registerDriver.patchValue(data);
   }
   onAddPersonal(event) {
     const file = event.srcElement.files;

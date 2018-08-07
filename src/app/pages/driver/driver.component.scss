@@ -541,6 +541,11 @@ $font-quick-bold: 'Quicksand_Bold';
                                             height: 421px;  
                                             margin-top: -6px;
                                             margin-left: -1px;
+                                            & > .carousel-item  {
+                                                & > img {
+                                                    margin-top: -35px;
+                                                }
+                                            }
                                         }
                                         & > a {
                                             z-index: 1000 !important;

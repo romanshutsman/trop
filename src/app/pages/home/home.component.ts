@@ -14,6 +14,7 @@ import * as Typed from 'typed.js';
 export class HomeComponent implements OnInit {
   location: string;
   locationForm: FormGroup;
+  subscribeApp: FormGroup;
   constructor(
     private router: Router,
     private service:   SharedService,
@@ -21,6 +22,7 @@ export class HomeComponent implements OnInit {
   ) { 
     this.validationForm();
     this.location = '';
+    this.validationFormApp();
   }
 
   ngOnInit() {
@@ -107,6 +109,11 @@ export class HomeComponent implements OnInit {
       'address': new FormControl(null)
     });
   }
+  validationFormApp() {
+    this.subscribeApp = new FormGroup({
+      'email': new FormControl(null, [Validators.email, Validators.required])
+    });
+  }
   onSubmitLocation() {
     const data = this.locationForm.value;
     console.log(this.location);
@@ -115,5 +122,13 @@ export class HomeComponent implements OnInit {
     this.router.navigateByUrl('/create-order');
   }
   goToCreate() {
+  }
+
+  onSubmitSubscribeApp() {
+    const data = this.subscribeApp.value;
+    console.log(data);
+
+    
+    this.subscribeApp.reset();
   }
 }
