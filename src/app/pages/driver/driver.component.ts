@@ -4,6 +4,7 @@ import { RouterModule, Routes, Router } from '@angular/router';
 import { SharedService } from './../../services/shared.service';
 import { AuthService } from './../../services/auth/auth.service';
 import * as firebase from 'firebase';
+
 @Component({
   selector: 'app-driver',
   templateUrl: './driver.component.html',
@@ -48,6 +49,7 @@ export class DriverComponent implements OnInit {
   ngOnInit() {
     window.scrollTo(0, 0);
     this.validationForm();
+
   }
   validationForm() {
     const phoneFormat = '[0-9]';

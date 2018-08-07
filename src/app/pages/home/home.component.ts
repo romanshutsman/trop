@@ -5,7 +5,7 @@ import { SharedService } from './../../services/shared.service';
 import { AuthService } from './../../services/auth/auth.service';
 import * as firebase from 'firebase';
 declare var $: any;
-
+import * as Typed from 'typed.js';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -24,7 +24,16 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.typeWrite();
+    window.scrollTo(0, 0);
+    const typed = new Typed("#typed", {
+      strings: ["| tu oficina", "| tu bicicleta", "| tus muebles", "| tus mercaderías" ],
+      typeSpeed: 30,
+      backSpeed: 30,
+      backDelay: 1000,
+      startDelay: 1000,
+      smartBackspace: false,
+      loop: true
+  });
   }
   typeWrite() {
     const TxtType = function(el, toRotate, period) {

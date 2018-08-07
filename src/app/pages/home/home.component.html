@@ -8,11 +8,14 @@
 
         </h1> -->
         <p><span>Trop</span> mueve cualquier cosa por vos:</p>
-        <p>tu casa, tu moto, tu mascota 
-          <a class="typewrite" data-period="2000" data-type='["| tu oficina", "| tu bicicleta", "| tus muebles", "| tus mercaderías" ]'>
+        <div>tu casa, tu moto, tu mascota 
+          <!-- <a class="typewrite" data-period="2000" data-type='["| tu oficina", "| tu bicicleta", "| tus muebles", "| tus mercaderías" ]'>
             <span class="wrap"></span>
-          </a>
-        </p>
+          </a> -->
+          <span id="typed-strings">
+              <span id="typed"></span>
+          </span>
+        </div>
       </div>
       <div>
         <form [formGroup]="locationForm" (ngSubmit)="onSubmitLocation()">
