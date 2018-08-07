@@ -55,8 +55,6 @@
                     placeholder="Confirmar constraseña"
                     [class.err]="loginUser.controls['password'].errors && loginUser.controls['password'].touched"
                     >
-
-
                       <button class="btn login" [disabled]="!loginUser.valid" >Continuar con EMAIL</button>
                   </form>
                   <p><a class="forgot" routerLink='/forgot-password'>Olvide contraseña</a></p>
@@ -96,9 +94,14 @@
                   type="password" 
                   formControlName="password" 
                   class="form-control " 
-                  [class.err]="registerUser.controls['password'].errors && registerUser.controls['password'].touched"
+                  
                   >
-
+                  <p 
+                  *ngIf="registerUser.controls['password'].errors && registerUser.controls['password'].touched"
+                  [class.err]="registerUser.controls['password'].errors && registerUser.controls['password'].touched"
+                  class="parErr">
+                    La contraseña debe contener 8 caracteres como mínimo
+                </p>
                   <label for="repeatPassword">Confirmar constraseña</label>
                   <input 
                   id="repeatPassword"
@@ -114,8 +117,8 @@
                   <button class="btn facebook"  >Registrate con FACEBOOK</button>
                   <button class="btn gmail"  >Registrate con  GMAIL</button>
                 </div>
-                <p>
-                    Al registrarte o iniciar sesión, aceptas nuestros Términos y<br>Condiciones y la Política de Privacidad.
+                <p class="terms_privacy">
+                    Al registrarte o iniciar sesión, aceptas nuestros <a routerLink="/terms">Términos y<br>Condiciones</a> y la <a routerLink="/privacy">Política de Privacidad</a>.
                 </p>
               </div>
             </div>

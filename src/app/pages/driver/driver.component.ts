@@ -35,7 +35,7 @@ export class DriverComponent implements OnInit {
     'Santa Cruz',
     'Santa Fe',
     'Santiago del Estero',
-    'Terra do Fogo',
+    'Tierra del Fuego',
     'Tucumán'
   ];
 
@@ -46,17 +46,16 @@ export class DriverComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    window.scrollTo(0, 0);
     this.validationForm();
   }
   validationForm() {
-    const nameFormat = '[a-zA-Z ]*';
     const phoneFormat = '[0-9]';
     this.registerDriver = new FormGroup({
       'name': new FormControl(null, [
         Validators.required,
         Validators.maxLength(50),
-        Validators.minLength(5),
-        Validators.pattern(nameFormat)
+        Validators.minLength(5)
         ]),
       'email': new FormControl(null, [Validators.required, Validators.email]),
       'phone': new FormControl(null, [Validators.required, Validators.minLength(10), Validators.maxLength(13)]),

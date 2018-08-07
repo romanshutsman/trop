@@ -723,6 +723,10 @@ $font-quick-med: 'Quicksand-Medium';
             & > .row {
                 & > .col-8 {
                     & > p {
+                        & > span {
+                            font-family: $font-reg;
+                            margin-right: -20px;
+                        }
                         color: white !important;
                     }
                     & > p:first-child {

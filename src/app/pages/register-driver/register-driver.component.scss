@@ -194,6 +194,23 @@ input[type="file"], input[type="checkbox"] {
                                 & > .btn.subir {
                                     margin-top: 0px;
                                 }
+                                & > div.desc {
+                                    margin-bottom: 26px;
+                                    max-width: 300px;
+                                    width: 100%;
+                                    margin-right: auto;
+                                    margin-left: auto;
+                                    & > textarea {
+                                        font-family: $font-reg;
+                                        font-size: 12px;
+                                        font-weight: normal;
+                                        font-style: normal;
+                                        font-stretch: normal;
+                                        line-height: normal;
+                                        letter-spacing: normal;
+                                        color: $black;
+                                    }
+                                }
                             }
                             & > .skip {
                                 display: flex;
@@ -304,7 +321,9 @@ input[type="file"], input[type="checkbox"] {
 .err {
     color: red !important;
 }
-
+textarea {
+    resize: none;
+}
 .longCard {
     min-height: 865px;
     height: 100%;

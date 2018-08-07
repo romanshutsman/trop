@@ -5,7 +5,7 @@
         <div class="container">
           <div class="row">
             <div>
-              <p>¿Qué esperás para unirte a Trop? Es muy<br> sencillo. Recibís más ofertas de trabajo y<br> así aumentan tus ingresos. </p>
+              <p><span>¿</span> Qué esperás para unirte a Trop? Es muy<br> sencillo. Recibís más ofertas de trabajo y<br> así aumentan tus ingresos. </p>
               <p>Trop se encarga de buscar nuevos clientes y las nuevas ofertas laborales te<br> llegan directamente a tu teléfono.</p>
             </div>
             <div>
@@ -162,8 +162,9 @@
                   formControlName="password" 
                   class="form-control " 
                   placeholder="Confirmar constraseña"
-                  [class.err]="registerDriver.controls['password'].errors && registerDriver.controls['password'].touched"
                   >
+                  <p class="parErr" *ngIf="registerDriver.controls['password'].errors && registerDriver.controls['password'].touched"
+                  [class.err]="registerDriver.controls['password'].errors && registerDriver.controls['password'].touched">La contraseña debe contener 8 caracteres como mínimo</p>
                 </div>
             </div>
             <div class="btn-block">
@@ -178,7 +179,7 @@
       <div class="container">
         <div class="row">
           <div class="col-sm ios_android">
-            <p>¿Ya te descargaste la app de Trop?</p>
+            <p> <span>¿</span> Ya te descargaste la app de Trop?</p>
             <p>Si querés que tu trabajo comience a aumentar desde hoy, descárgate
                 la app gratuita. Disponible en sistemas iOS y Android.</p>
             <div>

@@ -73,7 +73,7 @@ export class RegisterDriverComponent implements OnInit {
       'alternateNumber': new FormControl(null, [ Validators.minLength(10), Validators.maxLength(13)]),
       'provincia': new FormControl(null, [Validators.required ]),
       'password': new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(16)]),
-      'description': new FormControl(null, [Validators.required, Validators.minLength(5), Validators.maxLength(1000)]),
+      'description': new FormControl(null, [Validators.required, Validators.minLength(5), Validators.maxLength(1200)]),
       'automotores': new FormControl(false),
       'mudanza': new FormControl(false),
       'maquinaria': new FormControl(false),

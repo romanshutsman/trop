@@ -70,6 +70,10 @@ $font-quick-bold: 'Quicksand_Bold';
                         text-align: center;
                     }
                     & > div > p:first-child {
+                        & > span {
+                            font-family: $font-reg;
+                            margin-right: -10px;
+                        }
                         font-family: $font-quick-bold;
                     }
                     & > div > p:nth-child(2) {
@@ -437,6 +441,10 @@ $font-quick-bold: 'Quicksand_Bold';
                         font-family: $font-quick-bold;
                         font-size: 32px;
                         padding-top: 90px;
+                        & > span {
+                            font-family: $font-reg;
+                            margin-right: -10px;
+                        }
                         @media only screen and (min-width: 576px) and (max-width: 991px) {
                             padding-top: 60px;
                         }
@@ -704,4 +712,7 @@ app-menu {
 
   .err {
       color: red;
+  }
+  .parErr {
+      font-size: 12px;
   }
