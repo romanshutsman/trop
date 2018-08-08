@@ -5,6 +5,7 @@ import { SharedService } from './../../services/shared.service';
 import { AuthService } from './../../services/auth/auth.service';
 import * as firebase from 'firebase';
 declare var $: any;
+import { PlatformLocation } from '@angular/common';
 @Component({
   selector: 'app-driver',
   templateUrl: './driver.component.html',
@@ -44,7 +45,14 @@ export class DriverComponent implements OnInit {
     private router: Router,
     private service:   SharedService,
     private auth:   AuthService,
-  ) { }
+    private Platformlocation: PlatformLocation
+  ) { 
+    Platformlocation.onPopState(() => {
+      $('#driver').modal('hide');
+      console.log('pressed back!');
+
+  });
+  }
 
   ngOnInit() {
     window.scrollTo(0, 0);

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators  } from '@angular/forms';
 import * as firebase from 'firebase';
 declare var $: any;
+import { PlatformLocation } from '@angular/common';
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -12,7 +13,11 @@ export class FooterComponent implements OnInit {
 
   subscibeNews: FormGroup;
   subscribeApp: FormGroup;
-  constructor() { }
+  constructor(private Platformlocation: PlatformLocation) { 
+    Platformlocation.onPopState(() => {
+      $('#footer').modal('hide');
+  });
+  }
 
   ngOnInit() {
     this.validationFormApp();

@@ -6,6 +6,7 @@ import { AuthService } from './../../services/auth/auth.service';
 import * as firebase from 'firebase';
 declare var $: any;
 import * as Typed from 'typed.js';
+import { PlatformLocation } from '@angular/common';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -19,10 +20,14 @@ export class HomeComponent implements OnInit {
     private router: Router,
     private service:   SharedService,
     private auth:   AuthService,
+    private Platformlocation: PlatformLocation
   ) { 
     this.validationForm();
     this.location = '';
     this.validationFormApp();
+    Platformlocation.onPopState(() => {
+      $('#home').modal('hide');
+  });
   }
 
   ngOnInit() {
