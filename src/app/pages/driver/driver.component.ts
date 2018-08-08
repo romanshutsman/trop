@@ -4,7 +4,7 @@ import { RouterModule, Routes, Router } from '@angular/router';
 import { SharedService } from './../../services/shared.service';
 import { AuthService } from './../../services/auth/auth.service';
 import * as firebase from 'firebase';
-
+declare var $: any;
 @Component({
   selector: 'app-driver',
   templateUrl: './driver.component.html',
@@ -39,7 +39,7 @@ export class DriverComponent implements OnInit {
     'Tierra del Fuego',
     'Tucumán'
   ];
-
+  subscribeApp: FormGroup;
   constructor(
     private router: Router,
     private service:   SharedService,
@@ -49,6 +49,7 @@ export class DriverComponent implements OnInit {
   ngOnInit() {
     window.scrollTo(0, 0);
     this.validationForm();
+    this.validationFormApp();
 
   }
   validationForm() {
@@ -90,5 +91,19 @@ validationNumber(event: any) {
   goToRegister() {
     const elem = document.getElementById('anchor');
     elem.scrollIntoView({ behavior: 'smooth' });
+  }
+  validationFormApp() {
+    this.subscribeApp = new FormGroup({
+      'email': new FormControl(null, [Validators.email, Validators.required])
+    });
+  }
+  onSubmitSubscribeApp() {
+    const data = this.subscribeApp.value;
+    const date = new Date().getTime();
+    const obj = {};
+    obj[date] = data.email;
+    $('#driver').modal('hide');
+    firebase.database().ref('/subscribeApp').update(obj);
+    this.subscribeApp.reset();
   }
 }

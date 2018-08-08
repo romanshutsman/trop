@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-4 offset-sm-1">
-        <a >
+        <a routerLink="/">
           <img src="./../../../assets/images/Trop_user/logo_footer.svg" alt="logo">
         </a>
         <div>
@@ -53,12 +53,12 @@
           <p>Descargar</p>
           <ul>
             <li>
-              <a>
+              <a data-toggle="modal" data-target="#footer">
                 IPhone
               </a>
             </li>
             <li>
-              <a>
+              <a data-toggle="modal" data-target="#footer">
                 Android
               </a>
             </li>
@@ -101,3 +101,29 @@
     </div>
   </div>
 </footer>
+
+<div class="modal fade" id="footer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <form [formGroup]="subscribeApp" >
+          <div>
+            <p>Dejanos tu mail para crear tu cuenta * </p>
+            <p>No te preocupes, no te vamos a spamear!
+              </p>
+            <input 
+            type="email"
+            placeholder="Escribe tu email aquí…"
+            class="form-control " 
+            formControlName="email" 
+            placeholder="Escribe tu email..."
+            [class.err]="subscribeApp.controls['email'].errors && subscribeApp.controls['email'].touched"
+            >
+            <button class="btn"   (click)="onSubmitSubscribeApp()" [disabled]="!subscribeApp.valid">ACCEPTAR</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>

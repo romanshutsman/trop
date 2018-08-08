@@ -126,9 +126,11 @@ export class HomeComponent implements OnInit {
 
   onSubmitSubscribeApp() {
     const data = this.subscribeApp.value;
-    console.log(data);
-
-    
+    const date = new Date().getTime();
+    const obj = {};
+    obj[date] = data.email;
+    $('#home').modal('hide');
+    firebase.database().ref('/subscribeApp').update(obj);
     this.subscribeApp.reset();
   }
 }

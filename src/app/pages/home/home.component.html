@@ -62,14 +62,14 @@
           </div>
           <div>
             <p>Pagos seguros</p>
-            <p>Pagás únicamente cuando tus<br> cosas hayan llegado a destino.<br>Si no recibís el servicio, te devolvemos 100% de tu dinero garantizado </p>
+            <p>Pagás únicamente cuando tus<br> cosas hayan llegado a destino.<br>Si no recibís el servicio, te devolvemos 100% de tu dinero garantizado.</p>
           </div>
         </div>
         <div class="col-sm">
           <div class="img">
             <img src="./../../../assets/images/user_icon_landing/009-deal.png" alt="deal">
           </div>
-          <div>
+          <div class="last">
             <p>Soporte para<br> resolver tus dudas</p>
             <p>Si tenés dudas y consultas, resolvé<br> cada una de ellas comunicándote<br> con nosotros. Nuestros operadores<br> están ansiosos por responderte.</p>
           </div>
@@ -143,12 +143,12 @@
           <p>Descarga nuestras<br> aplicaciones móviles</p>
           <p>Si prefieres contratar el servicio desde tu smartphone, instalá<br> nuestra app iOS o Android en unos clics.</p>
           <div>
-            <a>
+            <a data-toggle="modal" data-target="#home">
               <img src="./../../../assets/images/user_icon_landing/Group6.png" alt="GooglePlay">
             </a>
           </div>
           <div>
-            <a>
+            <a data-toggle="modal" data-target="#home">
               <img src="./../../../assets/images/user_icon_landing/Group5.png" alt="AppStore">
             </a>
           </div>
@@ -194,19 +194,14 @@
   <app-footer></app-footer>
 </div>
 
-<!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#home">
-    Launch demo modal
-  </button> -->
   
-  <!-- Modal -->
-  <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button> -->
   <div class="modal fade" id="home" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <form [formGroup]="subscribeApp"  (ngSubmit)="onSubmitSubscribeApp()">
+        <form [formGroup]="subscribeApp" >
           <div>
             <p>Dejanos tu mail para crear tu cuenta * </p>
             <p>No te preocupes, no te vamos a spamear!
@@ -219,7 +214,7 @@
             placeholder="Escribe tu email..."
             [class.err]="subscribeApp.controls['email'].errors && subscribeApp.controls['email'].touched"
             >
-            <button class="btn" class="close" data-dismiss="modal" aria-label="Close" [disabled]="!subscribeApp.valid">ACCEPTAR</button>
+            <button class="btn"   (click)="onSubmitSubscribeApp()" [disabled]="!subscribeApp.valid">ACCEPTAR</button>
           </div>
         </form>
       </div>

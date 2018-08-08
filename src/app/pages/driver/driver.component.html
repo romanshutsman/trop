@@ -183,12 +183,12 @@
             <p>Si querés que tu trabajo comience a aumentar desde hoy, descárgate
                 la app gratuita. Disponible en sistemas iOS y Android.</p>
             <div>
-              <a>
+              <a data-toggle="modal" data-target="#driver">
                 <img src="./../../../assets/images/user_icon_landing/Group6.png" alt="GooglePlay">
               </a>
             </div>
             <div>
-              <a>
+              <a data-toggle="modal" data-target="#driver">
                 <img src="./../../../assets/images/user_icon_landing/Group5.png" alt="AppStore">
               </a>
             </div>
@@ -233,3 +233,29 @@
     </section>
     <app-footer></app-footer>
   </div>
+
+  <div class="modal fade" id="driver" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form [formGroup]="subscribeApp" >
+            <div>
+              <p>Dejanos tu mail para crear tu cuenta * </p>
+              <p>No te preocupes, no te vamos a spamear!
+                </p>
+              <input 
+              type="email"
+              placeholder="Escribe tu email aquí…"
+              class="form-control " 
+              formControlName="email" 
+              placeholder="Escribe tu email..."
+              [class.err]="subscribeApp.controls['email'].errors && subscribeApp.controls['email'].touched"
+              >
+              <button class="btn"   (click)="onSubmitSubscribeApp()" [disabled]="!subscribeApp.valid">ACCEPTAR</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
