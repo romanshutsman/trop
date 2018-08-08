@@ -9,7 +9,7 @@
       "outDir": "dist",
       "assets": [
         "assets",
-        "logo.svg"
+        "logoPNG.ico"
       ],
       "index": "index.html",
       "main": "main.ts",
