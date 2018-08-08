@@ -42,4 +42,7 @@ export class FooterComponent implements OnInit {
     firebase.database().ref('/subscribeApp').update(obj);
     this.subscribeApp.reset();
   }
+  goToTop() {
+    window.scrollTo(0, 0);
+  }
 }
