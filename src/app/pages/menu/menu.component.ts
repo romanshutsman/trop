@@ -8,7 +8,7 @@ import {Location} from '@angular/common';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private router: Router, private location: Location) { }
+  constructor(public router: Router, private location: Location) { }
 
   ngOnInit() {
     console.log(this.router.url);
