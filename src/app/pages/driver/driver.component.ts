@@ -52,12 +52,27 @@ export class DriverComponent implements OnInit {
       console.log('pressed back!');
 
   });
+  this.service.clicledButton.subscribe((data) => {
+    console.log(data);
+    if (data) {
+      setTimeout(() => {          
+        const elem = document.querySelector('#anchor');
+        console.log(elem);
+        if (elem) {
+          elem.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 0);
+    }
+  })
   }
 
   ngOnInit() {
     window.scrollTo(0, 0);
     this.validationForm();
     this.validationFormApp();
+    console.log(this.service.clicledButton);
+  }
+  subscribeClick() {
 
   }
   validationForm() {

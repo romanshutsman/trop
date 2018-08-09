@@ -138,4 +138,8 @@ export class HomeComponent implements OnInit {
     firebase.database().ref('/subscribeApp').update(obj);
     this.subscribeApp.reset();
   }
+  registrate() {
+    this.service.clicledButtonTransfer(true);
+    this.service.clicledButton.next(true);
+  }
 }

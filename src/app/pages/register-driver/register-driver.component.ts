@@ -262,6 +262,7 @@ export class RegisterDriverComponent implements OnInit {
     dataDriver['name'] = this.userInfo.name;
     dataDriver['phone'] = this.userInfo.phone;
     dataDriver['provincia'] = this.userInfo.provincia;
+    dataDriver['approved'] = false;
     if (data.description) {
       dataDriver['description'] = data.description;
     }
