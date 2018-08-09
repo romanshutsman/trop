@@ -71,7 +71,8 @@ $font-quick-bold: 'Quicksand_Bold';
                     }
                     & > div > p:first-child {
                         & > span {
-                            font-family: $font-reg;
+                            display: inline-block;
+                            transform: scale(-1,1);
                             margin-right: -10px;
                         }
                         font-family: $font-quick-bold;
@@ -442,7 +443,8 @@ $font-quick-bold: 'Quicksand_Bold';
                         font-size: 32px;
                         padding-top: 90px;
                         & > span {
-                            font-family: $font-reg;
+                            display: inline-block;
+                            transform: scale(-1,1);
                             margin-right: -10px;
                         }
                         @media only screen and (min-width: 576px) and (max-width: 991px) {
