@@ -49,28 +49,29 @@ export class DriverComponent implements OnInit {
   ) { 
     Platformlocation.onPopState(() => {
       $('#driver').modal('hide');
-      console.log('pressed back!');
+    });
 
-  });
-  this.service.clicledButton.subscribe((data) => {
-    console.log(data);
-    if (data) {
-      setTimeout(() => {          
+    const interval = setInterval(() => {
+      const btn = localStorage.getItem('btn');
+      if(btn == 'button') {
+        localStorage.removeItem('btn');
         const elem = document.querySelector('#anchor');
-        console.log(elem);
         if (elem) {
           elem.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 0);
-    }
-  })
+        } 
+        clearInterval(interval);
+      } else {
+        clearInterval(interval);
+      }
+    }, 50);
+
   }
 
   ngOnInit() {
     window.scrollTo(0, 0);
     this.validationForm();
     this.validationFormApp();
-    console.log(this.service.clicledButton);
+
   }
   subscribeClick() {
 

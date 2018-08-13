@@ -139,7 +139,6 @@ export class HomeComponent implements OnInit {
     this.subscribeApp.reset();
   }
   registrate() {
-    this.service.clicledButtonTransfer(true);
-    this.service.clicledButton.next(true);
+    localStorage.setItem('btn', 'button');
   }
 }
