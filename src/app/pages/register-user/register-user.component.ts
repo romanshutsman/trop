@@ -1,18 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators, FormBuilder, NgForm  } from '@angular/forms';
 import { RouterModule, Routes, Router } from '@angular/router';
 import { Subscription } from 'rxjs/Subscription';
 import { SharedService } from './../../services/shared.service';
 import { AuthService } from './../../services/auth/auth.service';
 import * as firebase from 'firebase';
-
+declare var FB: any;
+declare var gapi: any;
 @Component({
   selector: 'app-register-user',
   templateUrl: './register-user.component.html',
   styleUrls: ['./register-user.component.scss']
 })
-export class RegisterUserComponent implements OnInit {
-
+export class RegisterUserComponent implements OnInit, AfterViewInit {
+  public auth2: any;
   registerUser: FormGroup;
   loginUser: FormGroup;
   displayLine = true;
@@ -25,6 +26,7 @@ export class RegisterUserComponent implements OnInit {
    }
 
   ngOnInit() {
+    this.googleInit();
   }
   validationRegisterUser() {
     const nameFormat = '[a-zA-Z ]*';
@@ -84,5 +86,60 @@ export class RegisterUserComponent implements OnInit {
     } else {
       this.displayLine = false;
     }
+  }
+  RegisterFB() {
+
+  }
+  onSignIn(googleUser) {
+    // Useful data for your client-side scripts:
+    var profile = googleUser.getBasicProfile();
+    console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+    console.log('Full Name: ' + profile.getName());
+    console.log('Given Name: ' + profile.getGivenName());
+    console.log('Family Name: ' + profile.getFamilyName());
+    console.log("Image URL: " + profile.getImageUrl());
+    console.log("Email: " + profile.getEmail());
+
+    // The ID token you need to pass to your backend:
+    var id_token = googleUser.getAuthResponse().id_token;
+    console.log("ID Token: " + id_token);
+  };
+  googleInit() {
+    gapi.load('auth2', () => {
+      this.auth2 = gapi.auth2.init({
+        client_id: '159737933531-st2ss37g4dh7mcioc2l4r76o59t87mjl.apps.googleusercontent.com',
+        cookiepolicy: 'single_host_origin',
+        scope: 'profile email'
+      });
+    });
+    
+    gapi.signin2.render("div_tag_id", {
+      "scope": "profile email ",
+      "width": 277,
+      "height": 44,
+      "longtitle": true,
+      "theme": "dark",
+      "onsuccess": this.onGoogleLoginSuccess,
+      
+      "onfailure": function (e) {
+          console.warn("Google Sign-In failure: " + e.error);
+      }
+  });
+  }
+  onGoogleLoginSuccess = (loggedInUser) => {
+    const profile = loggedInUser.getBasicProfile();
+           console.log(profile);
+           console.log(loggedInUser);
+           this.auth.registerGmail();
+           this.router.navigateByUrl('/');
+          }
+  loginGmail() {
+  }
+  registerGmail() {
+    this.auth.registerGmail();
+    this.router.navigateByUrl('/');
+  }
+  ngAfterViewInit() {
+    
   }
 }

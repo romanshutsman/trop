@@ -31,64 +31,31 @@ services = ['automotores', 'mudanza', 'maquinaria', 'objetos', 'mascotas', 'moto
   constructor(private service:   SharedService, private fb: FormBuilder, private router: Router) {
     this.validationForm();
     // this.setLocation();
-    this.router.events
-    .pipe(filter((e: any) => e instanceof RoutesRecognized),
-    pairwise()
-  ).subscribe((e: any) => {
-    const url = e[0].urlAfterRedirects;
-    console.log('LALALALAL');
-      console.log(url);
-      if (url == '/') {
-        const interval = setInterval(() => {
-          const data = localStorage.getItem('address');
-          console.log(data);
-          // console.log(data != null);
-          if (data) {
-            console.log(data);
-            console.log(data);
-            if (data != 'null') {
-              const d = {};
-              d['dest_from'] = data;
-              this.createOrder.patchValue(d);
-              console.log(this.createOrder);
-            }
-            setTimeout(() => {
-              clearInterval(interval);
-            }, 1000);
-          }
-        }, 10);
-      }
-    });    
   }
   setLocation() {
-    this.router.events
-    .pipe(filter((e: any) => e instanceof RoutesRecognized),
-    pairwise()
-  ).subscribe((e: any) => {
-    const url = e[0].urlAfterRedirects;
-    console.log('LALALALAL');
-      console.log(url);
-      if (url == '/') {
-        const interval = setInterval(() => {
-          const data = localStorage.getItem('address');
-          console.log(data);
-          // console.log(data != null);
-          if (data) {
-            console.log(data);
-            console.log(data);
-            if (data != 'null') {
-              const d = {};
-              d['dest_from'] = data;
-              this.createOrder.patchValue(d);
-              console.log(this.createOrder);
-            }
-            setTimeout(() => {
-              clearInterval(interval);
-            }, 1000);
+    const interval = setInterval(() => {
+      const data = localStorage.getItem('address');
+      console.log(data);
+      // console.log(data != null);
+      if (data) {
+        console.log(data);
+        if (data != 'null') {
+          if (data != 'undefined') {
+            const d = {};
+            d['dest_from'] = data;
+            this.createOrder.patchValue(d);
+            console.log(this.createOrder);
           }
-        }, 10);
+        }
+        setTimeout(() => {
+          clearInterval(interval);
+        }, 1000);
+        localStorage.removeItem('address');
+      } else {
+        clearInterval(interval);
+        localStorage.removeItem('address');
       }
-    });
+    }, 10);
   }
   ngOnInit() {
     

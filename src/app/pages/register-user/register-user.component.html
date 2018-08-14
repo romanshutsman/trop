@@ -31,7 +31,9 @@
               <div role="tabpanel" class="tab-pane fade " id="login">
                   <div class="social ">
                     <button class="btn facebook login"  >Continuar con FACEBOOK</button>
-                    <button class="btn gmail login"  >Continuar con GOOGLE</button>
+                    <button class="btn gmail" (click)="loginGmail()" >Continuar con GOOGLE
+                      <button class="g-signin2 btn" data-onsuccess="onSignIn" (click)="loginGmail()" style="display:none;">Sign up via Google</button>
+                    </button>
                   </div>
                   <p class="orUse">o usa:</p>
                   <form [formGroup]="loginUser"  (ngSubmit)="onSubmitLoginUser()">
@@ -114,8 +116,12 @@
                   <button class="btn driver" [disabled]="!registerUser.valid" >Crear cuenta</button>
                 </form>
                 <div class="social">
-                  <button class="btn facebook"  >Registrate con FACEBOOK</button>
-                  <button class="btn gmail"  >Registrate con  GMAIL</button>
+                  <button class="btn facebook" (click)="RegisterFB()" >Registrate con FACEBOOK</button>
+                  <!-- <button class="g-signin2 btn" data-onsuccess="onSignIn" (click)="loginGmail()"  >Sign up via Google</button> -->
+                  <div class="g-signin2 btn gmail" id="div_tag_id" (click)="loginGmail()"  data-longtitle="true" data-onsuccess="onSignIn"></div>
+                  <button class="g-signin2 btn gmail" data-onsuccess="onSignIn" (click)="loginGmail()">Sign up via Google</button>
+                  <button class="btn gmail" (click)="loginGmail()" >Registrate con  GMAIL
+                  </button>
                 </div>
                 <p class="terms_privacy">
                     Al registrarte o iniciar sesión, aceptas nuestros <a routerLink="/terms">Términos y<br>Condiciones</a> y la <a routerLink="/privacy">Política de Privacidad</a>.

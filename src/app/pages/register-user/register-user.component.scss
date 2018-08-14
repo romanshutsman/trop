@@ -204,3 +204,44 @@ app-menu {
     margin-left: auto;
     margin-right: auto;
 }
+#customBtn {
+    display: inline-block;
+    background: #4285f4;
+    color: white;
+    width: 190px;
+    border-radius: 5px;
+    white-space: nowrap;
+    // display: none;
+  }
+  #customBtn:hover {
+    cursor: pointer;
+  }
+  span.label {
+    font-weight: bold;
+  }
+  span.icon {
+    background: transparent;
+    display: inline-block;
+    vertical-align: middle;
+    width: 42px;
+    height: 42px;
+    border-right: #2265d4 1px solid;
+  }
+  span.buttonText {
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 42px;
+    padding-right: 42px;
+    font-size: 14px;
+    font-weight: bold;
+    /* Use the Roboto font that is loaded in the <head> */
+    font-family: 'Roboto', sans-serif;
+  }
+  div.abcRioButtonContentWrapper {
+      visibility: hidden !important;
+      background: rebeccapurple !important;
+  }
+  div.abcRioButtonIcon {
+      visibility: hidden !important;
+      background: rebeccapurple !important;
+  }
