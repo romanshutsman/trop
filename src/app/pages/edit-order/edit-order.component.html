@@ -1,0 +1,115 @@
+<app-menu></app-menu>
+<div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="card" [class.longCard]="true">
+
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade show active" id="login">
+                  <div class="wrap_form">                    
+                    <form [formGroup]="createOrder"  (ngSubmit)="onSubmitCreate()">
+                      <p class="first_par">
+                        <input 
+                        type="text" 
+                        formControlName="title" 
+                        class="form-control "  
+                        value="{{title}}">
+                        <button class="btn">
+                          <img src="./../../../assets/images/edit.png" alt="edit">
+                        </button>
+                      </p>
+                      <label for="dest_from">Origen *
+                        <button class="btn">
+                          <img src="./../../../assets/images/edit.png" alt="edit">
+                        </button>
+                      </label>
+                      <input 
+                      id="dest_from"
+                      type="text" 
+
+                      placeholder=" "
+                      class="form-control " 
+                      formControlName="dest_from" 
+                      [class.err]="createOrder.controls['dest_from'].errors && createOrder.controls['dest_from'].touched">
+
+                      <label for="dest_to">Destino *
+                          <button class="btn">
+                            <img src="./../../../assets/images/edit.png" alt="edit">
+                          </button>
+                      </label>
+                      <input 
+                      id="dest_to"
+                      type="text"
+                      placeholder=" "
+                      (setAddress)="getAddressOnChangeTo($event)"
+                      appGoogleplace 
+                      class="form-control " 
+                      formControlName="dest_to" 
+                      [class.err]="createOrder.controls['dest_to'].errors && createOrder.controls['dest_to'].touched">
+                      
+                      <label>Día de recogida *</label>
+                      <label for="date" class=" time_date">Fecha</label>
+                      <mat-form-field>
+                        <mat-select [(value)]="selectedDate" formControlName="date" style="font-family: 'BrownStd-Regular';    font-size: 14px;" >
+                          <mat-option style="font-family: 'BrownStd-Regular';color: #171717; font-size: 14px;"  value="nope">Cualquiera</mat-option>
+                          <mat-option style="font-family: 'BrownStd-Regular';color: #171717; font-size: 14px;" *ngFor="let i of date" value="{{i}}">{{i}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+
+                      <label class=" time_date" >Time</label>
+                      <mat-form-field>
+                        <mat-select [(value)]="selectedTime" formControlName="time" style="font-family: 'BrownStd-Regular';    font-size: 14px;" >
+                          <mat-option style="font-family: 'BrownStd-Regular';color: #171717; font-size: 14px;"  value="nope">Cualquiera</mat-option>
+                          <mat-option style="font-family: 'BrownStd-Regular';color: #171717; font-size: 14px;" *ngFor="let i of time" value="{{i}}">{{i}}</mat-option>
+                        </mat-select>
+                      </mat-form-field>
+                      <div class="checkboxes">
+                        <p class="services" [class.errCheckbox]="createOrder.errors">Categoría *</p>
+                        <ng-container *ngFor="let service of services" >
+                          <input 
+                          type="checkbox" 
+                          class="form-control"
+                          id="{{service}}"
+                          formControlName="{{service}}">
+                          <label for="{{service}}" class="{{service}}" >{{service}}</label>
+                        </ng-container>
+                        <input
+                        *ngIf="createOrder.controls['otros'].value"
+                        type="text" 
+                        class="form-control"
+                        placeholder="Input what are you mean"
+                        formControlName="otrosText"
+                        [class.err]="createOrder.controls['otrosText'].errors && createOrder.controls['otrosText'].touched">
+                      </div>
+                      <label class="description2" for="description2">
+                          Descripción *
+                          <button class="btn">
+                            <img src="./../../../assets/images/edit.png" alt="edit">
+                          </button>
+                      </label>
+                      <div class="desc">
+                        <textarea 
+                        id="description2" 
+                        class="form-control" 
+                        formControlName="description"  
+                        rows="3"
+                        [class.errCheckbox]="createOrder.controls['description'].errors && createOrder.controls['description'].touched"
+                        ></textarea>
+                      </div>
+
+  
+  
+                      <button class="btn login" [disabled]="!createOrder.valid" >PUBLICAR ANUNCIO</button>
+                      <p class="skip_par">
+                        <a class="skip" >Volver</a>
+                      </p>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

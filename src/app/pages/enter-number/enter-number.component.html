@@ -1,0 +1,60 @@
+<app-menu></app-menu>
+<div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="card" [class.longCard]="true">
+
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade show active" id="login">
+                  <p class="title">Teléfono</p>
+                  <p class="description">
+                    Ingrese un número de télefono válido. Únicamente podrá<br> visualizarlo el transportista que hayas seleccionado para tu envío.
+                  </p>
+                  <div class="wrap_form">                    
+                    <form [formGroup]="createOrder"  (ngSubmit)="onSubmitCreate()">
+                      <div>
+                        <label for="number_phone">Número de teléfono</label>
+                        <div>                          
+                          <mat-form-field class="select" [style.width]="'140px'">
+                            <mat-select  [(ngModel)]="selectedCode1" formControlName="code1" style="font-family: 'BrownStd-Regular';    font-size: 14px;" >
+                              <mat-option style="font-family: 'BrownStd-Regular';color: #171717; font-size: 14px;" *ngFor="let i of countryCode" value="{{i}}">{{i}}</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                          <input 
+                          id="number_phone"
+                          type="number"
+                          placeholder=" "
+                          class="form-control " 
+                          formControlName="number" 
+                          [class.err]="createOrder.controls['number'].errors && createOrder.controls['number'].touched">
+                        </div>
+                        <label for="number_alternative">Número alternativo</label>
+                        <div>                          
+                          <mat-form-field class="select" [style.width]="'140px'">
+                            <mat-select  [(ngModel)]="selectedCode2" formControlName="code2" style="font-family: 'BrownStd-Regular';    font-size: 14px;" >
+                              <mat-option style="font-family: 'BrownStd-Regular';color: #171717; font-size: 14px;" *ngFor="let i of countryCode" value="{{i}}">{{i}}</mat-option>
+                            </mat-select>
+                          </mat-form-field>
+                          <input 
+                          id="number_alternative"
+                          type="number"
+                          placeholder=" "
+                          class="form-control " 
+                          formControlName="number_alternative" 
+                          [class.err]="createOrder.controls['number_alternative'].errors && createOrder.controls['number_alternative'].touched">
+                        </div>
+
+                      </div>
+
+                      <button class="btn login" [disabled]="!createOrder.valid" >Continuar</button>
+
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

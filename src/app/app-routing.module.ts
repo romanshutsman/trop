@@ -15,6 +15,8 @@ import { DashboardUserComponent } from './pages/dashboard-user/dashboard-user.co
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { TermsComponent } from './pages/terms/terms.component';
 import { CreateOrderComponent } from './pages/create-order/create-order.component';
+import { EditOrderComponent } from './pages/edit-order/edit-order.component';
+import { EnterNumberComponent } from './pages/enter-number/enter-number.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -26,7 +28,9 @@ const routes: Routes = [
   {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'privacy', component: PrivacyComponent},
   {path: 'terms', component: TermsComponent},
-  // {path: 'create-order', component: CreateOrderComponent},
+  {path: 'create-order', component: CreateOrderComponent},
+  {path: 'edit-order', component: EditOrderComponent},
+  {path: 'enter-number', component: EnterNumberComponent},
   {path: 'orders-for-drivers', component: OrdersForDriversComponent, canActivate: [AuthGuard]},
   {path: 'dashboard-user', component: DashboardUserComponent, canActivate: [AuthGuard]},
   {path: '**', component: HomeComponent}

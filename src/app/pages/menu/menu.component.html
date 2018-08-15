@@ -6,6 +6,7 @@
     *ngIf="router.url === '/' 
     || router.url === '/home'
     || this.router.url === '/driver'
+    || this.router.url === '/edit-order'
     || this.router.url === '/dashboard-user'
     || this.router.url === '/orders-for-drivers'">
       <img src="./../../../assets/images/LOGO_truck.svg" alt="logo">
@@ -15,6 +16,7 @@
     || router.url === '/forgot-password'
     || router.url === '/privacy'
     || router.url === '/terms'
+    || router.url === '/enter-number'
     || router.url === '/create-order'
     || router.url === '/login-driver'
     || router.url === '/register-user'">
@@ -23,6 +25,12 @@
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+    <p 
+    style="
+      width:  100%;
+      text-align:  center;"
+      *ngIf="this.router.url === '/edit-order'"  
+      >Vehículos, motos</p>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">

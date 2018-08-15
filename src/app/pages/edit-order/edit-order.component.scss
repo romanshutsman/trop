@@ -1,0 +1,282 @@
+@font-face {
+    font-family: 'BrownStd-Regular';
+    src: url('./../../../assets/fonts/BrownStd-Regular.otf');
+}
+
+@font-face {
+    font-family: 'BrownStd-Bold';
+    src: url('./../../../assets/fonts/BrownStd-Bold.otf')
+}
+
+$yellow : #ffcf00;
+$black : #171717;
+$blue : #0F7EDF;
+$white : #ffffff;
+$lightwhite : #f9f9f9;
+$bg: #efeef4;
+
+$font-bold: 'BrownStd-Bold';
+$font-reg: 'BrownStd-Regular';
+
+input[type="file"], input[type="checkbox"] {
+    display: none;
+}
+textarea {
+    resize: none;
+}
+.container-fluid {
+    background-color: $bg;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 105px;
+    padding-bottom: 50px;
+    height: 100%;
+    & > .container {
+        & > .row {
+            & > .col-12 {
+                display: flex;
+                justify-content: center;
+                & > .card {
+                    width: 836px;
+                    min-height: 710px;
+                    height: 100%;
+                    border-radius: 4px;
+                    background-color: $white;
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+                    & > ul {
+                        display: flex;
+                        justify-content: space-around;
+                        border: unset;
+                        margin: 30px auto;
+                        & > li {
+                            & > p {
+                                border: unset;
+                                font-family: $font-reg;
+                                max-width: 570px;
+                                width: 100%;
+                                font-size: 14px;
+                                padding: 0;
+                                font-weight: normal;
+                                font-style: normal;
+                                font-stretch: normal;
+                                line-height: normal;
+                                letter-spacing: normal;
+                                color: #737373;
+                                text-align: center;
+                            }
+                        }
+                    }
+                    & > .tab-content {
+                        & > .tab-pane {
+                            padding-left: 5px;
+                            padding-right: 5px;
+                            & > .wrap_form {
+                                max-width: 742px;
+                                margin-left: auto;
+                                margin-right: auto;
+                                & > form {
+                                    display: flex;
+                                    flex-direction: column;
+                                    & > .first_par {
+                                        position: relative;
+                                        margin: 53px 0;
+                                        & > input {
+                                            border: none;
+                                            padding-left: 0;
+                                            font-family: $font-reg;
+                                            font-size: 14px;
+                                            font-weight: normal;
+                                            font-style: normal;
+                                            font-stretch: normal;
+                                            line-height: normal;
+                                            letter-spacing: normal;
+                                            padding-right: 35px;
+                                            color: rgba($color: #000000, $alpha: 0.68);
+                                        }
+                                        & > button.btn {
+                                            position: absolute;
+                                            right: 0;
+                                            top: 0;
+                                            background: transparent;
+                                            padding-top: 0px;
+                                        }
+                                    }
+                                    & > .time_date {
+                                        text-align: center;
+                                        font-size: 12px
+                                    }
+                                    & > label {
+                                        text-align: left;
+                                        color: #525252;
+                                        font-size: 14px;
+                                        font-family: $font-reg;
+                                        margin-bottom: 3px;
+                                        position: relative;
+                                        & > button.btn {
+                                            position: absolute;
+                                            top: 20px;
+                                            right: 0;
+                                            background: transparent;
+                                        }
+                                    }
+                                    & > input {
+                                        // max-width: 300px;
+                                        width: 100%;
+                                        margin-left: auto;
+                                        margin-right: auto;
+                                        border: unset;  
+                                        font-size: 14px;
+                                        border-radius: unset;
+                                        border-bottom: 1px $black solid;
+                                        margin-bottom: 24px;
+                                        font-family: $font-reg;
+                                        color: $black;
+                                        padding-left: 0;
+                                        padding-right: 0;
+                                        &:focus {
+                                            box-shadow: unset;
+                                            outline: none;
+                                        }
+                                    }
+                                    & > .btn {
+                                        max-width: 277px;
+                                        width: 100%;
+                                        height: 47px;
+                                        font-size: 13px;
+                                        font-family: $font-reg;
+                                        color: $white;
+                                        border-radius: 6px;
+                                        background-color: $blue;
+                                        text-transform: uppercase;
+                                        margin-left: auto;
+                                        margin-right: auto;
+                                        margin-top: 6px;
+                                        padding-top: 11px;
+                                        margin-bottom: 19px;
+                                    }
+                                    & > .skip_par  {
+                                        margin-right: auto;
+                                        margin-left: auto;
+                                        padding-bottom: 34px;
+                                        & > a {
+                                            font-family: $font-reg;
+                                            font-size: 14px;
+                                            font-weight: normal;
+                                            font-style: normal;
+                                            font-stretch: normal;
+                                            line-height: normal;
+                                            letter-spacing: normal;
+                                            color: #171717;
+                                        }
+                                    }
+                                    & > .checkboxes {
+                                        width: 100%;
+                                        margin-left: auto;
+                                        margin-right: auto;
+                                        & > p {
+                                            text-align: left;
+                                            color: #525252;
+                                            font-size: 14px;
+                                            font-family: "BrownStd-Regular";
+                                            margin-bottom: 18px;
+                                        }
+                                        & > label{
+                                            height: 33px;
+                                            border-radius: 2px;
+                                            border: solid 1px #979797;
+                                            padding: 7px 12px 7px;
+                                            font-size: 14px;
+                                            color: rgba(82, 82, 82, 0.65);
+                                            font-family: $font-reg;
+                                            margin-right: 7px;
+                                            margin-bottom: 10px;
+                                            &::first-letter {
+                                                text-transform: capitalize;
+                                            }
+                                        }
+                                        & > #automotores:checked + label,
+                                        #mudanza:checked + label,
+                                        #maquinaria:checked + label,
+                                        #objetos:checked + label,
+                                        #mascotas:checked + label,
+                                        #motocicleta:checked + label,
+                                        #muebles:checked + label,
+                                        #otros:checked + label {
+                                            border: solid 1px #0f7edf;
+                                            color: $black;
+                                            color: rgba(23, 23, 23, 1);
+                                        }
+                                        input {
+                                            // max-width: 300px;
+                                            width: 100%;
+                                            margin-left: auto;
+                                            margin-right: auto;
+                                            border: unset;  
+                                            border-radius: unset;
+                                            border-bottom: 1px $black solid;
+                                            margin-bottom: 20px;
+                                            font-family: $font-reg;
+                                            color: $black;
+                                            padding-left: 0;
+                                            padding-right: 0;
+                                            font-size: 14px;
+                                            &:focus {
+                                                box-shadow: unset;
+                                                outline: none;
+                                            }
+                                        }
+                                    }
+                                    & > .description2 {
+                                        margin-top: 22px;
+                                        margin-bottom: 24px;
+                                        & > button.btn {
+                                            top: 0px;
+                                        }
+                                        
+                                    }
+                                    & > div.desc {
+                                        margin-bottom: 26px;
+                                        & > textarea {
+                                            font-family: $font-reg;
+                                            font-size: 12px;
+                                            font-weight: normal;
+                                            font-style: normal;
+                                            font-stretch: normal;
+                                            line-height: normal;
+                                            letter-spacing: normal;
+                                            color: $black;
+                                        }
+                                    }
+                                }
+                            }
+                            & > p {
+                                text-align: center;
+                                font-size: 12px;
+                                color: #393939;
+                                font-family: $font-reg;
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.err {
+    // color: red !important;
+    border-bottom: solid 1px red !important;
+}
+.errCheckbox {
+    color: red !important;
+}
+@keyframes increase {
+    100% {
+        width: 80px;
+    }
+}
+app-menu {
+    position: absolute !important;
+    width: 100% !important;
+    background: $yellow ;
+}

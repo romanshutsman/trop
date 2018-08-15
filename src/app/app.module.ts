@@ -27,6 +27,8 @@ import { DashboardUserComponent } from './pages/dashboard-user/dashboard-user.co
 import { PrivacyComponent } from './pages/privacy/privacy.component';
 import { TermsComponent } from './pages/terms/terms.component';
 import { CreateOrderComponent } from './pages/create-order/create-order.component';
+import { EditOrderComponent } from './pages/edit-order/edit-order.component';
+import { EnterNumberComponent } from './pages/enter-number/enter-number.component';
 
 
 
@@ -46,7 +48,9 @@ import { CreateOrderComponent } from './pages/create-order/create-order.componen
     DashboardUserComponent,
     PrivacyComponent,
     TermsComponent,
-    CreateOrderComponent
+    CreateOrderComponent,
+    EditOrderComponent,
+    EnterNumberComponent
   ],
   imports: [
     BrowserModule,

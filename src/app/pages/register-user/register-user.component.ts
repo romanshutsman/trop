@@ -115,10 +115,7 @@ export class RegisterUserComponent implements OnInit, AfterViewInit {
     
     gapi.signin2.render("div_tag_id", {
       "scope": "profile email ",
-      "width": 277,
-      "height": 44,
       "longtitle": true,
-      "theme": "dark",
       "onsuccess": this.onGoogleLoginSuccess,
       
       "onfailure": function (e) {
