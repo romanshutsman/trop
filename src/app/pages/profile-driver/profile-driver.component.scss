@@ -1,0 +1,345 @@
+@font-face {
+    font-family: 'BrownStd-Regular';
+    src: url('./../../../assets/fonts/BrownStd-Regular.otf');
+}
+
+@font-face {
+    font-family: 'BrownStd-Bold';
+    src: url('./../../../assets/fonts/BrownStd-Bold.otf')
+}
+
+$yellow : #ffcf00;
+$black : #171717;
+$blue : #0F7EDF;
+$white : #ffffff;
+$lightwhite : #f9f9f9;
+$bg: #efeef4;
+
+$font-bold: 'BrownStd-Bold';
+$font-reg: 'BrownStd-Regular';
+
+input[type="file"], input[type="checkbox"] {
+    display: none;
+}
+textarea {
+    resize: none;
+}
+.container-fluid {
+    background-color: $bg;
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 55px;
+    padding-bottom: 50px;
+    height: 100%;
+    padding-bottom: 0;
+    padding-left: 0;
+    padding-right: 0;
+    & > .container {
+        & > .row {
+            & > .col-12 {
+                display: flex;
+                justify-content: center;
+                & > .card {
+                    width: 974px;
+                    min-height: 600px;
+                    height: 100%;
+                    border-radius: 4px;
+                    background-color: $white;
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+                    & > .tab-content {
+                        & > .tab-pane {
+                            padding-left: 5px;
+                            padding-right: 5px;
+                            & > p.title {
+                                font-family: $font-reg;
+                                font-size: 20px;
+                                font-weight: normal;
+                                font-style: normal;
+                                font-stretch: normal;
+                                line-height: 1.4;
+                                letter-spacing: normal;
+                                color: #000000;
+                                margin-top: 51px;
+                                margin-bottom: 20px;
+                            }
+                            & > p.description {
+                                font-family: $font-reg;
+                                font-size: 14px;
+                                font-weight: normal;
+                                font-style: normal;
+                                font-stretch: normal;
+                                line-height: normal;
+                                letter-spacing: normal;
+                                text-align: center;
+                                color: rgba(17,17,17, 0.61);
+                                margin-bottom: 57px;
+                            }
+                            & > .wrap_form {
+                                max-width: 742px;
+                                margin-left: auto;
+                                margin-right: auto;
+                                & > form {
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: center;
+                                    & > .group {
+                                        display: flex;
+                                        margin-top: 65px;
+                                        & > .avatar {
+                                            width: 300px;
+                                            display:  flex;
+                                            justify-content:  center;
+                                            padding-top:  20px;
+                                            & > .img {
+                                                width: 126px;
+                                                height: 126px;
+                                                & > img {                             
+                                                    max-width:100%; 
+                                                    height:100%;
+                                                    border-radius: 50%;
+                                                }
+                                            }
+                                        }
+                                        & > .main-info {
+                                            display: flex;
+                                            flex-direction: column;
+                                            & > .edit {
+                                                position: relative;
+                                                input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+                                                    padding-top: 10px;
+                                                  }
+                                                input::-moz-placeholder { /* Firefox 19+ */
+                                                    padding-top: 10px;
+                                                  }
+                                                input:-ms-input-placeholder { /* IE 10+ */
+                                                    padding-top: 10px;
+                                                  }
+                                                input:-moz-placeholder { /* Firefox 18- */
+                                                    padding-top: 10px;
+                                                  }
+                                                & > .btn {
+                                                    position: absolute;
+                                                    right: 20%;
+                                                    background: transparent;
+                                                    padding-top: 0px;
+                                                }
+                                            }
+                                            & > input#name {
+                                                font-family: $font-reg;
+                                                font-size: 22px;
+                                                font-weight: bold;
+                                                font-style: normal;
+                                                font-stretch: normal;
+                                                line-height: normal;
+                                                letter-spacing: normal;
+                                                text-align: left;
+                                                padding-left: 0;
+                                                color: #171717;
+                                                background: transparent;
+                                                border: unset;
+                                                
+                                            }
+                                            & > div {
+                                                display: flex;
+                                                margin-bottom: 15px;
+                                                & > label {
+                                                    width: 183px;
+                                                    font-family: $font-reg;
+                                                    font-size: 12px;
+                                                    font-weight: normal;
+                                                    font-style: normal;
+                                                    font-stretch: normal;
+                                                    line-height: normal;
+                                                    letter-spacing: normal;
+                                                    color: #525252;
+                                                    margin-right: 40px;
+                                                    display: flex;
+                                                    align-items: center;
+                                                }
+                                                & > input {
+                                                    font-family: $font-reg;;
+                                                    font-size: 16px;
+                                                    font-weight: normal;
+                                                    font-style: normal;
+                                                    font-stretch: normal;
+                                                    line-height: normal;
+                                                    letter-spacing: normal;
+                                                    text-align: left;
+                                                    color: #171717;
+                                                    background: transparent;
+                                                    border: unset;
+                                                }
+                                            }
+                                        }
+
+                                    }
+                                    & > div {
+                                        max-width: 776px;
+                                        width: 100%;
+                                        & > label {
+                                            text-align: left;
+                                            color: #525252;
+                                            font-size: 14px;
+                                            font-family: $font-reg;
+                                            margin-bottom: 3px;
+                                            position: relative;
+                                            & > button.btn {
+                                                position: absolute;
+                                                top: 20px;
+                                                right: 0;
+                                                background: transparent;
+                                            }
+                                        }
+
+                                    }
+                                    & > .extra {
+                                        & > div {
+                                            &:first-child {
+                                                margin-bottom: 37px;
+                                            }
+                                            display: flex;
+                                            & > label {
+                                                width: 165px;
+                                                height: 15px;
+                                                font-family: $font-reg;
+                                                font-size: 12px;
+                                                font-weight: normal;
+                                                font-style: normal;
+                                                font-stretch: normal;
+                                                line-height: normal;
+                                                letter-spacing: normal;
+                                                color: #383838;
+                                                flex-shrink: 0
+                                            }
+                                            & > .desc {
+                                                width: 100%;
+                                                .form-control:disabled, .form-control[readonly] {
+                                                    background: transparent;
+                                                }
+                                                & > textarea {
+                                                    font-family: $font-reg;
+                                                    font-size: 14px;
+                                                    font-weight: normal;
+                                                    font-style: normal;
+                                                    font-stretch: normal;
+                                                    letter-spacing: normal;
+                                                    color: #171717;
+                                                    padding: 0px;
+                                                    border: unset;
+                                                }
+                                            } 
+                                        }
+                                        &> div:nth-child(2) {
+                                            & > .checkboxes {
+                                                width: 100%;
+                                                margin-left: auto;
+                                                margin-right: auto;
+                                                display:  flex;
+                                                flex-wrap:  wrap;
+                                                & > p {
+                                                    text-align: left;
+                                                    color: #525252;
+                                                    font-size: 14px;
+                                                    font-family: "BrownStd-Regular";
+                                                    margin-bottom: 18px;
+                                                }
+                                                & > label{
+                                                    height: 33px;
+                                                    border-radius: 2px;
+                                                    border: solid 1px #979797;
+                                                    padding: 7px 12px 7px;
+                                                    font-size: 14px;
+                                                    color: rgba(82, 82, 82, 0.65);
+                                                    font-family: $font-reg;
+                                                    margin-right: 7px;
+                                                    margin-bottom: 10px;
+                                                    &::first-letter {
+                                                        text-transform: capitalize;
+                                                    }
+                                                }
+                                                & > #automotores-profile:checked + label,
+                                                #mudanza-profile:checked + label,
+                                                #maquinaria-profile:checked + label,
+                                                #objetos-profile:checked + label,
+                                                #mascotas-profile:checked + label,
+                                                #motocicleta-profile:checked + label,
+                                                #muebles-profile:checked + label,
+                                                #otros-profile:checked + label {
+                                                    border: solid 1px #0f7edf;
+                                                    color: $black;
+                                                    color: rgba(23, 23, 23, 1);
+                                                }
+                                                input {
+                                                    // max-width: 300px;
+                                                    width: 100%;
+                                                    border: unset;  
+                                                    border-radius: unset;
+                                                    border-bottom: 1px $black solid;
+                                                    font-family: $font-reg;
+                                                    color: $black;
+                                                    padding-left: 0;
+                                                    padding-right: 0;
+                                                    font-size: 14px;
+                                                    width: 145px;
+                                                    padding-bottom: 0px;
+                                                    padding-top: 9px;
+                                                    height: 33px;
+                                                    font-size: 12px;
+                                                    &:focus {
+                                                        box-shadow: unset;
+                                                        outline: none;
+                                                    }
+                                                }
+                                            }
+                                        } 
+                                    }
+
+                                    & > .btn {
+                                        max-width: 277px;
+                                        width: 100%;
+                                        height: 47px;
+                                        font-size: 13px;
+                                        font-family: $font-reg;
+                                        color: $white;
+                                        border-radius: 6px;
+                                        background-color: $blue;
+                                        text-transform: uppercase;
+                                        margin-left: auto;
+                                        margin-right: auto;
+                                        margin-top: 45px;
+                                        padding-top: 11px;
+                                        margin-bottom: 19px;
+                                    }
+                                }
+                            }
+                            & > p {
+                                text-align: center;
+                                font-size: 12px;
+                                color: #393939;
+                                font-family: $font-reg;
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.err {
+    // color: red !important;
+    border-bottom: solid 1px red !important;
+}
+.errCheckbox {
+    color: red !important;
+}
+@keyframes increase {
+    100% {
+        width: 80px;
+    }
+}
+app-menu-driver {
+    position: absolute !important;
+    width: 100% !important;
+    background: $yellow ;
+}

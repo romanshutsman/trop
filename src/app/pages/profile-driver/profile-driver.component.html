@@ -1,0 +1,132 @@
+<app-menu-driver></app-menu-driver>
+<div class="container-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="card" [class.longCard]="true">
+              <div class="tab-content">
+                <div role="tabpanel" class="tab-pane fade show active" id="login">
+                  <div class="wrap_form">                    
+                    <form [formGroup]="driverProfile" >
+                      <div class="group">
+                        <div class="avatar">
+                          <div class="img">
+                            <img src="./../../../assets/images/driver/Slider_5.png" alt="avatar">
+                          </div>
+                          <div class="stars">
+  
+                          </div>
+                        </div>
+                        <div class="main-info">
+                            <input 
+                              id="name"
+                              type="text" 
+                              [(ngModel)]="name"
+                              formControlName="name" 
+                              class="form-control"
+                              [attr.disabled]="true"
+                              style="margin-bottom:30px;"
+                              [class.err]="driverProfile.controls['number-alternative'].errors && driverProfile.controls['name'].touched"
+                            >
+                          <div>
+                            <label for="number-driver">Número de teléfono</label>
+                            <input 
+                              id="number-driver"
+                              type="number" 
+                              [(ngModel)]="number"
+                              formControlName="number" 
+                              class="form-control" 
+                              [attr.disabled]="true"
+                              [class.err]="driverProfile.controls['number'].errors && driverProfile.controls['number'].touched"
+                            >
+                          </div>
+  
+                          <div class="">
+                            <label for="number-alternative">Número alternativo</label>
+                            <input 
+                              id="number-alternative"
+                              type="number" 
+                              [(ngModel)]="numberAlternate"
+                              formControlName="number-alternative" 
+                              class="form-control" 
+                              [attr.disabled]="true"
+                              [class.err]="driverProfile.controls['number-alternative'].errors && driverProfile.controls['number-alternative'].touched"
+                            >
+                          </div>
+                          
+                          <div>
+                            <label for="email-profile">Email</label>
+                            <input 
+                              id="email-profile"
+                              type="email" 
+                              [(ngModel)]="email"
+                              formControlName="email" 
+                              class="form-control" 
+                              [attr.disabled]="true"
+                              [class.err]="driverProfile.controls['email'].errors && driverProfile.controls['email'].touched"
+                            >
+                          </div>
+  
+                          <div class="edit">
+                            <label for="password-driver">Contraseña</label>
+                            <input 
+                              id="password-driver"
+                              type="password" 
+                              placeholder="********"
+                              formControlName="password-driver" 
+                              class="form-control" 
+                              [class.err]="driverProfile.controls['password-driver'].errors && driverProfile.controls['password-driver'].touched"
+                            >
+                            <button class="btn">
+                              <img src="./../../../assets/images/edit.png" alt="edit">
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="extra">
+                        <div>
+                          <label for="description-profile">Escriba su mensaje aquí</label>
+                          <div class="desc">
+                            <textarea 
+                            id="description-profile" 
+                            class="form-control" 
+                            [(ngModel)]="name"
+                            formControlName="description"  
+                            rows="2"
+                            [attr.disabled]="true"
+                            [class.err]="driverProfile.controls['description'].errors && driverProfile.controls['description'].touched"
+                            ></textarea>
+                          </div>
+                        </div>
+                        <div>
+                          <label for="extra-info">Extra services</label>
+                          <div class="checkboxes">
+                              <ng-container *ngFor="let service of services" >
+                                <input 
+                                type="checkbox" 
+                                class="form-control"
+                                id="{{service}}-profile"
+                                formControlName="{{service}}">
+                                <label for="{{service}}-profile" class="{{service}}-profile" >{{service}}</label>
+                              </ng-container>
+                              <input
+                              *ngIf="driverProfile.controls['otros'].value"
+                              type="text" 
+                              class="form-control"
+                              placeholder="Input what are you mean"
+                              formControlName="otrosText"
+                              [class.err]="driverProfile.controls['otrosText'].errors && driverProfile.controls['otrosText'].touched">
+                            </div>
+                        </div>
+                      </div>
+                      <button class="btn login"  >Cerrar sesión</button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <app-footer></app-footer>
+  </div>

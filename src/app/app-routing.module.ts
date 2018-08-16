@@ -4,6 +4,7 @@ import { RouterModule, Routes, CanActivate  } from '@angular/router';
 import { AuthGuardService as AuthGuard } from './services/auth/auth-guard.service';
 
 import { MenuComponent } from './pages/menu/menu.component';
+import { MenuDriverComponent } from './pages/menu-driver/menu-driver.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DriverComponent } from './pages/driver/driver.component';
 import { RegisterDriverComponent } from './pages/register-driver/register-driver.component';
@@ -17,6 +18,7 @@ import { TermsComponent } from './pages/terms/terms.component';
 import { CreateOrderComponent } from './pages/create-order/create-order.component';
 import { EditOrderComponent } from './pages/edit-order/edit-order.component';
 import { EnterNumberComponent } from './pages/enter-number/enter-number.component';
+import { ProfileDriverComponent } from './pages/profile-driver/profile-driver.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -28,6 +30,7 @@ const routes: Routes = [
   {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'privacy', component: PrivacyComponent},
   {path: 'terms', component: TermsComponent},
+  {path: 'profile-driver', component: ProfileDriverComponent},
   {path: 'create-order', component: CreateOrderComponent},
   {path: 'edit-order', component: EditOrderComponent},
   {path: 'enter-number', component: EnterNumberComponent},

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule, ReactiveFormsModule  } from '@angular/forms';
+import { RouterModule, Routes, Router } from '@angular/router';
 
 import { SharedService } from './services/shared.service';
 import { AuthService } from './services/auth/auth.service';
@@ -29,6 +30,8 @@ import { TermsComponent } from './pages/terms/terms.component';
 import { CreateOrderComponent } from './pages/create-order/create-order.component';
 import { EditOrderComponent } from './pages/edit-order/edit-order.component';
 import { EnterNumberComponent } from './pages/enter-number/enter-number.component';
+import { ProfileDriverComponent } from './pages/profile-driver/profile-driver.component';
+import { MenuDriverComponent } from './pages/menu-driver/menu-driver.component';
 
 
 
@@ -50,7 +53,9 @@ import { EnterNumberComponent } from './pages/enter-number/enter-number.componen
     TermsComponent,
     CreateOrderComponent,
     EditOrderComponent,
-    EnterNumberComponent
+    EnterNumberComponent,
+    ProfileDriverComponent,
+    MenuDriverComponent
   ],
   imports: [
     BrowserModule,
@@ -60,9 +65,11 @@ import { EnterNumberComponent } from './pages/enter-number/enter-number.componen
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    MatSelectModule
+    MatSelectModule,
+    RouterModule
   ],
   exports: [
+    BrowserModule,
     MatButtonModule,
     MatInputModule,
     MatSelectModule
