@@ -131,3 +131,53 @@ app-menu-user {
     width: 100% !important;
     background: $yellow ;
 }
+
+.modal-dialog {
+    display:  flex !important; 
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    margin-top:  10% !important;
+    height:  100vh !important;
+  }
+  .modal-header {
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 52px;
+    padding-bottom: 56px;
+    border-bottom: unset;
+  }
+  .close {
+      position: absolute;
+      right: 5px;
+      top: 0;
+  }
+  .modal-footer{
+    padding: 0;
+    padding-bottom: 39px;
+    border-top: unset;
+    justify-content: center;
+    & > .reject {
+        max-width: 175px;
+        width: 100%;
+        height: 40px;
+        font-size: 13px;
+        font-family: $font-reg;
+        color: $black;
+        border-radius: 6px;
+        background-color: transparent;
+        border: solid 1px $blue;
+        margin-right: 49px;
+        padding-top: 12px;
+    }
+    & > .accept {
+        max-width: 222px;
+        width: 100%;
+        height: 40px;
+        font-size: 13px;
+        font-family: $font-bold;
+        color: $white;
+        border-radius: 6px;
+        background-color: $blue;
+        padding-top: 12px;
+    }
+  }
