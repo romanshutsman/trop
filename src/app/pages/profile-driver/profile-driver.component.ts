@@ -36,7 +36,7 @@ export class ProfileDriverComponent implements OnInit {
       'description': new FormControl(null),
       'automotores': new FormControl(null),
       'mudanza': new FormControl(null),
-      'maquinaria': new FormControl(null),
+      'maquinaria': new FormControl(true),
       'objetos': new FormControl(null),
       'mascotas': new FormControl(null),
       'motocicleta': new FormControl(null),
