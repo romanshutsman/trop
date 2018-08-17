@@ -1,0 +1,60 @@
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light ">
+      <a 
+      class="navbar-brand" 
+      routerLink="/" 
+      >
+        <img src="./../../../assets/images/LOGO_truck.svg" alt="logo">
+        <span>Trop</span>
+      </a>
+      <!-- <a class="navbar-brand" (click)="backClicked()" *ngIf="router.url === '/register-driver' 
+      || router.url === '/forgot-password'
+      || router.url === '/privacy'
+      || router.url === '/terms'
+      || router.url === '/enter-number'
+      || router.url === '/create-order'
+      || router.url === '/login-driver'
+      || router.url === '/register-user'">
+        <img src="./../../../assets/images/Trop_user/Logo/Full+arrow.png" alt="logo">
+      </a> -->
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+  
+          <li class="nav-item  menu">
+            <a class="nav-link" 
+              routerLinkActive="active-link"
+              routerLink="/dashboard-user"
+              [ngClass]="dashboard.isActive?'active':''"  
+              #dashboard="routerLinkActive"
+            >Anuncios</a>
+          </li>
+          <li class="nav-item menu">
+            <a class="nav-link" 
+            routerLinkActive="active-link"
+            >Chat</a>
+          </li>
+          <li class="nav-item menu">
+            <a class="nav-link"  
+            routerLinkActive="active-link"
+            >Mis trabajos</a>
+          </li>
+          <li class="nav-item menu">
+            <a class="nav-link" 
+            routerLinkActive="active-link"
+            >Transferencias</a>
+          </li>
+          <li class="nav-item menu">
+            <a class="nav-link"
+            routerLink="/profile-user"
+            [ngClass]="{ 'active': user.isActive}"
+            routerLinkActive="active" #user="routerLinkActive"
+            >Perfil</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>

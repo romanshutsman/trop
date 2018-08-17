@@ -32,6 +32,8 @@ import { EditOrderComponent } from './pages/edit-order/edit-order.component';
 import { EnterNumberComponent } from './pages/enter-number/enter-number.component';
 import { ProfileDriverComponent } from './pages/profile-driver/profile-driver.component';
 import { MenuDriverComponent } from './pages/menu-driver/menu-driver.component';
+import { MenuUserComponent } from './pages/menu-user/menu-user.component';
+import { ProfileUserComponent } from './pages/profile-user/profile-user.component';
 
 
 
@@ -55,7 +57,9 @@ import { MenuDriverComponent } from './pages/menu-driver/menu-driver.component';
     EditOrderComponent,
     EnterNumberComponent,
     ProfileDriverComponent,
-    MenuDriverComponent
+    MenuDriverComponent,
+    MenuUserComponent,
+    ProfileUserComponent
   ],
   imports: [
     BrowserModule,

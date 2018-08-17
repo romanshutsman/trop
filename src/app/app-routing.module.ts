@@ -5,6 +5,7 @@ import { AuthGuardService as AuthGuard } from './services/auth/auth-guard.servic
 
 import { MenuComponent } from './pages/menu/menu.component';
 import { MenuDriverComponent } from './pages/menu-driver/menu-driver.component';
+import { MenuUserComponent } from './pages/menu-user/menu-user.component';
 import { HomeComponent } from './pages/home/home.component';
 import { DriverComponent } from './pages/driver/driver.component';
 import { RegisterDriverComponent } from './pages/register-driver/register-driver.component';
@@ -19,6 +20,7 @@ import { CreateOrderComponent } from './pages/create-order/create-order.componen
 import { EditOrderComponent } from './pages/edit-order/edit-order.component';
 import { EnterNumberComponent } from './pages/enter-number/enter-number.component';
 import { ProfileDriverComponent } from './pages/profile-driver/profile-driver.component';
+import { ProfileUserComponent } from './pages/profile-user/profile-user.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -31,6 +33,7 @@ const routes: Routes = [
   {path: 'privacy', component: PrivacyComponent},
   {path: 'terms', component: TermsComponent},
   {path: 'profile-driver', component: ProfileDriverComponent},
+  {path: 'profile-user', component: ProfileUserComponent},
   {path: 'create-order', component: CreateOrderComponent},
   {path: 'edit-order', component: EditOrderComponent},
   {path: 'enter-number', component: EnterNumberComponent},
