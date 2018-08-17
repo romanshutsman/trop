@@ -14,6 +14,7 @@
                 id="name-user"
                 type="text" 
                 [(ngModel)]="name"
+                [attr.disabled]="true"
                 class="form-control " 
                 formControlName="name" 
                 [class.err]="profileUser.controls['name'].errors && profileUser.controls['name'].touched">
@@ -23,6 +24,7 @@
                 id="number-user"
                 type="number"
                 [(ngModel)]="number"
+                [attr.disabled]="true"
                 class="form-control" 
                 formControlName="number"
                 [class.err]="profileUser.controls['number'].errors && profileUser.controls['number'].touched">
@@ -31,6 +33,7 @@
                 <input 
                 id="number-alternative-user"
                 type="number"
+                [attr.disabled]="true"
                 [(ngModel)]="numberAlternative"
                 class="form-control" 
                 formControlName="number-alternative"
@@ -41,6 +44,7 @@
                 id="email-user"
                 type="email"
                 [(ngModel)]="email"
+                [attr.disabled]="true"
                 class="form-control " 
                 formControlName="email" 
                 placeholder="Escribe tu email..."
@@ -55,6 +59,7 @@
                 id="password-user"
                 type="password" 
                 formControlName="password" 
+                [attr.disabled]="true"
                 class="form-control" 
                 placeholder="********"
                 [class.err]="profileUser.controls['password'].errors && profileUser.controls['password'].touched"
