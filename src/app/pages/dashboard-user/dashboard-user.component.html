@@ -1,12 +1,216 @@
 <app-menu-user></app-menu-user>
 <div class="container-fluid">
-  <section class="main-container">
-    <div class="no-orders">
+  <section class="main-container" *ngIf="false">
+    <div class="no-orders" >
       <div>
         <img src="./../../../assets/images/Trop_user/CAR.png" alt="truck">
       </div>
       <p>Creá tu anuncio y recibí ofertas de nuestros<br> transportistas al instante.</p>
       <button class="btn">Crear anuncio</button>
+    </div>
+  </section>
+  <section class="main-orders">
+    <div class="orders">
+      <p class="title">Creá tu anuncio y recibí ofertas de nuestros transportistas al instante.</p>
+      <div class="create">
+        <div class="line1"></div>
+        <button class="btn" routerLink="/create-order">Crear anuncio</button>
+        <div class="line2"></div>
+      </div>
+      <div class="all-orders">
+        <article routerLink="/details-user">
+          <div class="info">
+            <div class="profile">
+              <div class="img">
+                <img src="./../../../assets/images/Slider-5-compressor.png" alt="avatar">
+              </div>
+              <div class="name_service">
+                <p class="name">João</p>
+                <p class="service">otros</p>
+              </div>
+            </div>
+            <div class="date">
+              <p class="date">05/06/2018</p>
+              <p class="status">publicado</p>
+            </div>
+          </div>
+          <div class="photo">
+            <div class="big-photo">
+              <img src="./../../../assets/images/Slider-5-compressor.png"  alt="photo">
+            </div>
+            <div class="small-photo-group">
+              <div class="small small-1">
+                <img src="./../../../assets/images/Slider-5-compressor.png"  alt="photo">
+              </div>
+              <div class="small small-2">
+                <img src="./../../../assets/images/Slider-5-compressor.png"  alt="photo">
+              </div>
+              <div class="small small-3">
+                <img src="./../../../assets/images/Slider-5-compressor.png"  alt="photo">
+              </div>
+              <div class="small small-4">
+                <img src="./../../../assets/images/Slider-5-compressor.png"  alt="photo">
+              </div>
+            </div>
+          </div>
+          <div class="place">
+            <div class="tag">
+              <img src="./../../../assets/images/driver/24-hours.png" alt="tag">
+            </div>
+            <p class="place">395 NW. Greystone St. Benton Harbor, MI 49022</p>
+          </div>
+          <div class="other">
+            <div class="mount">
+              <div class="img">
+                <img src="./../../../assets/images/driver/24-hours.png" alt="tag">
+              </div>
+              <p class="quantity">3</p>
+            </div>
+            <div class="chat">
+              <div class="img">
+                <img src="./../../../assets/images/driver/24-hours.png" alt="tag">
+              </div>
+              <p class="quantity">11</p>
+
+            </div>
+            <div class="time">
+              <div class="img">
+                <img src="./../../../assets/images/driver/24-hours.png" alt="tag">
+              </div>
+              <p class="date">3 días restantes</p>
+
+            </div>
+          </div>
+        </article>
+        <article routerLink="/details-user">
+          <div class="info">
+            <div class="profile">
+              <div class="img">
+                <img src="./../../../assets/images/Slider-5-compressor.png" alt="avatar">
+              </div>
+              <div class="name_service">
+                <p class="name">João</p>
+                <p class="service">otros</p>
+              </div>
+            </div>
+            <div class="date">
+              <p class="date">05/06/2018</p>
+              <p class="status">publicado</p>
+            </div>
+          </div>
+          <div class="photo">
+            <div class="big-photo">
+              <img src="./../../../assets/images/Slider-5-compressor.png"  alt="photo">
+            </div>
+            <div class="small-photo-group">
+              <div class="small small-1">
+                <img src="./../../../assets/images/Slider-5-compressor.png"  alt="photo">
+              </div>
+              <div class="small small-2">
+                <img src="./../../../assets/images/Slider-5-compressor.png"  alt="photo">
+              </div>
+              <div class="small small-3">
+                <img src="./../../../assets/images/Slider-5-compressor.png"  alt="photo">
+              </div>
+              <div class="small small-4">
+                <img src="./../../../assets/images/Slider-5-compressor.png"  alt="photo">
+              </div>
+            </div>
+          </div>
+          <div class="place">
+            <div class="tag">
+              <img src="./../../../assets/images/driver/24-hours.png" alt="tag">
+            </div>
+            <p class="place">395 NW. Greystone St. Benton Harbor, MI 49022</p>
+          </div>
+          <div class="other">
+            <div class="mount">
+              <div class="img">
+                <img src="./../../../assets/images/driver/24-hours.png" alt="tag">
+              </div>
+              <p class="quantity">3</p>
+            </div>
+            <div class="chat">
+              <div class="img">
+                <img src="./../../../assets/images/driver/24-hours.png" alt="tag">
+              </div>
+              <p class="quantity">11</p>
+
+            </div>
+            <div class="time">
+              <div class="img">
+                <img src="./../../../assets/images/driver/24-hours.png" alt="tag">
+              </div>
+              <p class="date">3 días restantes</p>
+
+            </div>
+          </div>
+        </article>
+        <article routerLink="/details-user">
+          <div class="info">
+            <div class="profile">
+              <div class="img">
+                <img src="./../../../assets/images/Slider-5-compressor.png" alt="avatar">
+              </div>
+              <div class="name_service">
+                <p class="name">João</p>
+                <p class="service">otros</p>
+              </div>
+            </div>
+            <div class="date">
+              <p class="date">05/06/2018</p>
+              <p class="status">publicado</p>
+            </div>
+          </div>
+          <div class="photo">
+            <div class="big-photo">
+              <img src="./../../../assets/images/Slider-5-compressor.png"  alt="photo">
+            </div>
+            <div class="small-photo-group">
+              <div class="small small-1">
+                <img src="./../../../assets/images/Slider-5-compressor.png"  alt="photo">
+              </div>
+              <div class="small small-2">
+                <img src="./../../../assets/images/Slider-5-compressor.png"  alt="photo">
+              </div>
+              <div class="small small-3">
+                <img src="./../../../assets/images/Slider-5-compressor.png"  alt="photo">
+              </div>
+              <div class="small small-4">
+                <img src="./../../../assets/images/Slider-5-compressor.png"  alt="photo">
+              </div>
+            </div>
+          </div>
+          <div class="place">
+            <div class="tag">
+              <img src="./../../../assets/images/driver/24-hours.png" alt="tag">
+            </div>
+            <p class="place">395 NW. Greystone St. Benton Harbor, MI 49022</p>
+          </div>
+          <div class="other">
+            <div class="mount">
+              <div class="img">
+                <img src="./../../../assets/images/driver/24-hours.png" alt="tag">
+              </div>
+              <p class="quantity">3</p>
+            </div>
+            <div class="chat">
+              <div class="img">
+                <img src="./../../../assets/images/driver/24-hours.png" alt="tag">
+              </div>
+              <p class="quantity">11</p>
+
+            </div>
+            <div class="time">
+              <div class="img">
+                <img src="./../../../assets/images/driver/24-hours.png" alt="tag">
+              </div>
+              <p class="date">3 días restantes</p>
+
+            </div>
+          </div>
+        </article>
+      </div>
     </div>
   </section>
 </div>

@@ -16,6 +16,7 @@
     || router.url === '/forgot-password'
     || router.url === '/privacy'
     || router.url === '/terms'
+    || router.url === '/details-user'
     || router.url === '/enter-number'
     || router.url === '/create-order'
     || router.url === '/login-driver'
@@ -31,6 +32,13 @@
       text-align:  center;"
       *ngIf="this.router.url === '/edit-order'"  
       >Vehículos, motos</p>
+    <p 
+    style="
+      width:  100%;
+      font-size: 18px;
+      text-align:  center;"
+      *ngIf="this.router.url === '/details-user'"  
+      >Detalles</p>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">

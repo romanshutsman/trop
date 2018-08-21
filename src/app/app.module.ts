@@ -34,6 +34,7 @@ import { ProfileDriverComponent } from './pages/profile-driver/profile-driver.co
 import { MenuDriverComponent } from './pages/menu-driver/menu-driver.component';
 import { MenuUserComponent } from './pages/menu-user/menu-user.component';
 import { ProfileUserComponent } from './pages/profile-user/profile-user.component';
+import { DetailsUserComponent } from './pages/details-user/details-user.component';
 
 
 
@@ -59,7 +60,8 @@ import { ProfileUserComponent } from './pages/profile-user/profile-user.componen
     ProfileDriverComponent,
     MenuDriverComponent,
     MenuUserComponent,
-    ProfileUserComponent
+    ProfileUserComponent,
+    DetailsUserComponent
   ],
   imports: [
     BrowserModule,

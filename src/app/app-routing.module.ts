@@ -21,6 +21,7 @@ import { EditOrderComponent } from './pages/edit-order/edit-order.component';
 import { EnterNumberComponent } from './pages/enter-number/enter-number.component';
 import { ProfileDriverComponent } from './pages/profile-driver/profile-driver.component';
 import { ProfileUserComponent } from './pages/profile-user/profile-user.component';
+import { DetailsUserComponent } from './pages/details-user/details-user.component';
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -32,6 +33,7 @@ const routes: Routes = [
   {path: 'forgot-password', component: ForgotPasswordComponent},
   {path: 'privacy', component: PrivacyComponent},
   {path: 'terms', component: TermsComponent},
+  {path: 'details-user', component: DetailsUserComponent},
   {path: 'profile-driver', component: ProfileDriverComponent},
   {path: 'profile-user', component: ProfileUserComponent},
   {path: 'create-order', component: CreateOrderComponent},
