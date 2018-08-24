@@ -33,6 +33,7 @@ textarea {
     height: 100%;
     & > .container {
         & > nav {
+            margin-bottom: 12px;
             & > .nav.nav-tabs {
                 display: flex;
                 justify-content: center;
@@ -49,6 +50,8 @@ textarea {
                     border: none;
                     color: rgba($color: #000000, $alpha: 0.54);
                     position: relative;
+                    padding-bottom: 0px;
+                    height: 27px;
                     & > span {
                         width: 16px;
                         height: 16px;
@@ -65,8 +68,22 @@ textarea {
                 }
                 & > a.active {
                     color: #000000;
-                    border-bottom: solid 2px #979797;
+                    border-bottom: solid 1px #979797;
                 }
+            }
+        }
+        & > .tab-content {
+            & > .tab-pane {
+                & > .card {
+                    max-width: 836px;
+                    width: 100%;
+                    min-height: 878px;
+                    border-radius: 4px;
+                    background-color: #ffffff;
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
+                    margin-left: auto;
+                    margin-right: auto;
+                } 
             }
         }
     }
